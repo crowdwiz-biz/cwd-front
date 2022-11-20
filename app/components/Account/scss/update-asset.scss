@@ -1,0 +1,91 @@
+.update-asset {
+    &__tabs {
+        display: flex;
+        align-items: center;
+        margin: 0 !important;
+        margin-bottom: 30px !important;
+        padding: 0 !important;
+    }
+    &__tabs-item {
+        display: flex;
+        margin-right: 30px;
+        color: #e1c697;
+        font-family: "CoreSansE-Regular";
+        text-decoration: underline;
+        cursor: pointer;
+        &--inactive {
+            border-bottom: none;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+    &__inner {
+        max-width: 900px;
+        padding-bottom: 50px;
+
+        &--short-block {
+            max-width: 650px;
+        }
+    }
+    &__asset-wrap {
+        max-width: 500px;
+    }
+    &__trading-pair {
+        margin: 24px 0;
+        line-height: 1;
+        .formatted-price {
+            font-family: CoreSansE-65Bold;
+            color: #e1c697;
+        }
+    }
+    &__desc-block {
+        margin-bottom: 30px;
+    }
+    &__warning-text {
+        padding: 0 !important;
+        color: #f04124 !important;
+    }
+    &__table {
+        &:nth-child(odd) {
+            background-color: #2a2a2a;
+        }
+
+        td {
+            border: none;
+        }
+    }
+    &__permission-data {
+        width: 80%;
+    }
+    &__switch {
+        text-align: right;
+    }
+    &__label {
+        display: block;
+        text-transform: none !important;
+        margin-bottom: 8px;
+    }
+    &__trade-fee {
+        font-family: CoreSansE-65Bold;
+        color: #e1c697;
+        display: inline-block;
+    }
+    &__trade-fee-text {
+        display: inline-block;
+        padding-right: 6px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .update-asset {
+        &__tabs {
+            display: block;
+        }
+        &__tabs-item {
+            margin-right: 0;
+        }
+        &__trade-fee-text {
+            margin-bottom: 10px;
+        }
+    }
+}

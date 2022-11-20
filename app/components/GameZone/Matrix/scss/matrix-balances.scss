@@ -1,0 +1,99 @@
+.matrix-balances {
+    &__list {
+        display: grid;
+        grid-template-columns: 220px 220px 220px 220px;
+        grid-gap: 14px;
+        margin: 0;
+        margin-bottom: 60px !important;
+        list-style: none;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 28px;
+        padding-bottom: 30px;
+        border-radius: 20px;
+        background-color: #1e1e1e;
+    }
+    &__inner {
+        text-align: center;
+    }
+    &__icon {
+        display: block;
+        width: 55px !important;
+        min-height: 36px !important;
+        max-height: 40px !important;
+        margin: auto;
+        margin-bottom: 14px;
+        & svg {
+            * {
+                fill: #f2cb96 !important;
+            }
+        }
+    }
+    &__text {
+        display: block;
+        margin-bottom: 7px;
+        line-height: 1;
+        font-size: 12px;
+    }
+    &__data {
+        line-height: 1;
+        font-family: "CoreSansE-55Medium", arial, sans-serif;
+        font-size: 27px;
+        color: #f2cb96;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .matrix-balances {
+        &__list {
+            grid-template-columns: 200px 200px 200px 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .matrix-balances {
+        &__list {
+            grid-template-columns: 310px 310px;
+            grid-template-rows: 60px 60px;
+        }
+        &__item {
+            justify-content: flex-start;
+            padding: 12px 15px;
+            padding-left: 21px;
+            border-radius: 30px;
+        }
+        &__inner {
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        &__icon {
+            display: inline-block;
+            width: 36px !important;
+            min-height: 30px !important;
+            max-height: 36px !important;
+            margin: auto;
+            margin-bottom: 0;
+            margin-right: 14px;
+        }
+        &__text {
+            display: block;
+            width: 80px;
+            text-align: left;
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+    }
+}
+@media screen and (max-width: 567px) {
+    .matrix-balances {
+        &__list {
+            grid-template-columns: 100%;
+            margin-bottom: 30px !important;
+        }
+    }
+}

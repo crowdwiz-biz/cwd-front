@@ -1,0 +1,114 @@
+.mobile-footer {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #1b1b1b;
+    background-color: #262626;
+    z-index: 1000;
+
+    &__nav-list {
+        display: grid;
+        grid-template-rows: 40px;
+        column-gap: 10px;
+        list-style: none;
+        margin: 0 !important;
+        padding-top: 8px;
+        padding-bottom: 12px;
+    }
+
+    &__action-item--active {
+        .mobile-footer__btn-icon {
+            svg * {
+                stroke: #ffffff;
+            }
+        }
+
+        .mobile-footer__btn-name {
+            color: #ffffff;
+        }
+    }
+
+    &__action-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__btn-icon {
+        margin-bottom: 2px;
+    }
+
+    &__btn-name {
+        font-size: 11px;
+        color: #8c8c8c;
+    }
+
+    &__lock-btn-wrap {
+        height: 80px;
+        margin-top: -27px;
+        border-top: 1px solid #1b1b1b;
+        background-color: #262626;
+        padding: 5px;
+        border-top-right-radius: 80px;
+        border-top-left-radius: 80px;
+    }
+
+    &__lock-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #1b1b1b;
+        border-top-right-radius: 80px;
+        border-top-left-radius: 80px;
+        height: inherit;
+        padding-top: 8px;
+
+        .new-icon {
+            margin-bottom: 2px;
+        }
+    }
+
+    &__lock-text {
+        font-size: 11px;
+        color: #dec27f;
+
+        &--locked {
+            color: #8c8c8c;
+        }
+    }
+
+    &__reg-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: inherit;
+        text-decoration: none;
+        cursor: pointer;
+
+        & span {
+            font-size: 18px;
+            color: #dec27f;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .mobile-footer {
+        &__nav-list {
+            grid-template-columns: 1fr 1fr 120px 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .mobile-footer {
+        &__nav-list {
+            grid-template-columns: 1fr 1fr 75px 1fr 1fr;
+        }
+    }
+}

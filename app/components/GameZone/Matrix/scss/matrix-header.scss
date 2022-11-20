@@ -1,0 +1,74 @@
+.matrix-header {
+    height: 384px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    background: url(../../../../assets/png-images/gamezone/game-zone_matrix.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -110px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__intro {
+        display: block;
+        padding-top: 150px;
+        font-family: CoreSansE-65Bold, arial, sans-serif;
+        line-height: 1.2;
+        font-size: 30px;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0px 4px 22px #000000;
+    }
+    &__text-wrap {
+        padding: 14px 20px 13px;
+        background-color: #262626;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        text-align: center;
+        box-shadow: 0px -19px 46px #1d1c1c;
+
+        & span {
+            font-size: 14px;
+            color: #ffffff;
+            &:first-child {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .matrix-header {
+        height: 285px;
+        background-position: 0px -64px;
+
+        &__intro {
+            padding-top: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .matrix-header {
+        height: 304px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 9px;
+        margin-top: -26px;
+
+        &__intro {
+            padding-top: 70px;
+            font-size: 24px;
+        }
+
+        &__text-wrap {
+            margin-bottom: 0;
+        }
+    }
+}

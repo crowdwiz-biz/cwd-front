@@ -1,0 +1,65 @@
+.gr-tabs {
+    background-color: #1b1b1b;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        margin: 0 !important;
+        margin-left: 60px !important;
+
+        & li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: inherit;
+
+            & a {
+                display: flex;
+                height: inherit;
+                width: 100%;
+                color: #fff !important;
+                padding: 0 20px;
+                line-height: 1;
+                align-items: center;
+
+                &:hover {
+                    color: #dec27f !important;
+                }
+            }
+
+            .tab-title {
+                font-family: SuisseIntlBold, arial, sans-serif;
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+        }
+        & li.is-active {
+            & a {
+                background-color: #262626;
+            }
+
+            &:hover {
+                a {
+                    color: #ffffff !important;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gr-tabs {
+        &__list {
+            height: 44px;
+            margin-left: 22px !important;
+
+            & li {
+                .tab-title {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

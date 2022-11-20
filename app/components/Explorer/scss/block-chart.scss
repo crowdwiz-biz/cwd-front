@@ -1,0 +1,30 @@
+.block-chart {
+    &__wrap {
+        margin-bottom: 60px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .highcharts-xaxis .highcharts-tick {
+            stroke: #474747;
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .block-chart {
+        &__wrap {
+            max-width: 636px;
+            margin-bottom: 45px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .block-chart {
+        &__wrap {
+            margin-bottom: 34px;
+        }
+    }
+}

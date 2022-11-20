@@ -1,0 +1,267 @@
+/* ***** declarations ****** */
+@import "./../style-guide-fixes";
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url("#{$file-path}.woff") format("woff");
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+// BASE CROWDWIZ FONT
+@include font-face(
+    CoreSansE-Light,
+    "vendors/CoreSansE/CoreSansE-35Light",
+    300,
+    normal
+);
+@mixin CoreSansELight {
+    font-family: "CoreSansE-Light", arial, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@include font-face(
+    CoreSansE-Regular,
+    "vendors/CoreSansE/CoreSansE-45Regular",
+    400,
+    normal
+);
+@mixin CoreSansERgular {
+    font-family: "CoreSansE-Regular", arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@include font-face(
+    CoreSansE-55Medium,
+    "vendors/CoreSansE/CoreSansE-55Medium",
+    500,
+    normal
+);
+@mixin CoreSansEMedium {
+    font-family: "CoreSansE-55Medium", arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@include font-face(
+    CoreSansE-65Bold,
+    "vendors/CoreSansE/CoreSansE-65Bold",
+    700,
+    normal
+);
+@mixin CoreSansE665Bold {
+    font-family: "CoreSansE-65Bold", arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@include font-face(
+    CoreSansE-85Heavy,
+    "vendors/CoreSansE/CoreSansE-85Heavy",
+    900,
+    normal
+);
+@mixin CoreSansE85Heavy {
+    font-family: "CoreSansE-85Heavy", arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+@mixin SegoeUILight {
+    font-family: "wf_SegoeUILight", "Segoe UI Light", "Segoe WP Light",
+        "wf_SegoeUI", "Segoe UI", "Segoe", "Segoe WP", "Tahoma", "Verdana",
+        arial, sans-serif;
+    font-size: 90%;
+    font-weight: lighter;
+}
+
+@mixin SegoeUIRegular {
+    font-family: "wf_SegoeUI", "Segoe UI", "Segoe", "Segoe WP", "Tahoma",
+        "Verdana", arial, sans-serif;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+@mixin MonospaceFont {
+    font-family: "Lucida Console", Monaco, monospace !important;
+}
+
+// MAIN-PAGE FONTS header
+@include font-face(Sifonn, "vendors/Sifonn/Sifonn", normal, normal);
+@include font-face(StemBold, "vendors/Stem/Stem_Bold", normal, normal);
+
+// MAIN-PAGE FONTS Base
+@include font-face(
+    SuisseIntlReg,
+    "vendors/SuisseIntl/SuisseIntl-Regular",
+    normal,
+    normal
+);
+
+// MAIN-PAGE FONTS titles
+@include font-face(
+    SuisseIntlBold,
+    "vendors/SuisseIntl/SuisseIntl-Bold",
+    normal,
+    normal
+);
+
+//Other titles
+@include font-face(
+    FuturaDemiC,
+    "vendors/FuturaDemiC/FuturaDemiC",
+    normal,
+    normal
+);
+/* ***** styles ****** */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "CoreSansERgular", arial, sans-serif;
+}
+
+.monospace {
+    @include MonospaceFont;
+}
+
+*#{$ant-fix} > {
+    label,
+    label > span {
+        @include CoreSansERgular;
+        text-transform: uppercase;
+    }
+}
+
+.json-inspector__key {
+    @include MonospaceFont;
+    text-transform: none;
+}
+
+.json-inspector__value {
+    @include MonospaceFont;
+    text-transform: none;
+}
+
+.txtann {
+    @include CoreSansELight;
+}
+
+.txtlabel {
+    @include CoreSansELight;
+    text-transform: uppercase;
+}
+
+.account-drop-down a.button {
+    @include CoreSansELight;
+}
+
+.footer .logo {
+    @include CoreSansELight;
+}
+
+.tabs > .tab-item {
+    @include CoreSansELight;
+}
+
+.label,
+.label.warning,
+.label.success,
+.label.info,
+.label.cancel,
+.label.alert {
+    @include CoreSansELight;
+}
+
+.table > thead > tr > th {
+    @include CoreSansERgular;
+}
+
+.vertical-order-table-cell {
+    @include CoreSansERgular;
+}
+
+.table.dashboard-table {
+    > thead > tr > th {
+        @include CoreSansERgular;
+    }
+
+    > tbody > tr > td {
+        @include CoreSansERgular;
+    }
+}
+
+.win32 {
+    @include CoreSansELight;
+}
+
+.win32 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include CoreSansELight;
+    }
+
+    label,
+    label > span {
+        @include CoreSansELight;
+    }
+
+    button,
+    .button {
+        @include CoreSansELight;
+    }
+
+    .content-block > h3 {
+        @include CoreSansELight;
+    }
+
+    .page-header > h3 {
+        @include CoreSansELight;
+    }
+
+    a.currency,
+    span.currency {
+        @include CoreSansELight;
+    }
+
+    .txtlabel {
+        @include CoreSansELight;
+    }
+
+    span.time {
+        @include CoreSansELight;
+    }
+
+    .footer .logo {
+        @include CoreSansELight;
+    }
+
+    .tabs > .tab-item {
+        @include CoreSansELight;
+    }
+
+    .label,
+    .label.warning,
+    .label.success,
+    .label.info,
+    .label.cancel,
+    .label.alert {
+        @include CoreSansELight;
+    }
+
+    .key-value-table tr > td:first-child {
+        @include CoreSansELight;
+    }
+}

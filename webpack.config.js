@@ -1,0 +1,422 @@
+var path = require("path");
+var webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var Clean = require("clean-webpack-plugin");
+var git = require("git-rev-sync");
+require("es6-promise").polyfill();
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+var locales = require("./app/assets/locales");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+/*
+ * For staging builds, set the version to the latest commit hash, for
+ * production set it to the package version
+ */
+let branch = !!process.env.BRANCH ? process.env.BRANCH : git.branch();
+var __VERSION__ =
+    branch === "develop" ? git.short() : require("./package.json").version;
+
+// BASE APP DIR
+var root_dir = path.resolve(__dirname);
+
+module.exports = function(env) {
+    // STYLE LOADERS
+    var cssLoaders = [
+        {
+            loader: "style-loader"
+        },
+        {
+            loader: "css-loader"
+        },
+        {
+            loader: "postcss-loader"
+        }
+    ];
+
+    var scssLoaders = [
+        {
+            loader: "style-loader"
+        },
+        {
+            loader: "css-loader"
+        },
+        {
+            loader: "postcss-loader"
+        },
+        {
+            loader: "sass-loader",
+            options: {
+                outputStyle: "expanded"
+            }
+        }
+    ];
+
+    // OUTPUT PATH
+    var outputPath = path.join(root_dir, "assets");
+
+    // COMMON PLUGINS
+    const baseUrl = env.electron ? "./" : "baseUrl" in env ? env.baseUrl : "/";
+
+    /*
+     * moment and react-intl include tons of locale files, use a regex and
+     * ContextReplacementPlugin to only include certain locale files
+     */
+    let regexString = "";
+    locales.forEach((l, i) => {
+        regexString = regexString + (l + (i < locales.length - 1 ? "|" : ""));
+    });
+    const localeRegex = new RegExp(regexString);
+    
+    var plugins = [
+        new HtmlWebpackPlugin({
+            favicon: "./app/assets/favicon.svg",
+            template: "!!handlebars-loader!app/assets/index.hbs",
+            templateParameters: {
+                CrowdApiUrl: "https://backup.cwd.global",
+                title: "CWD - Crowdwiz. World. Decentralization.",
+                INCLUDE_BASE: !!env.prod && !env.hash,
+                PRODUCTION: !!env.prod,
+                ELECTRON: !!env.electron
+            }
+        }),
+
+        new webpack.DefinePlugin({
+            APP_VERSION: JSON.stringify(__VERSION__),
+            __ELECTRON__: !!env.electron,
+            __HASH_HISTORY__: !!env.hash,
+            __BASE_URL__: JSON.stringify(baseUrl),
+            __UI_API__: JSON.stringify(env.apiUrl),
+            __TESTNET__: !!env.testnet,
+            __DEPRECATED__: !!env.deprecated,
+            DEFAULT_SYMBOL: "CWD",
+            __GIT_BRANCH__: JSON.stringify(git.branch()),
+            __PERFORMANCE_DEVTOOL__: !!env.perf_dev
+        }),
+        new webpack.ContextReplacementPlugin(
+            /moment[\/\\]locale$/,
+            localeRegex
+        ),
+        new webpack.ContextReplacementPlugin(
+            /react-intl[\/\\]locale-data$/,
+            localeRegex
+        ),
+        new CopyWebpackPlugin([
+            {
+                from: path.join(root_dir, "charting_library"),
+                to: "charting_library"
+            }
+        ])
+    ];
+    if (env.prod) {
+        // PROD OUTPUT PATH
+        let outputDir = env.electron
+            ? "electron"
+            : env.hash
+            ? !baseUrl
+                ? "hash-history"
+                : `hash-history_${baseUrl.replace("/", "")}`
+            : "dist";
+        outputPath = path.join(root_dir, "build", outputDir);
+
+        // DIRECTORY CLEANER
+        var cleanDirectories = [outputPath];
+
+        // WRAP INTO CSS FILE
+        cssLoaders = [
+            {loader: MiniCssExtractPlugin.loader},
+            {loader: "css-loader"},
+            {
+                loader: "postcss-loader",
+                options: {
+                    minimize: true,
+                    debug: false
+                }
+            }
+        ];
+        scssLoaders = [
+            {loader: MiniCssExtractPlugin.loader},
+            {loader: "css-loader"},
+            {
+                loader: "postcss-loader",
+                options: {
+                    minimize: true,
+                    debug: false
+                }
+            },
+            {loader: "sass-loader", options: {outputStyle: "expanded"}}
+        ];
+
+        // PROD PLUGINS
+        plugins.push(new Clean(cleanDirectories, {root: root_dir}));
+        plugins.push(
+            new webpack.DefinePlugin({
+                __DEV__: false
+            })
+        );
+        plugins.push(
+            new MiniCssExtractPlugin({
+                filename: "[name].[contenthash].css"
+            })
+        );
+    } else {
+        plugins.push(
+            new webpack.DefinePlugin({
+                "process.env": {NODE_ENV: JSON.stringify("development")},
+                __DEV__: true
+            })
+        );
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+    }
+
+    plugins.push(
+        new CopyWebpackPlugin(
+            [
+                {
+                    from: path.join(
+                        root_dir,
+                        "app",
+                        "assets",
+                        "locales",
+                        "*.json"
+                    ),
+                    to: path.join(outputPath, "[name].[ext]"),
+                    toType: "template"
+                },
+                {
+                    from: path.join(
+                        root_dir,
+                        "app",
+                        "lib",
+                        "common",
+                        "dictionary_en.json"
+                    ),
+                    to: path.join(outputPath, "dictionary.json"),
+                    toType: "file"
+                },
+                {
+                    from: path.join(root_dir, "app", "assets", "manifest.json"),
+                    to: path.join(outputPath, "manifest.json"),
+                    toType: "file"
+                },
+                {
+                    from: path.join(
+                        root_dir,
+                        "app",
+                        "assets",
+                        "outdated_browser.css"
+                    ),
+                    to: path.join(outputPath, "outdated_browser.css"),
+                    toType: "file"
+                }
+            ],
+            {}
+        )
+    );
+
+    var config = {
+        mode: env.noUgly ? "none" : env.prod ? "production" : "development",
+        entry: {
+            app: env.prod
+                ? path.resolve(root_dir, "app/Main.js")
+                : [
+                      "webpack-hot-middleware/client",
+                      "react-hot-loader/patch",
+                      path.resolve(root_dir, "app/Main.js")
+                  ]
+        },
+        output: {
+            publicPath: env.prod ? "" : "/",
+            path: outputPath,
+            filename: env.prod ? "[name].[chunkhash].js" : "[name].js",
+            chunkFilename: env.prod ? "[name].[chunkhash].js" : "[name].js",
+            pathinfo: !env.prod,
+            sourceMapFilename: "[name].js.map"
+        },
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    styles: {
+                        name: "styles",
+                        test: /\.css$/,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    vendor: {
+                        name: "vendor",
+                        test: /node_modules/,
+                        chunks: "initial",
+                        enforce: true
+                    }
+                }
+            }
+        },
+        devtool:
+            env.noUgly || !env.prod
+                ? "inline-cheap-module-source-map"
+                : "cheap-source-map",
+        module: {
+            rules: [
+                {
+                    // Test for a polyfill (or any file) and it won't be included in your
+                    // bundle
+                    test: /node-fetch/,
+                    use: "null-loader"
+                },
+                {
+                    test: /\.jsx$/,
+                    include: [
+                        path.join(root_dir, "app"),
+                        path.join(
+                            root_dir,
+                            "node_modules/react-foundation-apps"
+                        )
+                    ],
+                    use: [
+                        {
+                            loader: "babel-loader",
+                            options: {
+                                cacheDirectory: env.prod ? false : true,
+                                plugins: ["react-hot-loader/babel"]
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.js$/,
+                    include: [
+                        path.join(root_dir, "app"),
+                        path.join(root_dir, "node_modules/react-datepicker2"),
+                        path.join(root_dir, "node_modules/alt-container"),
+                        path.join(root_dir, "node_modules/alt-react")
+                    ],
+                    use: [
+                        {
+                            loader: "babel-loader",
+                            options: {
+                                compact: false,
+                                cacheDirectory: env.prod ? false : true,
+                                plugins: ["react-hot-loader/babel"]
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.mjs$/,
+                    include: /node_modules/,
+                    type: "javascript/auto"
+                },
+                {test: /\.coffee$/, loader: "coffee-loader"},
+                {
+                    test: /\.(coffee\.md|litcoffee)$/,
+                    loader: "coffee-loader?literate"
+                },
+                {
+                    test: /\.css$/,
+                    use: cssLoaders
+                },
+                {
+                    test: /\.scss$/,
+                    use: scssLoaders
+                },
+                {
+                    test: /\.(png|jpg)$/,
+                    // PNG can be used as import an in SCSS styles
+                    exclude: [
+                        path.resolve(
+                            root_dir,
+                            "app/assets/png-images/app-icons"
+                        )
+                    ],
+                    use: [
+                        {
+                            loader: "url-loader",
+                            options: {
+                                limit: 100000
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.(woff|eot|ttf|gif)$/,
+                    use: [
+                        {
+                            loader: "url-loader",
+                            options: {
+                                limit: 100000,
+                                mimetype: "application/font-woff"
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /.*\.svg$/,
+                    oneOf: [
+                        // use  SVG files as inline in Icon.jsx. Exseption - files in /svg-common folder.
+                        {
+                            exclude: [
+                                path.resolve(
+                                    root_dir,
+                                    "app/assets/svg-images/svg-common"
+                                )
+                            ],
+                            use: [
+                                {
+                                    loader: "svg-inline-loader"
+                                }
+                            ]
+                        },
+                        // SVG can be used as import an in SCSS styles
+                        {
+                            use: {
+                                loader: "svg-url-loader",
+                                options: {}
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.md/,
+                    use: [
+                        {
+                            loader: "html-loader",
+                            options: {
+                                removeAttributeQuotes: false
+                            }
+                        },
+                        {
+                            loader: "markdown-loader",
+                            options: {}
+                        }
+                    ]
+                }
+            ]
+        },
+        resolve: {
+            modules: [
+                path.resolve(root_dir, "app"),
+                path.resolve(root_dir, "app/lib"),
+                "node_modules"
+            ],
+            extensions: [".js", ".jsx", ".coffee", ".json"],
+            mainFields: ["module", "jsnext:main", "browser", "main"],
+            alias: {
+                sanitize$: "xss",
+                moment$: path.resolve(
+                    root_dir,
+                    "node_modules/moment/moment.js"
+                ),
+                bitsharesjs$: path.resolve(
+                    root_dir,
+                    "node_modules/bitsharesjs/"
+                ),
+                "crowdwiz-ui-modal$": path.resolve(
+                    root_dir,
+                    "node_modules/crowdwiz-ui-modal/dist/main.js"
+                )
+            }
+        },
+        plugins: plugins
+    };
+
+    return config;
+};

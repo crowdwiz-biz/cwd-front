@@ -1,0 +1,109 @@
+.rate-data {
+    &__wrap {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    &__table {
+        display: block !important;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: 145px 90px repeat(3, 130px);
+        text-align: center;
+        column-gap: 2px;
+        margin-bottom: 10px;
+    }
+
+    &__table-title {
+        color: #5d5d5d;
+        font-size: 12px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 145px 90px repeat(3, 130px);
+        grid-template-rows: max-content;
+        column-gap: 2px;
+        width: fit-content;
+        border-radius: 4px;
+        margin-bottom: 1px;
+        align-items: center;
+        background-color: #1e1e1e;
+        cursor: pointer;
+
+        &:nth-child(even) {
+            background-color: #212121;
+        }
+
+        &--active {
+            background-color: #333333;
+
+            &:nth-child(even) {
+                background-color: #333333;
+            }
+        }
+
+        &:hover {
+            .rate-data__cell {
+                color: #e1c697;
+            }
+        }
+    }
+
+    &__cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 7px;
+        padding-right: 7px;
+        font-size: 12px;
+        color: #ffffff;
+        border-left: 1px solid #404040;
+        border-right: 1px solid #404040;
+        overflow-x: scroll;
+
+        &--data {
+            font-size: 14px;
+        }
+
+        &--average {
+            color: #7bd500 !important;
+        }
+
+        &--no-border {
+            border: none;
+            justify-content: start;
+            padding-left: 14px;
+        }
+
+        &--no-right-border {
+            border-right: none;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .rate-data {
+        &__header {
+            display: grid;
+            grid-template-columns: 145px 90px repeat(3, 130px);
+        }
+
+        &__row {
+            display: grid;
+            grid-template-columns: 145px 90px repeat(3, 130px);
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.cwdgateway-popup {
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    margin-left: -155px;
+    width: 310px;
+    padding: 30px 20px;
+    padding-top: 20px;
+    background-color: #212121;
+    border-radius: 10px;
+    box-shadow: 0px 10px 18.3px 2.7px rgba(13, 17, 21, 0.55);
+    box-sizing: border-box;
+    z-index: 1020;
+    &--sell {
+        top: 100px;
+        width: 400px;
+        margin-left: -200px;
+    }
+    &--disput {
+        top: 100px;
+        width: 500px;
+        margin-left: -250px;
+        padding: 30px 30px;
+    }
+    &--confirm {
+        top: 100px;
+        .add-lot__img-preview {
+            display: flex;
+            justify-content: center;
+            height: 250px;
+            background-size: cover;
+            background-position: 50%;
+            overflow-y: scroll;
+            background-repeat: no-repeat;
+            overflow-y: scroll;
+        }
+    }
+    &__inner {
+        margin-bottom: 30px;
+
+        &--top-block {
+            margin-bottom: 0;
+        }
+    }
+    &__text {
+        display: inline-block;
+        margin-bottom: 13px;
+        font-family: CoreSansE-Light !important;
+        font-size: 14px;
+        line-height: 1.3;
+        color: #bfbfbf;
+    }
+    &__modal-close {
+        position: absolute;
+        top: -30px;
+        right: 10px;
+        z-index: 1011;
+        cursor: pointer;
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.65);
+        height: 100%;
+        z-index: 1010;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cwdgateway-popup {
+        top: 100px;
+        &--sell {
+            width: 310px;
+            margin-left: -155px;
+        }
+        &--disput {
+            width: 310px;
+            margin-left: -155px;
+            padding: 20px 25px;
+        }
+    }
+}

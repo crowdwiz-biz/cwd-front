@@ -1,0 +1,89 @@
+.address-input {
+    border: 1px solid rgba(#dec27f, 0.3) !important;
+    text-transform: lowercase;
+
+    &--scammer {
+        border: 1px solid #ea5050 !important;
+    }
+
+    &__container {
+        margin-bottom: 60px;
+    }
+
+    &__wrap {
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    &__status-tip {
+        position: absolute;
+        bottom: -30px;
+        left: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        background-color: #101010;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        & span {
+            color: #dec27f;
+            font-size: 14px;
+            text-transform: lowercase;
+        }
+
+        &--scammer {
+            background-color: #ea5050;
+
+            & span {
+                color: #ffffff;
+            }
+        }
+
+        &--success {
+            & span {
+                color: #03d99d;
+            }
+        }
+    }
+
+    &__clear-btn {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        bottom: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #181818;
+        cursor: pointer;
+    }
+
+    &__card-container {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .address-input {
+        &__container {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .address-input {
+        &__wrap {
+            margin-bottom: 50px;
+        }
+
+        &__card-container {
+            margin-bottom: 30px;
+        }
+    }
+}

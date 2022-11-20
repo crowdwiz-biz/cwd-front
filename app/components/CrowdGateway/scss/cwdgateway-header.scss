@@ -1,0 +1,42 @@
+.cwdgateway-header {
+    &__title {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    &__row {
+        display: grid;
+        grid-template-columns: auto max-content;
+        align-items: baseline;
+        margin-bottom: 16px;
+        grid-gap: 11px;
+        margin-right: 40px;
+    }
+    &__text {
+        font-size: 16px;
+        color: #6d6d6d;
+    }
+    &__data {
+        font-size: 16px;
+        color: #e1c697;
+    }
+}
+@media screen and (max-width: 768px) {
+    .cwdgateway-header {
+        &__text {
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .cwdgateway-header {
+        &__row {
+            margin-right: 0;
+        }
+    }
+}

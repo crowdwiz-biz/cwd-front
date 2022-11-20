@@ -1,0 +1,180 @@
+.finance-dashboard {
+    &__wrap {
+        position: relative;
+        max-width: 995px;
+        width: 100%;
+        padding: 30px 15px 30px 60px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 32px !important;
+        border: solid 1px #ecc38a;
+        background-color: #262626 !important;
+        outline: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        overflow: hidden;
+        text-decoration: none !important;
+
+        & span {
+            color: #ecc38a;
+            font-size: 14px;
+            line-height: 1;
+        }
+        & .new-icon {
+            margin-left: 8px;
+            & svg {
+                > path {
+                    fill: none;
+                    transition: inherit;
+                }
+            }
+        }
+        &:hover {
+            & span {
+                color: #1e1e1e;
+            }
+            background-image: linear-gradient(to bottom, #fad097, #dfb171);
+            box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+            transition: all 0.2s ease-in-out 0s;
+
+            & svg * {
+                stroke: #1e1e1e;
+            }
+
+            &:disabled {
+                & span {
+                    color: #ecc38a;
+                }
+                background-image: none;
+                box-shadow: none;
+                background-color: #262626 !important;
+
+                & svg {
+                    > path {
+                        stroke: #ecc38a;
+                    }
+                }
+            }
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: initial;
+        }
+
+        &--portfolio {
+            width: 200px;
+            padding: 13px 17px;
+        }
+
+        &--dex {
+            width: 210px;
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 15px;
+            box-sizing: border-box;
+            & .new-icon {
+                margin-right: 8px;
+                margin-left: 0;
+            }
+        }
+
+        &--staking {
+            width: 210px;
+            height: 50px;
+        }
+
+        &--pledge {
+            width: auto;
+            height: 50px;
+            padding-left: 27px;
+            padding-right: 27px;
+        }
+    }
+}
+
+.finance-dashboard__btn:disabled:hover {
+}
+
+@media screen and (max-width: 1080px) {
+    .finance-dashboard {
+        &__wrap {
+            max-width: 900px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .finance-dashboard {
+        margin-bottom: 50px;
+
+        &__wrap {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .finance-dashboard {
+        margin-bottom: 20px;
+
+        &__wrap {
+            max-width: 330px;
+        }
+
+        &__btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__btn {
+            & .new-icon {
+                width: 10px;
+                height: 8px;
+            }
+            & span {
+                font-size: 12px;
+            }
+
+            &--dex {
+                width: 300px;
+                height: 40px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            &--portfolio {
+                padding: 14px 5px 13px 5px;
+                width: 80%;
+
+                & .new-icon {
+                    width: 9px;
+                    height: 7px;
+                }
+            }
+
+            &--staking {
+                width: 300px;
+                height: 42px;
+            }
+
+            &--pledge {
+                width: 300px;
+                height: 42px;
+            }
+        }
+    }
+}

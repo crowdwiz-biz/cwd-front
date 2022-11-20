@@ -1,0 +1,186 @@
+.create-worker {
+    display: flex;
+    flex-direction: row !important;
+    max-width: 1140px;
+    padding-left: 40px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h3 {
+        font-size: 24px !important;
+        margin-bottom: 40px !important;
+        line-height: 31px !important;
+        margin-top: 0 !important;
+    }
+
+    p {
+        line-height: 22px;
+    }
+
+    &__label {
+        color: #6d6d6d;
+        text-transform: none !important;
+        font-size: 12px;
+        line-height: 15px;
+        padding-left: 16px;
+    }
+
+    &__description {
+        max-width: 312px;
+        margin-right: 63px;
+    }
+
+    &__form {
+        max-width: 728px;
+        width: 100%;
+        padding-top: 26px;
+    }
+
+    &__name {
+        max-width: 542px;
+    }
+
+    label {
+        border-bottom: 1px solid #373737;
+        padding-bottom: 32px;
+        padding-top: 26px;
+        position: relative;
+    }
+
+    &__two-inputs {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #373737;
+        padding-bottom: 32px;
+        padding-top: 26px;
+
+        label {
+            width: 48.5%;
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    &__last-label {
+        border-bottom: 0 !important;
+    }
+
+    &__hint {
+        color: #e8be82;
+        padding-top: 40px;
+        border-top: 1px solid #e8be82;
+    }
+
+    &__p {
+        margin-bottom: 40px !important;
+    }
+
+    &__mob-hint {
+        color: #fff;
+        background-color: #181818;
+        text-transform: none;
+        position: absolute;
+        bottom: -80px;
+        right: 0;
+        z-index: 100;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 16px;
+        border: 1px solid #45392a;
+        box-shadow: 10px 12px 16px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        font-family: "CoreSansE-Light", arial, sans-serif;
+        max-width: 300px;
+        margin: 0;
+
+        &--date {
+            bottom: -140px;
+        }
+
+        &--pay {
+            bottom: -270px;
+        }
+
+        &--vesting {
+            bottom: -130px;
+        }
+
+        &--website {
+            bottom: -130px;
+        }
+    }
+
+    &__submit-btn {
+        width: 263px;
+        height: 40px;
+    }
+
+    &__footer {
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column !important;
+
+        &__description {
+            max-width: none;
+        }
+
+        &__form {
+            max-width: 480px;
+            padding-left: 30px;
+            padding-top: 0;
+        }
+
+        &__two-inputs {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            label {
+                width: 100%;
+            }
+        }
+
+        &__submit-btn {
+            width: 170px;
+        }
+
+        &__p {
+            margin-bottom: 4px !important;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        align-items: center;
+        padding-bottom: 200px;
+
+        &__form {
+            padding-left: 0;
+        }
+
+        &__footer {
+            background-color: #212121;
+            position: fixed;
+            z-index: 10000;
+            right: 0;
+            bottom: -22px;
+            width: 100%;
+            height: 72px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 26px;
+        }
+
+        &__submit-btn {
+            width: 170px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

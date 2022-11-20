@@ -1,0 +1,165 @@
+.team-stage-vol {
+    &__wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        margin-bottom: 50px;
+        z-index: 100;
+
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            left: -3px;
+            top: 39px;
+            width: 929px;
+            height: 124px;
+            background-image: url(../../../assets/svg-images/svg-common/great-race/volume_line.svg);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            z-index: 0;
+        }
+    }
+
+    &__list {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 203px);
+        grid-template-rows: repeat(2, 82px);
+        gap: 32px;
+        list-style: none;
+        margin: 0 !important;
+        margin-right: 32px !important;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #262626;
+        border-radius: 4px;
+        font-size: 15px;
+        color: #5D5D5D;
+
+        &--current-stage {
+            background-image: url(../../../assets/jpg-images/great-race/current_stage-bg.jpg);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .team-stage-vol__name {
+                color: #dec27f;
+            }
+
+            .team-stage-vol__sum {
+                color: #ffffff;
+            }
+        }
+
+        &--past-stage {
+            .team-stage-vol__sum {
+                color: #ffffff;
+            }
+        }
+
+        &--total {
+            width: 204px;
+            height: 84px;
+            line-height: 1.5;
+            background-color: #101010;
+
+            .team-stage-vol__sum {
+                font-family: StemBold, arial, sans-serif;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__name {
+        display: block;
+    }
+
+    &__sum {
+        color: #5D5D5D;
+    }
+
+    &__past-stage-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-stage-vol {
+        &__wrap {
+            padding-left: 0;
+
+            &:before {
+                left: 95px;
+                top: 39px;
+                width: 538px;
+                height: 210px;
+                background-image: url(../../../assets/svg-images/svg-common/great-race/volume_line_tablet.svg);
+            }
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 198px);
+            grid-template-rows: repeat(3, 82px);
+            gap: 20px;
+            margin-right: 26px !important;
+        }
+
+        &__item {
+            &--total {
+                width: 185px;
+                height: 84px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .team-stage-vol {
+        &__wrap {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0;
+
+            &:before {
+                left: 73px;
+                top: 31px;
+                width: 179px;
+                height: 284px;
+                background-image: url(../../../assets/svg-images/svg-common/great-race/volume_line_mobile.svg);
+            }
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 155px);
+            grid-template-rows: repeat(3, 60px);
+            margin-right: 0 !important;
+            margin-bottom: 28px !important;
+        }
+
+        &__item {
+            padding-left: 15px;
+            padding-left: 15px;
+            .team-stage-vol__sum {
+                font-size: 13px;
+            }
+
+            &--total {
+                width: 155px;
+                height: 60px;
+            }
+        }
+    }
+}

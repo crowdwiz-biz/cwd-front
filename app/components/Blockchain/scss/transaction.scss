@@ -1,0 +1,58 @@
+$trx-bg-color: #1b1b1b;
+
+.transaction {
+    &__wrap {
+        font-family: SuisseIntlReg, arial, sans-serif;
+        font-size: 14px;
+    }
+
+    &__trx-item {
+        padding: 17px 20px 12px 20px;
+        background-color: $trx-bg-color;
+        border-radius: 10px;
+
+        &:nth-child(even) {
+            background-color: lighten($trx-bg-color, 1%);
+
+            .transaction__row {
+                background-color: lighten($trx-bg-color, 2.5%);
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 0 !important;
+        text-transform: none;
+        font-family: SuisseIntlReg, arial, sans-serif;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 30% 65%;
+        column-gap: 5%;
+        margin-bottom: 6px;
+        color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: darken($trx-bg-color, 1%);
+    }
+
+    &__legend {
+        color: #8c8c8c;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .transaction {
+        &__title {
+            font-size: 16px !important;
+            margin-bottom: 18px !important;
+        }
+
+        &__row {
+            grid-template-columns: 35% 60%;
+            font-size: 12px;
+            line-height: 1.3;
+        }
+    }
+}

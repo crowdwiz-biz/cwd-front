@@ -1,0 +1,71 @@
+.transfer-modal {
+    &__text {
+        color: #ffffff !important;
+        text-transform: none !important;
+    }
+
+    &__warning-text {
+        margin-top: 6px;
+        margin-bottom: -3px;
+        color: #f04124;
+    }
+
+    &__btn-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 77%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        text-align: center;
+        border: 1px solid #f2cb96;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .ant-btn.ant-btn-primary {
+            color: #2a2a2a !important;
+            background-color: #f2cb96 !important;
+            border: none;
+
+            &:hover {
+                color: #2a2a2a !important;
+            }
+        }
+
+        .ant-btn.ant-btn.ant-btn-ghost {
+            border: none;
+            color: #f2cb96;
+
+            &:hover {
+                color: #f2cb96 !important;
+            }
+        }
+    }
+
+    &__header {
+        width: 87%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__input-wrap {
+        margin-bottom: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .transfer-modal {
+        &__btn-wrap {
+            width: 90%;
+        }
+
+        &__header {
+            width: 100%;
+            margin-bottom: 18px;
+        }
+        &__warning-text {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+    }
+}

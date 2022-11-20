@@ -1,0 +1,158 @@
+.init-error {
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 70px;
+        height: 100vh;
+    }
+
+    &__grid-block {
+        display: block;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &__img {
+        background-image: url(../../assets/png-images/others/disconnected.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 56px auto;
+    }
+
+    &__title {
+        font-size: 36px !important;
+        text-align: center;
+        max-width: 588px;
+        line-height: 43px !important;
+        margin: 0 auto 24px auto !important;
+    }
+
+    &__api {
+        border-top: 1px solid #373737;
+        padding-top: 40px !important;
+        display: -webkit-box !important;
+        display: flex !important;
+        -webkit-box-align: end;
+        align-items: flex-end;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    &__form {
+        max-width: 540px !important;
+        margin: 0 auto !important;
+
+        .ant-input-group {
+            margin-bottom: 15px !important;
+        }
+
+        .ant-select-selection {
+            height: 40px !important;
+            margin-right: 30px;
+            padding: 3px 12px;
+            background-color: #1e1e1e !important;
+            color: #ffffff;
+            border: solid 2px #414141 !important;
+            border-radius: 20px !important;
+        }
+        .ant-form-item {
+            padding-bottom: 0 !important;
+        }
+    }
+
+    &__btn {
+        text-align: center !important;
+        border-radius: 20px !important;
+        border: solid 2px #414141 !important;
+        background-color: #262626 !important;
+        outline: none !important;
+        color: #fff !important;
+        font-size: 16px !important;
+        cursor: pointer;
+        display: inline-block !important;
+        white-space: nowrap !important;
+        vertical-align: middle !important;
+        touch-action: manipulation !important;
+        user-select: none !important;
+        position: static !important;
+        text-transform: none !important;
+        font-family: "CoreSansE-Regular" !important;
+        height: 40px !important;
+        width: 200px !important;
+
+        &:hover {
+            color: #212121 !important;
+            background-image: linear-gradient(
+                to bottom,
+                #f2cb96,
+                #e6ba7d
+            ) !important;
+            border-color: transparent !important;
+        }
+        &:active {
+            box-shadow: inset 0px 1px 2px 0 #90662d !important;
+            background-image: linear-gradient(
+                to bottom,
+                #cfa05f,
+                #9b7239
+            ) !important;
+        }
+    }
+    &__bottom-btns {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        padding-top: 50px;
+        margin-bottom: 40px;
+        align-items: center;
+
+        button:first-of-type {
+            margin-right: 20px;
+        }
+    }
+    &__select-label {
+        font-size: 12px;
+        color: #6d6d6d;
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+}
+
+body.darkTheme .ant-form-item-label {
+    text-align: center !important;
+}
+@media (max-width: 576px) {
+    .init-error {
+        &__container {
+            padding-top: 30px;
+        }
+        &__form {
+            .ant-select-selection {
+                margin-right: 0;
+            }
+            .ant-btn {
+                width: 270px !important;
+            }
+        }
+        &__bottom-btns {
+            flex-direction: column;
+            justify-content: center;
+            button:first-of-type {
+                margin-right: 0;
+                margin-bottom: 38px;
+            }
+        }
+        &__api {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 327px;
+            button {
+                margin-top: 24px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.cwdgateway-index {
+    width: 720px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__header {
+        margin-bottom: 37px;
+        & img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+    &__cards {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0 !important;
+        padding: 0;
+    }
+    &__item {
+        width: 344px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+        background: linear-gradient(133deg, #212121 63%, #1e1e1e 27%);
+        &:hover {
+            box-shadow: 0 11px 13px 3px #1b1b1b;
+            transform: translateY(-3px);
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px;
+        padding-left: 46px;
+        padding-right: 46px;
+        text-decoration: none !important;
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        justify-content: flex-end;
+        width: auto !important;
+        height: 126px !important;
+        & > svg {
+            width: inherit;
+            height: inherit;
+            > path {
+                fill: none;
+            }
+        }
+    }
+    &__text {
+        font-family: "CoreSansE-55Medium", arial, sans-serif;
+        font-size: 28px;
+        color: #ffffff;
+        line-height: 1.2;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cwdgateway-index {
+        width: 635px;
+        margin-left: 33px;
+        margin-right: 33px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &__header {
+            margin-bottom: 33px;
+            & img {
+                display: block;
+                width: 385px;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        &__item {
+            width: 310px;
+            margin-bottom: 15px;
+            background: linear-gradient(133deg, #212121 70%, #1e1e1e 30%);
+        }
+        &__inner {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        &__icon {
+            height: 97px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cwdgateway-index {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        &__header {
+            margin-bottom: 27px;
+        }
+        &__cards {
+            display: block;
+        }
+        &__inner {
+            align-items: center;
+            flex-direction: row;
+            padding: 15px 20px;
+        }
+        &__item {
+            width: 100%;
+        }
+    }
+}

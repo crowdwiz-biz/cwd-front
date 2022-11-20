@@ -1,0 +1,46 @@
+.faucet-settings {
+    &__wrap {
+        max-width: 650px;
+        padding-top: 35px;
+
+        .app-settings__description-text {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 205px 1fr max-content;
+        column-gap: 10px;
+        align-items: center;
+    }
+
+    &__input-wrap {
+        position: relative;
+
+        .app-settings__alert {
+            bottom: -24px;
+            left: 15px;
+            right: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .faucet-settings {
+        &__wrap {
+            padding-top: 30px;
+        }
+
+        &__inner {
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+            row-gap: 20px;
+        }
+
+        &__input-wrap {
+            margin-bottom: 20px;
+        }
+    }
+}

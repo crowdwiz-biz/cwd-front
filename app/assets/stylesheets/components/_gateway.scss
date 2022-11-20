@@ -1,0 +1,106 @@
+.gateway {
+    &__wrap {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        & input,
+        & textarea {
+            border: none !important;
+            border-radius: 20px !important;
+        }
+    }
+    &__inner {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__rate {
+        color: #b59567;
+        margin-bottom: 32px;
+        font-size: 16px;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #3f3f3f;
+    }
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 27px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__text {
+        display: inline-block;
+        color: #ffffff;
+        font-size: 16px;
+        &--subtitle {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            color: #b59567;
+        }
+        &--addr {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        &--btc {
+            display: block;
+            color: #bcbaba !important;
+        }
+        &--title {
+            font-family: CoreSansE-65Bold, sans-serif;
+            font-size: 18px;
+            color: #ffffff;
+        }
+        &--link {
+            color: #e1c697 !important;
+            text-decoration: underline;
+        }
+        & span {
+            display: inline-block;
+            color: #b59567;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+    }
+    &__wallet {
+        width: 100%;
+        padding: 10px 5px;
+        color: #7bd500 !important;
+        background-color: #3f3f3f;
+        border: 2px solid #7bd500;
+        border-radius: 5px;
+        font-size: 16px !important;
+    }
+    &__warning {
+        display: block;
+        padding-top: 20px;
+        font-size: 14px;
+        color: #938f8f;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gateway {
+        &__wrap {
+            padding: 0;
+        }
+        &__text {
+            font-size: 14px;
+        }
+        &__wallet {
+            font-size: 14px !important;
+        }
+    }
+}

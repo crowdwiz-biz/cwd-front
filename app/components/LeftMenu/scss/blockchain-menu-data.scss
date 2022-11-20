@@ -1,0 +1,113 @@
+.blockchain-menu-data {
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-bottom: 40px;
+
+    &__data-inner {
+        display: grid;
+        grid-template-rows: repeat(4);
+        row-gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        display: inline-block;
+        margin-right: 7px;
+        color: #8c8c8c;
+        font-size: 12px;
+    }
+
+    &__value {
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    &__current-node {
+        font-size: 14px;
+        color: #03d99d;
+
+        &--disconnected {
+            color: #e6001f;
+        }
+    }
+
+    &__btn-block {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 50px;
+        row-gap: 10px;
+    }
+
+    &__switch-block {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #212121;
+        padding-left: 10px;
+    }
+
+    &__switch-inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__switch-wrap {
+        margin-right: 11px;
+    }
+
+    &__auto-text {
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    &__settings-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #1b1b1b;
+        border-radius: 5px;
+        color: #dec27f !important;
+        font-size: 14px;
+        text-decoration: none !important;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lighten(#212121, 3%);
+        }
+    }
+
+    .react-switch-handle > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1080px) {
+    .blockchain-menu-data {
+        &__data-inner {
+            margin-bottom: 35px;
+        }
+
+        &__switch-block {
+            justify-content: center;
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blockchain-menu-data {
+        &__btn-block {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .blockchain-menu-data {
+        &__btn-block {
+            margin: 0 auto;
+        }
+    }
+}

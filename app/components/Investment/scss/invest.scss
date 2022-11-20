@@ -1,0 +1,184 @@
+.invest {
+    &__header {
+        max-width: 700px;
+        margin-left: -50px;
+        margin-top: -15px;
+    }
+    &__intro {
+        max-width: 600px;
+        margin-top: -28px;
+        & .cwd-common__title {
+            margin-bottom: 31px;
+        }
+    }
+    &__intro-text {
+        color: #9f9f9f;
+    }
+    &__transfer-wrap {
+        max-width: 600px;
+        padding-top: 14px;
+        padding-bottom: 90px;
+        &--option {
+            padding-top: 20px;
+            border-top: 1px solid #414141;
+            padding-bottom: 20px;
+        }
+    }
+    &__transfer-info {
+        display: inline-block;
+        font-family: "CoreSansE-55Medium", arial, sans-serif;
+        font-style: italic;
+        color: #e1c697;
+        max-width: 400px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    &__info-block {
+        margin-bottom: 16px;
+    }
+    &__percent {
+        display: inline-block;
+        font-size: 16px;
+        color: #e0e0e0;
+        margin-bottom: 10px;
+        &--data {
+            color: #ffffff;
+        }
+    }
+    &__form {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__field-wrap {
+        margin-right: 20px;
+        &--amount {
+            position: relative;
+            width: 322px;
+            z-index: 90;
+        }
+    }
+    &__field-hidden {
+        display: none !important;
+    }
+    &__amount-error {
+        position: absolute;
+        bottom: 42px;
+        padding: 12px;
+        background-color: #6d6d6d;
+        font-size: 14px;
+        width: 300px;
+        text-align: center;
+        z-index: 100;
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 28px;
+            bottom: -12px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 6px 0 6px;
+            border-color: #6d6d6d transparent transparent transparent;
+            z-index: 100;
+        }
+    }
+    &__btn {
+        min-width: 150px;
+        text-align: center;
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#f2cb96),
+            to(#e6ba7d)
+        );
+        background-image: linear-gradient(to bottom, #f2cb96, #e6ba7d);
+        padding: 9px 25px 11px 25px;
+        border-radius: 40px;
+
+        &:disabled {
+            opacity: 0.5;
+        }
+
+        & span {
+            color: #212121 !important;
+        }
+    }
+    &__has-error-wrap {
+        position: absolute;
+        z-index: 10;
+        & .has-error {
+            margin-bottom: 10px;
+            padding-top: 10px;
+        }
+    }
+    &__deposit-link {
+        color: #ffffff !important;
+        text-decoration: underline !important;
+        & span {
+            font-size: 16px;
+            color: #ffffff !important;
+        }
+    }
+}
+
+#investForm,
+#optionForm {
+    & input {
+        margin: 0 !important;
+        padding: 7px 26px !important;
+        border: none !important;
+        border-radius: 28px !important;
+        background-color: #181818;
+        color: #e0e0e0;
+        padding: 10px 14px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .invest {
+        &__header {
+            margin-left: 0;
+        }
+        &__intro {
+            margin-top: 0;
+            & .cwd-common__title {
+                margin-bottom: 31px;
+            }
+        }
+        &__transfer-wrap {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            padding-bottom: 0;
+
+            &--option {
+                padding-top: 35px;
+            }
+        }
+        &__form {
+            display: block;
+        }
+        &__field-wrap {
+            margin-right: 0;
+            margin-bottom: 25px;
+        }
+        &__field-wrap {
+            &--amount {
+                width: 100%;
+                margin-bottom: 11px;
+            }
+        }
+        &__btn {
+            width: 100%;
+            margin-top: 16px !important;
+            padding: 13px 25px 14px 25px;
+        }
+        &__has-error-wrap {
+            position: static;
+        }
+    }
+}

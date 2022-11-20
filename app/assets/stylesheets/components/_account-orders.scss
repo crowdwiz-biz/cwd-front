@@ -1,0 +1,162 @@
+.account-orders {
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__filter {
+        margin-right: 30px;
+        & ant-input {
+            background-color: #1e1e1e;
+            border-radius: 28px !important;
+            width: 215px;
+            position: relative;
+            color: #eabf85;
+            &:focus {
+                border: #eabf85 !important;
+            }
+        }
+        & .ant-input-group-addon {
+            border-top-right-radius: 28px;
+            border-bottom-right-radius: 28px;
+            z-index: 15;
+        }
+    }
+    &__btn-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn {
+        margin-right: 20px !important;
+        font-size: 16px;
+        padding: 7px 19px 9px 19px;
+        border-radius: 28px;
+        text-align: center;
+        border: 1px solid #f2cb96;
+        background-color: #1f1f1f;
+        font-size: 14px !important;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #f2cb96;
+        cursor: pointer;
+        box-sizing: border-box;
+        &:last-child {
+            margin-right: 0 !important;
+        }
+    }
+    &__table {
+        display: grid;
+        grid-template-columns: 20px 40px 55px 210px 100px 106px 134px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 10px;
+        grid-gap: 8px;
+        max-width: 710px;
+        text-align: center;
+    }
+    &__header-text {
+        font-size: 14px;
+        color: #6d6d6d;
+    }
+    &__checkbox {
+        cursor: pointer;
+    }
+    &__row {
+        padding: 7px 10px;
+        &:nth-child(odd) {
+            background-color: #2a2a2a;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        &--left {
+            justify-content: flex-start;
+            text-align: left;
+        }
+        .orderCancel {
+            display: none;
+        }
+
+        .new-icon {
+            & svg * {
+                fill: #ffffff;
+            }
+        }
+    }
+    &__amount {
+        padding-right: 5px;
+    }
+    &__total {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+    &__total-text {
+        padding-right: 8px;
+        color: #ffffff;
+    }
+    &__total-amount {
+        color: #7ed321 !important;
+    }
+    &__cancel-btn {
+        position: relative;
+        font-size: 14px;
+        z-index: 5;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: -6px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid #656565;
+            cursor: pointer;
+            z-index: 10;
+            &:hover {
+                border: 1px solid #000000;
+            }
+        }
+    }
+}
+.account-orders__cancel-label
+    input:checked
+    + .account-orders__cancel-btn::before {
+    background-image: url(../../assets/png-images/others/checkmark.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 10px;
+}
+
+@media (max-width: 576px) {
+    .account-orders {
+        .table__wrap {
+            width: 100%;
+            overflow-x: scroll;
+        }
+
+        &__header {
+            flex-direction: column;
+        }
+        &__filter {
+            width: 300px;
+            margin-right: 0;
+        }
+        &__table-header {
+            display: none;
+        }
+        &__btn-wrap {
+            margin: 0 auto;
+        }
+        &__btn {
+            margin-top: 15px !important;
+            margin-bottom: 15px !important;
+        }
+    }
+}

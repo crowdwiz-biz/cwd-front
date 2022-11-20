@@ -1,0 +1,17 @@
+#mobileMarketMenu {
+    width: 100%;
+    .ant-collapse-icon-position-left {
+        padding-right: 0 !important;
+    }
+    .ant-collapse-item {
+        .ant-collapse-header {
+            font-size: 16px;
+            color: #dec27f !important;
+            text-transform: none;
+            letter-spacing: 2px;
+            .ant-collapse-arrow {
+                display: none !important;
+            }
+        }
+    }
+}

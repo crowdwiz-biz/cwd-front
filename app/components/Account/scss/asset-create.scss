@@ -1,0 +1,64 @@
+.asset-create {
+    &__section {
+        margin-bottom: 32px;
+        border-bottom: 1px solid #414141;
+    }
+    &__ticker-data-wrap {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        column-gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        & .has-error {
+            margin-bottom: 0;
+        }
+    }
+    &__price-wrap {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        padding-bottom: 13px;
+    }
+    &__price {
+        color: #e1c697;
+    }
+    &__price-value {
+        padding-right: 6px;
+    }
+    &__block {
+        margin-bottom: 30px;
+    }
+    &__range-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+    }
+    &__range-value {
+        margin-left: 20px;
+        font-size: 26px;
+        color: #e1c697;
+    }
+    &__smart-asset-block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        & table {
+            &:first-child {
+                margin-right: 30px;
+            }
+            .update-asset__switch {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .asset-create {
+        &__ticker-data-wrap {
+            grid-template-columns: 100%;
+            row-gap: 20px;
+        }
+    }
+}

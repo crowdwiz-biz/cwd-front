@@ -1,0 +1,84 @@
+.node-settings {
+    &__inner {
+        width: 485px;
+        margin-bottom: 45px;
+        padding-left: 40px;
+        padding-top: 35px;
+
+        &--personal {
+            width: 1200px;
+        }
+
+        .general-settings__switch-block {
+            margin-bottom: 45px;
+        }
+
+        .app-settings__header {
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+
+        .general-settings__input-row {
+            grid-template-columns: 100px 1fr;
+        }
+
+        .app-settings__btn {
+            min-width: 100px;
+            height: 40px;
+
+            & span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &__node-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        padding-left: 40px;
+        padding-top: 35px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+
+        &--personal {
+            padding: 0;
+        }
+    }
+
+    &__personal-wrap {
+        width: 445px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .node-settings {
+        &__inner {
+            padding-left: 0;
+            max-width: 330px;
+            margin: 0 auto;
+            margin-bottom: 45px;
+
+            .general-settings__switch-block {
+                margin-bottom: 30px;
+            }
+
+            .general-settings__input-row {
+                grid-template-columns: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__node-wrap {
+            max-width: 330px;
+            margin: 0 auto;
+            padding: 0;
+            padding-top: 15px;
+        }
+
+        &__personal-wrap {
+            width: 100%;
+        }
+    }
+}

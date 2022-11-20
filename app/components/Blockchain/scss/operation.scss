@@ -1,0 +1,211 @@
+.operation {
+    &__wrap {
+        display: grid !important;
+        grid-template-columns: 100%;
+        row-gap: 8px;
+        font-family: SuisseIntlReg, arial, sans-serif;
+        font-size: 12px;
+
+        & a,
+        .balance-value {
+            font-family: SuisseIntlReg, arial, sans-serif;
+            color: #dec27f !important;
+        }
+    }
+
+    &__item {
+        padding: 15px 20px 12px 20px;
+        background-color: #1e1e1e;
+        border-radius: 10px;
+
+        &:nth-child(even) {
+            background-color: #212121;
+        }
+    }
+
+    &__type {
+        display: flex;
+        align-items: center;
+    }
+
+    &__marker {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin-right: 7px;
+        border-radius: 50%;
+
+        &--success {
+            background-color: #7bd500;
+        }
+
+        &--error {
+            background-color: #f04124;
+        }
+
+        &--cancel {
+            background-color: #f04124;
+        }
+
+        &--warning {
+            background-color: #fcab53;
+        }
+
+        &--info {
+            background-color: #6d6d6d;
+        }
+    }
+
+    &__data-block {
+        display: grid;
+        grid-template-columns: 1fr max-content 138px auto;
+        justify-content: flex-start;
+        column-gap: 40px;
+        margin-bottom: 8px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #292929;
+        font-size: 14px;
+
+        &--short-mode {
+            font-size: 12px;
+        }
+    }
+
+    &__data-set {
+        position: relative;
+        z-index: 100;
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 1px;
+            height: 17px;
+            bottom: -1px;
+            top: -1px;
+            right: -19px;
+            background-color: #292929;
+            z-index: 110;
+        }
+    }
+
+    &__name {
+        color: #ffffff;
+
+        &:hover {
+            color: #dec27f;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &__id {
+        color: #888888;
+    }
+
+    &__time-block {
+        color: #888888;
+    }
+
+    &__legend {
+        display: block;
+        color: #888888;
+    }
+
+    &__fee-block {
+        .operation__legend {
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 1.5;
+        word-break: break-word;
+
+        .cwd-common__link {
+            text-decoration: none !important;
+        }
+    }
+
+    &__pending {
+        margin-top: 15px;
+        color: #888888;
+    }
+
+    &__memo {
+        display: block;
+        align-items: center;
+        margin-top: 12px;
+        margin-bottom: 7px;
+        font-size: 14px;
+        line-height: 1.6;
+
+        &--locked {
+            display: flex;
+            color: #888888;
+            cursor: pointer;
+
+            .new-icon {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .operation {
+        &__data-block {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .operation {
+        &__item {
+            padding: 7px 15px 12px;
+        }
+
+        &__name {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        &__data-block {
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 34px 35px;
+            column-gap: 20px;
+            align-items: center;
+            font-size: 11px;
+        }
+
+        &__type {
+            grid-column: 1 / -1;
+        }
+
+        &__data-set {
+            position: relative;
+            z-index: 100;
+
+            &::after {
+                height: 13px;
+                right: -10px;
+            }
+        }
+
+        &__description {
+            font-size: 12px;
+            line-height: 1.7;
+
+            .cwd-btn__show-more-btn {
+                border-bottom: none;
+                margin-bottom: 0 !important;
+            }
+        }
+
+        &__legend {
+            margin-bottom: 4px;
+        }
+    }
+}

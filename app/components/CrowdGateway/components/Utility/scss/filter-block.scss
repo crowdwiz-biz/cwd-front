@@ -1,0 +1,108 @@
+.filter-block {
+    &__search-wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__field {
+        width: 220px !important;
+        height: 40px !important;
+        padding: 6px 30px 8px 16px !important;
+        margin-right: 30px !important;
+        border-radius: 35px !important;
+        border-color: transparent !important;
+        background: #1e1e1e
+            url(../../../../../assets/svg-images/svg-common/utility/search_icon.svg)
+            no-repeat scroll 93% 56%/14px;
+        background-size: 17px;
+        background-repeat: no-repeat;
+        background-position: 93% 48%;
+        color: #6d6d6d !important;
+        line-height: 1;
+
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+            line-height: 1;
+        }
+    }
+
+    &__search-btn {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border-radius: 35px !important;
+        border: none;
+        background-color: transparent !important;
+        outline: none;
+
+        & .new-icon {
+            margin-right: 10px;
+            > svg * {
+                fill: #6d6d6d;
+            }
+        }
+
+        & span {
+            color: #6d6d6d;
+        }
+
+        &:hover {
+            & .new-icon {
+                > svg * {
+                    transition: all 0.2s ease-in-out 0s;
+                    fill: #797979;
+                }
+            }
+
+            & span {
+                transition: all 0.1s ease-in-out 0s;
+                text-decoration: underline;
+                color: #ffffff;
+            }
+        }
+
+        &:focus {
+            outline: none !important;
+        }
+
+        &:active {
+            outline: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .filter-block {
+        &__field {
+            margin-right: 25px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .filter-block {
+        &__search-wrap {
+            justify-content: space-between;
+        }
+
+        &__field {
+            margin-right: 16px !important;
+            width: 250px !important;
+        }
+
+        &__search-btn {
+            & .new-icon {
+                margin-right: 0;
+                > svg {
+                    width: auto;
+                    height: 22px;
+                }
+            }
+        }
+
+        &__del-text {
+            display: none;
+        }
+    }
+}

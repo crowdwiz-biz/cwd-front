@@ -1,0 +1,432 @@
+.permissions {
+    &__form {
+        max-width: 640px;
+    }
+
+    .help-content {
+        color: #6d6d6d;
+        font-family: "CoreSansE-Light", arial, sans-serif;
+        margin-bottom: 20px;
+    }
+
+    &__threshold {
+        color: #6d6d6d;
+        text-transform: none !important;
+    }
+
+    input {
+        border-radius: 20px !important;
+        border: none !important;
+    }
+
+    .inline-label {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        position: static;
+        height: auto;
+
+        input {
+            margin-right: 10px;
+            margin-top: 10px;
+            max-width: 700px;
+            margin-bottom: 10px !important;
+        }
+
+        .weight-input {
+            max-width: 200px !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-bottom: 10px !important;
+        }
+    }
+
+    .div-name {
+        display: block;
+        width: 100%;
+        color: #adadad !important;
+        font-size: 0.875rem;
+    }
+
+    .right-label {
+        margin-bottom: 0;
+    }
+
+    .left-label,
+    .right-label span {
+        text-transform: none;
+        margin-bottom: 0;
+    }
+
+    .header-area {
+        margin-left: 0;
+    }
+
+    &__row-add {
+        color: #6d6d6d;
+        background-color: #2b2b2b !important;
+    }
+
+    &__row-even {
+        color: #6d6d6d;
+        background-color: #262626 !important;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    &__header-text {
+        font-family: "CoreSansE-55Medium", arial, sans-serif;
+        font-size: 22px;
+        color: #ffffff;
+    }
+
+    &__model-btn {
+        border: solid 2px #414141;
+        border-radius: 20px;
+        background-color: #212121 !important;
+        color: #fff;
+        text-align: center;
+        height: 40px;
+        line-height: 35px;
+        cursor: pointer;
+        font-size: 16px;
+        min-width: 126px;
+
+        &:hover {
+            border-color: #e1c697;
+        }
+    }
+
+    .account-tabs {
+        div.tab-content.padding {
+            padding: 0 !important;
+
+            div:nth-child(3)
+                > div:nth-child(2)
+                > table
+                > tbody
+                > tr
+                > td:nth-child(3) {
+                padding-left: 25px !important;
+
+                @media (max-width: 480px) {
+                    padding-left: 5px !important;
+                }
+            }
+
+            div:nth-child(3)
+                > div:nth-child(2)
+                > table
+                > tbody
+                > tr
+                > td:nth-child(2) {
+                padding-left: 13px !important;
+            }
+        }
+    }
+
+    &__text {
+        color: #6d6d6d;
+        font-family: "CoreSansE-Light", arial, sans-serif;
+    }
+
+    form {
+        .left-label {
+            span {
+                text-transform: none;
+                color: #6d6d6d;
+                font-family: "CoreSansE-Light", arial, sans-serif;
+                font-size: 16px;
+                font-variant: normal;
+            }
+        }
+    }
+
+    &__table {
+        color: #fff;
+        font-family: "CoreSansE-Light", arial, sans-serif;
+        max-width: 640px;
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    &__confirm-input {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    &__pass-section {
+        input {
+            max-width: 100% !important;
+        }
+    }
+
+    section progress {
+        max-width: none !important;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .cwd-buttons {
+        .button {
+            width: 105px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__add-btn {
+        width: 105px;
+
+        @media (max-width: 1100px) {
+            width: 105px;
+        }
+    }
+
+    &__new-key-text {
+        margin-bottom: 10px;
+    }
+    &__new-key-wrap {
+        display: flex;
+        margin-bottom: 14px;
+        align-items: center;
+        font-size: 15px !important;
+        color: #b69667 !important;
+        justify-content: space-between;
+    }
+    &__new-key {
+        border: solid 2px #414141;
+        border-radius: 20px;
+        width: 100%;
+        height: 40px;
+        margin-right: 15px;
+        padding: 10px 12px;
+    }
+    .account-selector__input-wrap {
+        display: flex !important;
+        align-items: center !important;
+        width: 267px;
+        margin-right: 13px;
+    }
+
+    &__key-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-key {
+        margin-right: 7px;
+    }
+
+    &__qr-btn {
+        display: flex;
+        align-items: center;
+        color: #000000;
+        line-height: 1;
+        cursor: pointer;
+
+        & .new-icon {
+            margin-right: 7px;
+        }
+    }
+
+    &__copy-btn {
+        cursor: pointer;
+    }
+
+    &__key-field {
+        display: flex;
+        background-color: #181818 !important;
+        width: 85% !important;
+        border-radius: 8px;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        overflow: scroll;
+
+        & span {
+            word-break: break-all;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .permissions {
+        &__header {
+            flex-wrap: wrap;
+        }
+        &__header-text {
+            width: 100%;
+            margin-bottom: 26px;
+        }
+        &__buttons {
+            flex-wrap: wrap;
+            margin-left: 0;
+        }
+
+        &__button {
+            margin: 0 20px 13px 0;
+        }
+
+        &__header {
+            align-items: baseline;
+            margin-bottom: 20px;
+
+            h1 {
+                margin-right: 40px !important;
+                width: 200px;
+            }
+        }
+        .account-selector__input-wrap {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .permissions {
+        .inline-label {
+            input {
+                margin-right: 0;
+            }
+
+            .weight-input {
+                max-width: 250px !important;
+            }
+
+            .right-label {
+                margin: 0;
+            }
+        }
+    }
+
+    select.cwd-select {
+        padding-right: 40px !important;
+        font-size: 16px !important;
+        color: #fff !important;
+    }
+}
+
+#mainContainer > div.grid-block.vertical > div > div > div > div > div {
+    max-width: 1100px;
+}
+
+#mainContainer > div.grid-block.vertical {
+    @media (max-width: 480px) {
+        padding: 0 20px !important;
+    }
+}
+
+#mainContainer
+    > div.grid-block.vertical
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.tabs-container.generic-bordered-box.permissions
+    > div.account-tabs
+    > div.tab-content.padding
+    > div:nth-child(3)
+    > div:nth-child(2)
+    > table
+    > tbody
+    > tr:nth-child(1)
+    > td.pub-key
+    > div
+    > a {
+    color: #e1c697 !important;
+}
+
+@media (max-width: 768px) {
+    .permissions {
+        &__form {
+            max-width: 590px;
+        }
+    }
+    .cwd-buttons {
+        height: auto;
+        align-items: center;
+
+        .button {
+            display: inline-block;
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            max-width: none !important;
+        }
+    }
+}
+
+#mainContainer
+    > div.grid-block.vertical
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.tabs-container.generic-bordered-box.permissions
+    > div.account-tabs
+    > div.tab-content.padding
+    > div:nth-child(3)
+    > div:nth-child(2)
+    > table
+    > tbody
+    > tr
+    > td.pub-key
+    > div {
+    display: flex;
+
+    .account-image {
+        margin-right: 10px !important;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.pub-key a {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    .permissions {
+        &__form {
+            margin-bottom: 37px;
+        }
+        &__new-key-wrap {
+            display: block;
+            margin-bottom: 21px;
+        }
+        &__new-key {
+            margin-right: 0;
+            margin-bottom: 12px;
+            overflow: scroll;
+        }
+        .account-selector__input-wrap {
+            width: 306px;
+            margin-right: 0;
+        }
+        .inline-label {
+            .weight-input {
+                max-width: 185px !important;
+            }
+        }
+
+        &__key-field {
+            width: 80% !important;
+        }
+    }
+}

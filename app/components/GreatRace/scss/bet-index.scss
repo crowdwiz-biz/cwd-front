@@ -1,0 +1,43 @@
+.bet-index {
+    padding-bottom: 90px;
+
+    .cwd-common__title-upper-case {
+        margin-bottom: 20px;
+    }
+
+    .gr-content__description-text {
+        margin-bottom: 4px;
+    }
+
+    .cwd-tabs__list {
+        margin-left: 0 !important;
+
+        .tab-title {
+            font-size: 14px;
+        }
+    }
+
+    &__desc-block {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bet-index {
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .bet-index {
+        .cwd-common__desc-block {
+            &.show {
+                height: auto;
+            }
+
+            &--short-view {
+                height: 100px;
+            }
+        }
+    }
+}

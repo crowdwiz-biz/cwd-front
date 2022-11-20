@@ -1,0 +1,137 @@
+.header-wrap {
+    height: 66px;
+    background-color: #262626;
+    border-bottom: 1px solid #1b1b1b;
+    font-family: SuisseIntlReg, arial, sans-serif;
+
+    &--mobile {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 136px 1fr max-content 72px;
+        align-items: center;
+        justify-content: space-between;
+        height: inherit;
+
+        &--mobile {
+            grid-template-columns: 67px 1fr 60px;
+        }
+    }
+
+    &__logo-block {
+        display: flex;
+        align-items: center;
+        height: inherit;
+        padding-left: 28px;
+        padding-right: 28px;
+        border-right: 1px solid #1b1b1b;
+
+        &--mobile {
+            position: relative;
+            padding-left: 20px;
+        }
+    }
+
+    &__bc-container {
+        position: absolute;
+        right: -14px;
+        top: 50%;
+        margin-top: -14px;
+        display: block;
+        width: 26px;
+        height: 26px;
+        padding: 4px;
+        z-index: 1000;
+
+        .bc_indicator {
+            svg {
+                margin-bottom: 0;
+            }
+        }
+
+        .bc_indicator--error {
+            svg * {
+                stroke: #e6001f;
+            }
+
+            .center-indicator {
+                fill: #e6001f;
+                stroke: transparent;
+            }
+        }
+    }
+
+    &__user-block {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: inherit;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-left: 1px solid #1b1b1b;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #1e1e1e;
+        }
+
+        .header-wrap__bc-container {
+            left: -14px;
+            right: unset;
+        }
+    }
+
+    &__auth-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        border-left: 1px solid #1b1b1b;
+
+        .new-icon {
+            cursor: pointer;
+        }
+    }
+
+    &__deposit-link {
+        color: #03d99d !important;
+        font-family: SuisseIntlReg, arial, sans-serif;
+    }
+
+    &__create-acc-btn {
+        text-decoration: none !important;
+
+        & span {
+            font-family: SuisseIntlReg, arial, sans-serif;
+            color: #dec27f;
+            padding-bottom: 1px;
+            border-bottom: 1px solid #dec27f;
+        }
+
+        &:hover {
+            & span {
+                color: darken(#dec27f, 4%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-wrap {
+        &__user-block {
+            padding-right: 15px;
+
+            &:active {
+                background-color: #1e1e1e;
+            }
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.structure-proposal {
+    &__wrap {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        width: 550px !important;
+        margin-bottom: 25px;
+    }
+
+    &__btn {
+        padding: 17px 17px 20px 17px;
+        border-radius: 10px;
+        background-color: #1f1f1f !important;
+        text-align: center;
+        text-decoration: none !important;
+        &:hover {
+            background-color: #1c1c1c !important    ;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .structure-proposal {
+        &__wrap {
+            grid-template-rows: 50% 50%;
+            grid-template-columns: 100%;
+            grid-gap: 9px;
+            width: 100% !important;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.contract-overview {
+    &__wrap {
+        .cwd-common__title-upper-case {
+            margin-bottom: 10px;
+        }
+
+        .cwd-tabs {
+            &__list {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 10px;
+                grid-template-rows: 60px;
+                justify-content: space-between;
+                margin-bottom: 30px !important;
+            }
+
+            &__item {
+                width: 100%;
+                height: 60px;
+                margin-bottom: 0;
+                margin-right: 0;
+
+                & a {
+                    height: 100%;
+                    align-items: center;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+
+    &__description-text {
+        color: #c9c9c9;
+        font-size: 15px;
+        line-height: 1.4rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contract-overview {
+        &__wrap {
+            .cwd-tabs {
+                &__list {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 60px);
+                    gap: 10px;
+                }
+            }
+
+            .cwd-common__wrap-920 {
+                padding-bottom: 150px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contract-overview {
+        &__wrap {
+            .cwd-tabs {
+                &__list {
+                    grid-template-columns: 100%;
+                    grid-template-rows: repeat(4, 40px);
+                    width: 100%;
+                    margin-bottom: 30px !important;
+                }
+
+                &__item {
+                    height: 100%;
+                    padding: 0;
+
+                    & a {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .cwd-common__wrap-920 {
+                padding-bottom: 120px;
+            }
+        }
+
+        &__description-text {
+            font-size: 13px;
+            line-height: 1.3rem;
+            margin-bottom: 26px;
+        }
+
+        &__table-scroll {
+            overflow-x: scroll;
+            margin-right: -30px;
+        }
+    }
+}

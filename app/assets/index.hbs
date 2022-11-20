@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+    {{#if INCLUDE_BASE}}
+    <base href="/">
+    {{/if}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#262626" />
+    <title>{{title}}</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' blob:; worker-src 'self' blob:; script-src https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/ 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' *; font-src 'self' data: https://at.alicdn.com; img-src * 'self' data:;">
+
+    <meta name="keywords" content="Blockchain, cryptocurrency, CrowdWiz, CWD, DEX" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#262626" />
+    <!-- Search Engine -->
+    <meta name="description"
+        content="Crowdwiz is a global community-driven blockchain platform. Based on CWD cryptocurrency with Proof-of-Crowd consensus algorithm. Here you find staking, p2p exchange, gamezone and decentralized exchange">
+    <meta name="image" content="{{CrowdApiUrl}}/static/sharer.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="cwd.global">
+    <meta itemprop="description"
+        content="Crowdwiz is a global community-driven blockchain platform. Based on CWD cryptocurrency with Proof-of-Crowd consensus algorithm. Here you find staking, p2p exchange, gamezone and decentralized exchange">
+    <meta itemprop="image" content="{{CrowdApiUrl}}/static/sharer.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="CWD - Crowdwiz. World. Decentralization.">
+    <meta name="og:description"
+        content="Crowdwiz is a global community-driven blockchain platform. Based on CWD cryptocurrency with Proof-of-Crowd consensus algorithm. Here you find staking, p2p exchange, gamezone and decentralized exchange">
+    <meta name="og:image" content="{{CrowdApiUrl}}/static/sharer.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="620">
+    <meta name="og:url" content="{{CrowdApiUrl}}">
+    <meta name="og:site_name" content="cwd.global">
+    <meta name="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="vi_VI" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta name="og:type" content="website">
+    <meta http-equiv="onion-location" content="http://cwdglobalxnyaie2.onion" />
+    <meta name="robots" content="index, nofollow" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="/png-images/app-icons/apple-touch-icon.png">
+
+    <style>
+        body {
+            background-color: #262626;
+        }
+
+        .intro__logo {
+            position: absolute;
+            width: 250px;
+            top: 50%;
+            left: 50%;
+            margin-left: -95px;
+            margin-top: -75px;
+            z-index: 110;
+        }
+    </style>
+
+    {{#if ELECTRON}}
+    <script>
+        var ref = encodeURIComponent(document.referrer);
+        if (window.process && window.process.versions && window.process.versions['electron']) {
+            window.electron = window.process.versions['electron'];
+            window.remote = require('electron').remote;
+            window._$guid$_ = window.remote.getGlobal('guid');
+            window.app_version = window.remote.getGlobal('version');
+            ref = 'lw-' + window.process.platform + '-' + window.app_version + '-' + window.remote.getGlobal('guid');
+            window.onload = function (e) {
+                var content = document.getElementById("content");
+                if (content) content.className = "electron " + window.process.platform;
+            }
+        }
+    </script>
+    {{/if}}
+</head>
+
+<body>
+    <main id="content" class="app-container">
+        <span class="intro__logo">
+            <svg width="190" height="152" viewBox="0 0 76 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M18.1244 52.3195C17.6048 56.867 13.7287 60.4622 9.04972 60.4622C4.01704 60.4622 0 56.3672 0 51.2947C0 46.2236 4.01704 42.1035 9.0277 42.1035C12.3124 42.1035 15.2184 43.8175 16.802 46.4129L13.943 48.4612C12.6676 46.5564 10.8711 45.6277 9.05119 45.6277C6.09675 45.6277 3.75726 48.1521 3.75726 51.2947C3.75726 54.4136 6.09675 56.9144 9.05119 56.9144C11.6974 56.9144 13.9195 54.9859 14.4156 52.3195H18.1244Z"
+                    fill="#DEC27F" />
+                <path
+                    d="M46.48 42.4142H50.2842L41.3285 60.4637L37.4773 53.1537L33.8624 60.4637L24.4575 42.4142H28.6639L34.0048 52.8195L35.6588 49.6044L31.9251 42.4142H36.1314L41.4723 52.8195L46.48 42.4142Z"
+                    fill="#DEC27F" />
+                <path
+                    d="M65.8492 42.4142C70.9303 42.4142 75.0648 46.2237 75.0648 51.2726C75.0648 56.3687 70.9288 60.1546 65.8727 60.1546H58.7119V42.4142H65.8492ZM65.8727 56.8198C68.9211 56.8198 71.3075 54.4625 71.3075 51.2711C71.3075 48.0561 68.9211 45.7461 65.8492 45.7461H62.3752V56.8183H65.8727V56.8198Z"
+                    fill="#DEC27F" />
+                <path
+                    d="M37.5169 18.9634C38.5721 18.9634 39.4278 19.8256 39.4278 20.8889C39.4278 21.9522 38.5721 22.8143 37.5169 22.8143C36.4616 22.8143 35.606 21.9522 35.606 20.8889C35.606 19.8256 36.4616 18.9634 37.5169 18.9634Z"
+                    fill="#DEC27F" />
+                <path
+                    d="M25.5596 29.9572L29.5546 22.4505C29.5546 22.4505 32.7541 25.1421 37.5036 25.1421C42.6727 25.1421 45.8591 22.3559 46.8908 21.3399L37.4815 3.89816L31.8647 14.2295C30.8814 14.5549 29.9289 15.1863 28.8516 16.0101L37.4815 0.193604L49.4666 22.3781L46.408 24.2607L49.4916 29.907L25.5596 29.9572Z"
+                    fill="#DEC27F" />
+                <path
+                    d="M26.2672 20.9052L19.394 33.5569H37.1838H55.6178L50.4002 23.9975L48.8357 24.9233L52.5151 31.7852H37.1838H22.4307L27.6541 22.1134C30.0538 17.6798 34.5507 16.7599 37.3584 16.7599C40.9572 16.7599 42.9327 17.875 42.9327 17.875L37.4934 7.74182L33.3076 15.5088C33.3091 15.5103 28.5773 16.7171 26.2672 20.9052Z"
+                    fill="#DEC27F" />
+            </svg>
+        </span>
+    </main>
+    <script>
+        function ieVersion(uaString) {
+            uaString = uaString || navigator.userAgent;
+            var match = /\b(MSIE |Trident.*?rv:|Edge\/)(\d+)/.exec(uaString);
+            if (match) return parseInt(match[2])
+        }
+        function createLinkTag() {
+            var link = document.createElement("link");
+            link.href = "outdated_browser.css";
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            document.getElementsByTagName("head")[0].appendChild(link);
+        }
+        function renderOutdatedWarning() {
+            createLinkTag();
+            var container = document.createElement("div");
+            var header = document.createElement("div");
+            var body = document.createElement("div");
+            var linkWrapper = document.createElement("div");
+            var link = document.createElement("a");
+
+            var headerText = document.createTextNode("Unsupported browser");
+            var bodyText = document.createTextNode("The Browser you are using has not been fully tested to support the CrowdWiz Wallet. We highly recommend that you backup your local wallet and import it using the Chrome Browser.");
+            var linkText = document.createTextNode("Google Chrome");
+
+            linkWrapper.classList.add("outdated-browser__link-wrapper");
+            link.appendChild(linkText);
+            link.setAttribute("href", "https://www.google.com/chrome/browser/desktop/");
+            link.setAttribute("target", "_blank");
+            linkWrapper.appendChild(link);
+
+            container.classList.add("outdated-browser");
+            header.appendChild(headerText);
+            header.classList.add("outdated-browser__header");
+
+            body.appendChild(bodyText);
+            body.classList.add("outdated-browser__body");
+            body.appendChild(linkWrapper);
+
+            container.appendChild(header);
+            container.appendChild(body);
+
+            document.getElementById("content").appendChild(container);
+        }
+
+        if (ieVersion()) {
+            renderOutdatedWarning();
+        }
+    </script>
+    <script>
+        if (document.cookie.match(/^(.*;)?\s*_gid\s*=\s*[^;]+(.*)?$/)) {
+            document.cookie = '_gid=; Path=/; Domain=.' + document.domain + '; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+        if (document.cookie.match(/^(.*;)?\s*_ga\s*=\s*[^;]+(.*)?$/)) {
+            document.cookie = '_ga=; Path=/; Domain=.' + document.domain + '; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+        if (document.cookie.match(/^(.*;)?\s*_gat\s*=\s*[^;]+(.*)?$/)) {
+            document.cookie = '_gat=; Path=/; Domain=.' + document.domain + '; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+    </script>
+    <script type="text/javascript" src='/notification.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.market-row {
+    & .grey-star {
+        & svg * {
+            fill: #878787;
+        }
+    }
+}

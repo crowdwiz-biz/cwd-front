@@ -1,0 +1,105 @@
+.general-settings {
+    &__description-wrap {
+        margin-bottom: 20px;
+        padding-top: 35px;
+    }
+
+    &__details-btn {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        padding-bottom: 3px;
+        margin-bottom: 32px !important;
+        font-size: 16px;
+        border-bottom: 1px dashed #ecc289;
+        cursor: pointer;
+        outline: none;
+
+        & span {
+            color: #ecc289;
+        }
+
+        & .new-icon {
+            margin-left: 5px;
+
+            &.hide-arrow {
+                transform: rotate(180deg);
+            }
+
+            & svg {
+                > path {
+                    fill: none;
+                }
+            }
+        }
+    }
+
+    &__container {
+        width: 500px;
+
+        &:last-child {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__input-row {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 180px 304px;
+        column-gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    &__verifacation-inner {
+        display: grid;
+        grid-template-columns: 1fr 115px;
+        column-gap: 10px;
+    }
+
+    &__switch-block {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #212121;
+        border-radius: 5px;
+    }
+
+    &__switch {
+        margin-right: 12px;
+
+        .react-switch-handle > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .general-settings {
+
+        &__description-wrap {
+            padding-top: 30px;
+        }
+
+        &__details-btn {
+            font-size: 14px;
+        }
+
+        &__container {
+            width: 100%;
+        }
+
+        &__input-row {
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto;
+            row-gap: 10px;
+            margin-bottom: 30px;
+        }
+    }
+}

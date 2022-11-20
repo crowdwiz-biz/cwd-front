@@ -1,0 +1,157 @@
+.trading-pair-selection {
+    margin-bottom: 50px;
+
+    .dex-item {
+        &:hover {
+            transition: unset;
+            box-shadow: none;
+        }
+    }
+
+    &__inner {
+        padding: 30px;
+        padding-top: 35px;
+        margin-bottom: 30px;
+        background-color: #1e1e1e;
+        border-radius: 8px;
+
+        .cwd-common__select {
+            height: 56px;
+            border-radius: 6px;
+            background-color: #171717;
+
+            &:first-child {
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
+            &:last-child {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        }
+    }
+
+    &__description {
+        display: inline-block;
+        margin-bottom: 26px;
+        font-family: StemBold, arial, sans-serif;
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 603px 1fr;
+        grid-template-rows: 56px;
+        column-gap: 30px;
+        align-items: center;
+    }
+
+    &__container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4px;
+        z-index: 50;
+    }
+
+    &__change-btn {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        margin-left: -11px;
+        z-index: 90;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease 0s;
+        }
+
+        &:active {
+            fill: #dbbc73;
+        }
+    }
+
+    &__show-pair-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        padding-left: 29px;
+        padding-right: 29px;
+        border-radius: 6px;
+        background-color: #dec27f;
+        outline: none;
+
+        & span {
+            font-family: SuisseIntlReg, arial, sans-serif;
+            font-size: 15px;
+            color: #262626;
+        }
+
+        &:hover {
+            background-color: #dbbc73;
+        }
+    }
+
+    &__favourite-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 100;
+
+        &:hover {
+            & svg {
+                fill: #DEC27F;
+                transition: transform 0.3s ease 0s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .trading-pair-selection {
+
+        &__grid {
+            grid-template-columns: 424px 1fr;
+        }        
+
+        &__description {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .trading-pair-selection {
+
+        .dex-index__list {
+            margin-bottom: 40px !important;
+        }
+
+        &__inner {
+            padding: 20px;
+            padding-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        &__grid {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, 50px);
+            row-gap: 15px;
+        }        
+
+        &__description {
+            margin-bottom: 18px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        &__show-pair-btn {
+            height: 50px;
+        }
+    }
+}

@@ -1,0 +1,220 @@
+
+
+.app-settings {
+    &__wrap {
+        width: 100%;
+        padding-top: 40px;
+        font-family: SuisseIntlReg, arial, sans-serif;
+
+        .underlined-tabs__list {
+            padding-left: 40px;
+        }
+    }
+
+    &__inner {
+        max-width: 950px;
+        padding-left: 40px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 950px;
+        padding-left: 40px;
+
+        .cwd-common__title {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__reset-wrap {
+        position: relative;
+    }
+
+    &__reset-btn {
+        min-width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding-left: 18px;
+        padding-right: 18px;
+        background-color: transparent;
+        border: 1px solid #1b1b1b;
+        border-radius: 4px;
+        outline: none;
+
+        & .new-icon {
+            margin-right: 12px;
+        }
+
+        & span {
+            color: #dec27f;
+            font-size: 14px;
+        }
+
+        &:hover {
+            background-color: #212121;
+
+            & .new-icon {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease 0s;
+            }
+        }
+    }
+
+    &__description-text {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #c9c9c9;
+    }
+
+    &__common-text {
+        display: inline-block;
+        color: #ffffff;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    &__input {
+        max-width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 50px !important;
+        background-color: #181818 !important;
+        border-radius: 5px !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-size: 14px;
+        color: #dec27f !important;
+
+        &--select {
+            background-image: url(../../../assets/svg-images/svg-common/other/select_arrow.svg);
+            background-repeat: no-repeat;
+            background-position: right 18px top 50%, 0 0;
+            background-size: 10px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    }
+
+    &__btn-wrap {
+        text-decoration: none !important;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: max-content;
+        min-width: 115px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        outline: none;
+        background-color: #dec27f;
+        border-radius: 5px;
+
+        &--activate {
+            width: 100%;
+        }
+
+        & span {
+            font-size: 16px;
+            color: #171717;
+        }
+
+        &:hover {
+            background-color: darken(#dec27f, 3%);
+        }
+    }
+
+    &__alert {
+        position: absolute;
+        bottom: -23px;
+        right: 2px;
+        width: max-content;
+        color: #03d99d;
+        font-size: 14px;
+        z-index: 100;
+        animation-name: fadeIn;
+        animation-duration: 1.4s;
+    }
+
+    &__title {
+        font-family: SuisseIntlBold, arial, sans-serif;
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    &__option-stutus {
+        display: flex;
+        align-items: center;
+
+        &--success {
+            color: #03d99d;
+        }
+
+        .new-icon {
+            margin-left: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .app-settings {
+        &__inner {
+            padding-right: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .app-settings {
+        &__wrap {
+            padding-top: 25px;
+            padding-bottom: 90px;
+
+            .underlined-tabs__list {
+                max-width: 330px;
+                margin: 0 auto !important;
+                padding-left: 0;
+            }
+        }
+
+        &__header {
+            max-width: 330px;
+            margin: 0 auto;
+            padding-left: 0;
+            margin-bottom: 25px;
+
+            .cwd-common__title {
+                margin-bottom: 0;
+            }
+        }
+
+        &__inner {
+            max-width: 330px;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &__common-text {
+            &--switch {
+                font-size: 12px;
+            }
+        }
+
+        &__input {
+            height: 43px !important;
+        }
+
+        &__btn {
+            height: 43px;
+        }
+    }
+}

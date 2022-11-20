@@ -1,0 +1,125 @@
+.explorer {
+    &__wrap {
+        width: 100%;
+        padding-top: 40px;
+        font-family: SuisseIntlReg, arial, sans-serif;
+
+        .underlined-tabs__list {
+            padding-left: 60px;
+
+            li.is-active {
+                opacity: 1;
+            }
+
+            .cwd-tabs__item {
+                opacity: 0.5;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    line-height: 20px;
+                    margin-bottom: 13px;
+
+                    .new-icon {
+                        margin-right: 14px;
+                    }
+
+                    .tab-title {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    &__header {
+        padding-left: 60px;
+    }
+
+    &__content {
+        max-width: 960px;
+        padding-left: 40px;
+        padding-top: 44px;
+        padding-bottom: 60px;
+    }
+
+    &__subtitle {
+        display: block;
+        margin-bottom: 10px;
+        font-family: FuturaDemiC, arial, sans-serif;
+        font-size: 18px;
+        line-height: 23px;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .explorer {
+        &__wrap {
+            .cwd-common__wrap-920 {
+                padding-top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .explorer {
+        &__wrap {
+            .cwd-common__wrap-920 {
+                max-width: 350px;
+                padding-top: 30px;
+                padding-bottom: 90px;
+            }
+
+            .underlined-tabs__list {
+                justify-content: space-between;
+                max-width: 350px;
+                margin: 0 auto !important;
+                padding: 0;
+
+                .cwd-tabs__item {
+                    justify-content: center;
+                    max-width: 200px;
+                    margin-right: 0;
+
+                    a {
+                        font-size: 12px;
+                        line-height: 16px;
+                        margin-bottom: 10px;
+
+                        & .new-icon {
+                            margin-right: 0;
+                        }
+
+                        .tab-title {
+                            display: none;
+                            color: #ffffff;
+                        }
+                    }
+                }
+
+                li.is-active {
+                    .tab-title {
+                        display: flex !important;
+                    }
+
+                    & .new-icon {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+
+        &__header {
+            max-width: 350px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        &__subtitle {
+            margin-bottom: 8px;
+        }
+    }
+}

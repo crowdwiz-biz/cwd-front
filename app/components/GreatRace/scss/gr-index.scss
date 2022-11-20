@@ -1,0 +1,115 @@
+.gr-index {
+    &__wrap {
+        background-color: #262626;
+        font-family: SuisseIntlReg, arial, sans-serif;
+
+        & .__react_component_tooltip {
+            max-width: 390px;
+            background-color: #3a3a3a;
+            line-height: 1.4;
+            border-radius: 4px;
+        }
+
+        & .__react_component_tooltip.type-dark.place-right:after {
+            border-right-color: #383838 !important;
+        }
+
+        .cwd-tabs__list {
+            margin-left: 50px !important;
+
+            .tab-counter {
+                background-color: #ea5050;
+                margin-top: -10px;
+            }
+
+            & .is-active {
+                .tab-counter__num {
+                    color: #212121 !important;
+                }
+            }
+        }
+
+        .cwd-common__link {
+            font-family: SuisseIntlReg, arial, sans-serif;
+        }
+    }
+
+    &__center-layout {
+        max-width: 920px;
+        margin-left: 50px;
+    }
+
+    &__header {
+        width: 1128px;
+        height: 244px;
+        margin-bottom: 20px;
+    }
+
+    &__alert-btn {
+        position: relative;
+    }
+
+    &__alert {
+        position: absolute;
+        bottom: -23px;
+        right: 0;
+        width: max-content;
+        color: #03d99d;
+        font-size: 14px;
+        z-index: 100;
+        animation-name: fadeIn;
+        animation-duration: 1.4s;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gr-index {
+        &__wrap {
+            .cwd-tabs__list {
+                width: 635px;
+                margin: 0 auto !important;
+            }
+        }
+
+        &__header {
+            width: 100%;
+            height: auto;
+            margin-bottom: 38px;
+        }
+
+        &__center-layout {
+            max-width: 635px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gr-index {
+        &__wrap {
+            .cwd-tabs__list {
+                width: 328px;
+                margin-bottom: 30px !important;
+            }
+        }
+
+        &__header {
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+        }
+
+        &__center-layout {
+            max-width: 328px;
+
+            .cwd-btn__action-btn {
+                width: 100%;
+            }
+        }
+
+        &__alert {
+            top: -23px;
+            bottom: unset;
+        }
+    }
+}

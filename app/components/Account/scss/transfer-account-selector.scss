@@ -1,0 +1,27 @@
+.transfer-account-selector {
+    &__status-tip {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 4px;
+
+        & span {
+            color: #dec27f;
+            font-size: 14px;
+            line-height: 1.4;
+            text-transform: lowercase;
+        }
+
+        &--scammer {
+            & span {
+                color: #f04124;
+            }
+        }
+
+        &--success {
+            & span {
+                color: #03d99d;
+            }
+        }
+    }
+}

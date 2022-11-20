@@ -1,0 +1,35 @@
+.account-asset {
+    &__inner {
+        margin-bottom: 30px;
+    }
+    &__table {
+        width: 900px;
+    }
+    &__table-btn {
+        .new-icon {
+            margin: 0 auto;
+        }
+    }
+
+    &__add-asset-icon {
+        transform: rotate(45deg);
+
+        & svg * {
+            fill: #a5f937;
+        }
+    }
+
+    &__dashboard-icon {
+        & svg * {
+            fill: #f2cb96;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .account-asset {
+        &__inner {
+            overflow: scroll;
+        }
+    }
+}

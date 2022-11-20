@@ -1,0 +1,136 @@
+.portfolio {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 286px);
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: #212121;
+        border-radius: 10px;
+        padding: 20px;
+        padding-bottom: 30px;
+    }
+
+    &__inner {
+        margin-bottom: 20px;
+    }
+
+    &__asset-type,
+    &__balance,
+    &__price,
+    &__hours,
+    &__cost {
+        margin-bottom: 12px;
+        display: flex;
+    }
+
+    &__asset-type-header,
+    &__balance-header,
+    &__price-header,
+    &__hours-header,
+    &__cost-header {
+        color: #6d6d6d;
+        margin-right: 12px;
+        font-family: "CoreSansE-Light", arial, sans-serif;
+    }
+
+    &__balance-inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__btn {
+        display: block;
+        margin: auto !important;
+        min-width: 185px;
+        width: max-content;
+        height: 40px;
+        border-radius: 20px;
+        background-image: linear-gradient(to bottom, #f2cb96, #e6ba7d);
+        color: #212121 !important;
+
+        &:hover {
+            transition: all 0.2s ease-in-out 0s;
+            background-image: linear-gradient(to bottom, #fad097, #dfb171);
+            box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__operations-wrap {
+        padding: 23px 13px;
+        background-color: #1b1b1b;
+        margin-top: 25px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    &__asset {
+        & a {
+            display: inline-block;
+            color: #e1c697 !important;
+        }
+    }
+
+    &__action-row {
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: #e1c697 !important;
+        line-height: 1;
+        cursor: pointer;
+        &--inactive {
+            color: #ccc !important;
+            cursor: default;
+        }
+        & .new-icon {
+            margin-right: 10px;
+            & svg * {
+                fill: #ffffff;
+            }
+        }
+    }
+
+    &__balance-item {
+        display: inline-block;
+    }
+
+    &__total-value {
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .portfolio {
+        &__wrap {
+            grid-template-columns: repeat(2, 286px);
+            gap: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .portfolio {
+        &__wrap {
+            grid-template-columns: 300px;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}

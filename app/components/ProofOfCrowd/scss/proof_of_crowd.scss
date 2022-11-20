@@ -1,0 +1,136 @@
+.proof_of_crowd {
+    &__wrap {
+        max-width: 920px;
+        padding-bottom: 60px;
+
+        .cwd-common__description {
+            max-width: 850px;
+        }
+        .cwd-common__description--highlighted {
+            color: #e1c697;
+        }
+    }
+
+    &__header {
+        margin-bottom: -68px;
+    }
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 30px;
+        font-family: CoreSansE-85Heavy, arial, sans-serif;
+        color: #ffffff;
+        font-size: 50px;
+
+        & span {
+            color: #ecc289;
+        }
+    }
+
+    &__intro {
+        margin-bottom: 45px;
+        & .cwd-common__title {
+            margin-bottom: 31px;
+        }
+    }
+
+    &__intro-text {
+        color: #9f9f9f;
+    }
+
+    &__desc-block {
+        margin-bottom: 11px;
+
+        &.show {
+            height: auto;
+        }
+
+        &--short-view {
+            height: 93px;
+            overflow: hidden;
+            transition: 200ms ease-in-out;
+        }
+    }
+
+    &__details-btn {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        padding-bottom: 3px;
+        margin-bottom: 32px !important;
+        font-family: "CoreSansE-Light", arial;
+        font-size: 16px;
+        border-bottom: 1px dashed #ecc289;
+        cursor: pointer;
+        outline: none;
+
+        & span {
+            color: #ecc289;
+        }
+
+        & .new-icon {
+            margin-left: 5px;
+
+            &.hide-arrow {
+                transform: rotate(180deg);
+            }
+
+            & svg {
+                > path {
+                    fill: none;
+                }
+            }
+        }
+    }
+
+    &__term-text {
+        display: block;
+        margin-bottom: 15px;
+        color: #ecc289;
+        line-height: 1.5;
+    }
+
+    &__term-date {
+        font-family: "CoreSansE-65Bold", arial, sans-serif;
+        color: #ffffff;
+    }
+
+    &__has-voted-text {
+        font-size: 20px;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .proof_of_crowd {
+        &__wrap {
+            padding-bottom: 90px;
+        }
+
+        &__header {
+            margin-bottom: -24px;
+        }
+
+        &__title {
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+
+        &__intro {
+            margin-top: 0;
+            & .cwd-common__title {
+                margin-bottom: 31px;
+            }
+        }
+
+        &__term-text {
+            margin-bottom: 20px;
+        }
+
+        &__term-date {
+            display: block;
+        }
+    }
+}

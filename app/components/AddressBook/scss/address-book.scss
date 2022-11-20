@@ -1,0 +1,27 @@
+.address-book {
+    &__wrap {
+        max-width: 920px;
+        padding-bottom: 50px;
+    }
+
+    &__intro-text {
+        display: block;
+        margin-bottom: 9px;
+        font-size: 14px;
+        line-height: 1.4;
+        height: 42px;
+        overflow: hidden;
+        transition: 200ms ease-in-out;
+    }
+    &__intro-text.show {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .address-book {
+        &__wrap {
+            padding-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.sync-fail {
+    &__wrap {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-top: 90px;
+        padding-bottom: 70px;
+        font-family: SuisseIntlReg, arial, sans-serif;
+
+        .node-settings__inner {
+            width: 100%;
+            margin-bottom: 45px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .node-item {
+            width: 100%;
+
+            &--inactive {
+                margin-right: 0;
+            }
+        }
+
+        .node-settings__node-wrap {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .tabs-btn-view__list--settings {
+            margin: 0 auto !important;
+            padding-left: 0;
+
+            & li {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__inner {
+        align-items: baseline;
+        background-color: #222;
+        padding: 15px 25px;
+        border-radius: 10px;
+
+        & p {
+            color: #ffffff;
+        }
+
+        & p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        font-family: SuisseIntlBold, arial, sans-serif;
+        font-size: 22px;
+        color: #ffffff;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    &__clock-icon {
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        & svg {
+            fill: #dec27f;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sync-fail {
+        &__wrap {
+            max-width: 330px;
+            margin: 0 auto;
+            padding-top: 40px !important;
+            padding-bottom: 30px;
+
+            .node-settings__inner {
+                padding-left: 0;
+                padding-right: 0;
+
+                &--personal {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+
+            .node-settings__node-wrap {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        &__clock-icon {
+            margin-bottom: 18px;
+        }
+
+        &__inner {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            & p {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

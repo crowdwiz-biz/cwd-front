@@ -1,0 +1,112 @@
+.node-item {
+    width: 445px;
+    height: 80px;
+    padding: 20px;
+    background-color: #212121;
+    border-radius: 5px;
+    font-size: 15px;
+
+    &--inactive {
+        background-color: #262626;
+        margin-bottom: 15px;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:nth-child(2) {
+        margin-right: 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__data-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__text {
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    &__ws-url {
+        color: #dec27f;
+    }
+
+    &__latency-value {
+        font-family: SuisseIntlBold, arial, sans-serif;
+
+        &--low {
+            color: #03d99d;
+        }
+
+        &--medium {
+            color: #ffa500;
+        }
+
+        &--high {
+            color: #ea5050;
+        }
+    }
+
+    &__btn-block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 90px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        border: 1px solid #141414;
+        cursor: pointer;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .node-item {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        font-size: 12px;
+        line-height: 1.4;
+
+        &--inactive {
+            min-height: unset;
+            height: auto;
+            margin-right: 0;
+        }
+
+        &__btn {
+            width: 29px;
+            height: 29px;
+        }
+    }
+}

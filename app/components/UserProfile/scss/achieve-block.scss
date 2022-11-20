@@ -1,0 +1,245 @@
+.achieve-block {
+    margin-bottom: 40px;
+
+    .cwd-common__subtitle {
+        margin-bottom: 25px;
+    }
+
+    &__wrap {
+        &--has-team {
+            display: grid;
+            grid-template-columns: 545px 365px;
+            grid-template-rows: 210px;
+            column-gap: 10px;
+        }
+    }
+
+    &__gr-wrap {
+        border-radius: 4px;
+        background-color: #262626;
+    }
+
+    &__gr-header {
+        display: block;
+        width: 100%;
+        height: 130px;
+        margin-bottom: 4px;
+    }
+
+    &__gr-columns {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+        margin-right: 35px;
+        font-size: 15px;
+        line-height: 1.1;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-position: 50%;
+        background-color: #101010;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__rank-icon {
+        background-size: 82%;
+
+        &--0 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_0.jpg");
+            background-position: 50% 2px;
+        }
+        &--1 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_01.jpg");
+        }
+        &--2 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_02.jpg");
+        }
+        &--3 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_03.jpg");
+        }
+        &--4 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_04.jpg");
+        }
+        &--5 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_05.jpg");
+        }
+        &--6 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_06.jpg");
+        }
+        &--7 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_07.jpg");
+        }
+        &--8 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_08.jpg");
+        }
+    }
+
+    &__apostol {
+        background-image: url("../../../assets/jpg-images/great-race/apostol.jpg");
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 15px;
+        color: #5d5d5d;
+    }
+
+    &__text {
+        color: #ffffff;
+
+        &--team-name {
+            display: block;
+            max-width: 165px;
+            white-space: nowrap;
+            overflow: hidden;
+
+            & a {
+                color: #ffffff !important;
+            }
+        }
+    }
+
+    &__rating-wrap {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat (2, 105px);
+        row-gap: 10px;
+
+        &--full-width {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 110px;
+            column-gap: 10px;
+            row-gap: 0;
+        }
+    }
+
+    &__side-rating {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        column-gap: 37px;
+        align-items: center;
+        padding-left: 26px;
+        border-radius: 4px;
+        background-color: #262626;
+    }
+
+    &__rating-img {
+        display: block;
+        margin: 0 auto;
+        max-width: 140px;
+        max-height: 85px;
+    }
+
+    &__rating-block {
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+    &__num {
+        font-size: 18px;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .achieve-block {
+        .cwd-common__subtitle {
+            margin-bottom: 30px;
+        }
+        
+        &__wrap {
+            &--has-team {
+                grid-template-columns: 100%;
+                gap: 10px;
+            }
+        }
+
+        &__rating-wrap {
+            grid-template-columns: repeat(2, 313px);
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .achieve-block {
+        .cwd-common__subtitle {
+            margin-bottom: 14px;
+        }
+
+        &__wrap {
+            &--has-team {
+                grid-template-rows: auto auto;
+            }
+        }
+
+        &__gr-header {
+            height: 74px;
+            margin-bottom: -2px;
+        }
+
+        &__gr-wrap {
+            padding-bottom: 20px;
+        }
+
+        &__col {
+            flex-direction: column;
+            min-width: 24%;
+        }
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 0;
+            margin-bottom: 6px;
+        }
+
+        &__text-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__label {
+            font-size: 12px;
+        }
+
+        &__text {
+            font-size: 12px;
+
+            &--team-name {
+                max-width: 80px;
+                white-space: pre-wrap;
+                overflow: hidden;
+            }
+
+            &--full-width {
+                max-width: 200px;
+            }
+        }
+
+        &__rating-wrap {
+            grid-template-columns: 100%;
+            gap: 10px;
+        }
+    }
+}

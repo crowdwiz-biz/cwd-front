@@ -1,0 +1,48 @@
+.confirm-modal {
+    &__btn {
+        width: auto !important;
+        padding: 6px 17px 9px 17px;
+        border-radius: 32px !important;
+        border: 2px solid #f2cb96 !important;
+        border: #f2cb96;
+        text-align: center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: none;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.5;
+        }
+
+        &--confirm {
+            background-color: #f2cb96 !important;
+            color: #2a2a2a !important;
+
+            &:hover {
+                transition: all 0.2s ease-in-out 0s;
+                background-image: linear-gradient(to bottom, #fad097, #dfb171);
+                box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+            }
+        }
+        &--cancel {
+            border: 2px solid #656565 !important;
+            background-color: transparent !important;
+            color: #656565 !important;
+            &:hover {
+                color: #f2cb96 !important;
+                border: 2px solid #f2cb96 !important;
+            }
+        }
+        & span {
+            font-family: "CoreSansE-Light", arial;
+            font-size: 14px;
+            font-weight: 700 !important;
+            text-transform: none !important;
+        }
+    }
+}

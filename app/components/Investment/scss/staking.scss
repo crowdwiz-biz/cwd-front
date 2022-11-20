@@ -1,0 +1,106 @@
+.staking {
+    &__wrap {
+        max-width: 920px;
+        width: 100%;
+        padding: 20px 15px 60px 60px;
+
+        .cwd-tabs__list {
+            justify-content: center;
+            margin-top: -50px !important;
+
+            & li:not(.is-active) {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__header-img {
+        width: 882px;
+        height: auto;
+    }
+
+    &__about-wrap {
+        margin-bottom: 20px;
+        padding: 45px 100px 30px 45px;
+        background-color: #212121;
+        border-radius: 10px;
+    }
+
+    &__title {
+        display: inline-block;
+        font-family: CoreSansE-55Medium, arial;
+        font-size: 22px;
+        line-height: 1;
+        margin-bottom: 25px;
+        color: #ffffff;
+    }
+
+    &__description {
+        font-family: CoreSansE-55Medium, arial;
+        font-size: 14px;
+        line-height: 22px;
+        color: #9f9f9f;
+        margin-bottom: 20px;
+    }
+
+    &__description-link {
+        text-decoration: none;
+
+        & span {
+            color: #ecc289 !important;
+            font-size: 14px !important;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__percent-text {
+        font-family: CoreSansE-Regular, arial;
+        font-size: 20px;
+        color: #ffffff;
+        padding-right: 6px;
+    }
+
+    &__percent {
+        font-family: CoreSansE-65Bold, arial;
+        font-size: 20px;
+        color: #ecc289;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .staking {
+        &__wrap {
+            max-width: 900px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 90px;
+        }
+        &__about-wrap {
+            max-width: 592px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding-right: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .staking {
+        &__wrap {
+            padding-right: 20px;
+            padding-left: 20px;
+
+            .cwd-tabs__list {
+                margin-top: -20px !important;
+            }
+        }
+
+        &__about-wrap {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}

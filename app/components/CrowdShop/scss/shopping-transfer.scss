@@ -1,0 +1,48 @@
+.shopping-transfer {
+    &__form {
+        max-width: 500px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .cwd-btn__rounded {
+            width: 220px !important;
+            margin-top: 14px;
+        }
+
+        .content-block {
+            margin-bottom: 25px;
+        }
+
+        .valid-amount {
+            color: #03d99d;
+            cursor: pointer;
+        }
+    }
+
+    &__details {
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .shopping-transfer {
+        &__form {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        &__inner {
+            display: block;
+            margin: 0 auto;
+
+            .cwd-btn__rounded {
+                width: 100% !important;
+                margin-top: 14px;
+            }
+        }
+    }
+}

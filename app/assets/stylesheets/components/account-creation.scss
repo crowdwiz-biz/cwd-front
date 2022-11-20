@@ -1,0 +1,182 @@
+.account-creation {
+    &__container {
+        background-image: url(../../assets/jpg-images/reg-page/reg-bg.jpg);
+        background-position-x: 50%;
+        background-size: cover;
+        padding-top: 32px;
+        padding-bottom: 40px;
+    }
+
+    &__wrap {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        width: 130px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__header {
+        width: 280px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 52px;
+        text-align: center;
+        font-size: 19px;
+        color: #ffffff;
+    }
+
+    &__submit-wrap {
+        display: flex;
+        justify-content: center;
+        padding-top: 7px;
+    }
+}
+
+.account-creation-step-2 {
+    &__step-wrap {
+        margin-bottom: 7px;
+        font-size: 20px;
+    }
+    &__grey-span {
+        font-size: 14px;
+        color: #606060;
+    }
+    &__title {
+        display: block;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+    &__text {
+        margin-bottom: 53px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #9f9f9f;
+        font-family: "CoreSansE-Light", arial;
+
+        & strong {
+            color: #fff !important;
+            font-family: "CoreSansE-Light", arial;
+        }
+
+        &--warning {
+            font-size: 14px;
+            line-height: 24px;
+            color: #ffffff;
+            font-family: "CoreSansE-Light", arial;
+        }
+    }
+}
+
+.gen-pass {
+    margin-bottom: 53px;
+
+    &__input-wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+    }
+
+    &__input-inner {
+        width: 89%;
+        position: relative;
+    }
+
+    label {
+        span {
+            color: #adadad;
+            text-transform: none;
+        }
+    }
+
+    &__pass {
+        width: 100% !important;
+        background-color: #181818;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 20px !important;
+        border: 0 !important;
+        height: 40px !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__show-pass {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #181818;
+        height: 40px;
+        width: 40px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        cursor: pointer;
+
+        .icon {
+            top: 12px;
+            left: 12px;
+        }
+    }
+
+    &__copy {
+        border-radius: 50% !important;
+        background-color: #b59567 !important;
+        height: 36px;
+        width: 36px;
+
+        .icon > svg > path {
+            fill: #000 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .account-creation {
+        &__container {
+            background-image: none;
+            padding-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .account-creation {
+        &__wrap {
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin: 0 auto;
+        }
+
+        &__header {
+            width: 150px;
+        }
+
+        &__title {
+            font-size: 22px;
+            margin-bottom: 38px;
+        }
+    }
+    .gen-pass {
+        margin-bottom: 40px;
+        &__input-inner {
+            width: 85%;
+        }
+    }
+    .account-creation-step-2 {
+        &__title {
+            margin-bottom: 35px;
+        }
+        &__text {
+            margin-bottom: 35px;
+        }
+    }
+}

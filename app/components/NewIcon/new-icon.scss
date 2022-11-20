@@ -1,0 +1,10 @@
+.new-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > svg {
+        width: inherit;
+        height: inherit;
+    }
+}

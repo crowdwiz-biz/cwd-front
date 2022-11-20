@@ -1,0 +1,80 @@
+.address-modal {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    padding: 30px 20px;
+    background-color: #212121;
+    border-radius: 10px;
+    box-shadow: 0px 10px 18.3px 2.7px rgba(13, 17, 21, 0.55);
+    box-sizing: border-box;
+    animation-name: appearAnimation;
+    animation-duration: 0.2s;
+    z-index: 1020;
+
+    &__input {
+        margin-bottom: 20px !important;
+        color: #dec27f;
+    }
+
+    &__btn-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__action-btn {
+        width: 100%;
+
+        & span {
+            margin-right: 0 !important;
+        }
+
+        &--confirm {
+            border: 1px solid #dec27f;
+            background-color: #dec27f;
+
+            & span {
+                color: #262626;
+            }
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.65);
+        height: 100%;
+        z-index: 1010;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .address-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -155px;
+        margin-top: -135px;
+        width: 310px;
+        padding: 30px 20px;
+
+        &__btn-wrap {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, auto);
+            column-gap: 0;
+            row-gap: 20px;
+            grid-auto-flow: dense;
+
+            .address-modal__action-btn--confirm {
+                grid-row: 1;
+            }
+        }
+    }
+}

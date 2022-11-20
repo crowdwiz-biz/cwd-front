@@ -1,0 +1,48 @@
+.matrix-game {
+    font-family: "CoreSansE-Regular", arial, sans-serif;
+    &__wrap {
+        width: 1000px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &__history-wrap {
+        padding-top: 50px;
+    }
+    &__title {
+        display: block;
+        margin-bottom: 25px;
+        font-family: "CoreSansE-55Medium", arial, sans-serif;
+        font-size: 24px;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .matrix-game {
+        &__wrap {
+            width: 920px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .matrix-game {
+        &__wrap {
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .matrix-game {
+        &__history-wrap {
+            padding-top: 20px;
+        }
+        &__title {
+            text-align: center;
+        }
+    }
+}

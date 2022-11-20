@@ -1,0 +1,129 @@
+.gr-indicator {
+    &__wrap {
+        margin-bottom: 40px;
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 13px;
+    }
+
+    &__column {
+        display: flex;
+        align-items: center;
+
+        .breadcrumbs_arrow {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            svg * {
+                fill: #ffffff;
+            }
+        }
+    }
+
+    &__stage-name {
+        display: inline-block;
+        width: fit-content;
+        font-size: 12px;
+        color: #5D5D5D;
+        padding-bottom: 2px;
+        cursor: pointer;
+
+        &--active {
+            font-size: 13px;
+            color: #ffffff;
+            border-bottom: 1px dotted #ffffff;
+        }
+
+        &--white {
+            color: #ffffff;
+        }
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__base {
+        width: 100%;
+        height: 22px;
+        margin-bottom: 16px;
+        background-image: url(../../../assets/svg-images/svg-common/great-race/race_indicator.svg);
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+    }
+
+    &__line {
+        position: absolute;
+        width: 0;
+        height: 22px;
+        top: 0;
+        left: 0;
+        background-image: url(../../../assets/svg-images/svg-common/great-race/race_indicator-colored.svg);
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+    &__stage-point {
+        position: absolute;
+        display: block;
+        width: 12px;
+        height: 22px;
+        top: 0;
+        background-image: url(../../../assets/svg-images/svg-common/great-race/stage_marker.svg);
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        z-index: 15;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gr-indicator {
+        &__base {
+            background-image: url(../../../assets/svg-images/svg-common/great-race/race_indicator--tablet.svg);
+        }
+    
+        &__line {
+            background-image: url(../../../assets/svg-images/svg-common/great-race/race_indicator--tablet-colored.svg);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gr-indicator {
+        &__header {
+            grid-template-columns: 100%;
+        }
+
+        &__base {
+            background-image: url(../../../assets/svg-images/svg-common/great-race/race_indicator_interval.svg);
+            background-size: contain;
+            margin-bottom: 12px;
+        }
+
+        &__line {
+            top: 10px;
+            height: 1px;
+            background-image: none;
+            background-color: #dec27f;
+        }
+
+        &__base-line {
+            width: 328px;
+        }
+
+        &__days-wrap {
+            & span {
+                font-size: 13px;
+                color: #ffffff;
+
+                &:last-child {
+                    font-family: SuisseIntlBold, arial, sans-serif;
+                }
+            }
+        }
+    }
+}

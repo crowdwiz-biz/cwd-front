@@ -1,0 +1,150 @@
+.crowd-market-item {
+    &__item {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__label {
+        display: inline-block;
+        position: absolute;
+        top: 14px;
+        right: -52px;
+        color: #ffffff;
+        width: 216px;
+        padding: 10px;
+        background-color: #ed4300;
+        text-transform: uppercase;
+        box-shadow: 0px 4px 19px 0 #000;
+        transform: rotate(39deg);
+        z-index: 100;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        text-shadow: 1px 1px 2px #292929;
+    }
+    &__content {
+        width: 390px;
+        margin-bottom: 50px;
+        padding: 20px 25px;
+        padding-bottom: 40px;
+        border-radius: 20px;
+        background-color: #212121;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 46%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--inactive {
+            opacity: 0.5;
+            .game-item__btn {
+                cursor: default;
+            }
+        }
+        &--board {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/board-logo.svg);
+        }
+        &--crowd_capital {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/crowd_capital_logo.svg);
+        }
+        &--index_cwd {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/index_cwd.svg);
+        }
+        &--trust_fond {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/trust_fond_logo.svg);
+        }
+        &--school {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/school_logo.svg);
+        }
+        &--global_trip_bot {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/global_trip.svg);
+            background-size: 38%;
+        }
+        &--lingvo_connect {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/lingvo_connect.svg);
+            background-size: 38%;
+        }
+        &--digitalinsurance {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/digitalinsurance.svg);
+            background-size: 31%;
+        }
+        &--pride {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/pride.svg);
+            background-size: 37%;
+        }
+        &--crowdskills {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/crowdskills.svg);
+            background-size: 52%;
+        }
+        &--business_step {
+            background-image: url(../../../../assets/svg-images/svg-common/crowdmarket/business_step.svg);
+            background-size: 29%;
+            background-position-x: 95%;
+        }
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 33px;
+        font-size: 26px;
+        color: #ffffff;
+        line-height: 1.2;
+        text-shadow: 0px 4px 22px #000000;
+    }
+    &__img {
+        display: block;
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        background-image: linear-gradient(to bottom, #f2cb96, #e6ba7d);
+        padding: 11px 25px 11px 25px;
+        border-radius: 40px;
+        &:hover {
+            text-decoration: none;
+        }
+        &:active {
+            text-decoration: none;
+        }
+    }
+    &__btn-text {
+        color: #1e1e1e !important;
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .crowd-market-item {
+        &__list {
+            justify-content: center;
+        }
+        &__item {
+            margin-right: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .crowd-market-item {
+        &__list {
+            grid-template-columns: 100%;
+        }
+    }
+}

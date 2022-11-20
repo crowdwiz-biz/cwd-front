@@ -1,0 +1,15 @@
+$border-color: rgba(128, 128, 128, 0.45);
+
+.green {
+    color: #b59567 !important;
+
+    .icon {
+        > svg {
+            > path {
+                fill: #b59567 !important;
+            }
+        }
+    }
+}
+
+$bs-blue: #b59567;

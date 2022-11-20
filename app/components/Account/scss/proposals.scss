@@ -1,0 +1,192 @@
+.proposals {
+    display: grid;
+    grid-template-columns: 384px 134px 150px 225px;
+    align-items: center;
+    column-gap: 30px;
+    padding: 15px 20px 15px 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+
+    &:nth-child(even) {
+        background-color: #212121;
+    }
+
+    &__wrap {
+        display: grid;
+        row-gap: 8px;
+        font-family: SuisseIntlReg, arial, sans-serif;
+    }
+
+    &__head {
+        display: grid;
+        grid-template-columns: 384px 134px 150px 225px;
+        align-items: center;
+        column-gap: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #888888;
+        font-size: 12px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    &__expiration-wrap {
+        margin-bottom: 12px;
+    }
+
+    &__expiration {
+        color: #888888;
+    }
+
+    &__list-item {
+        font-size: 12px;
+        line-height: 1.5;
+
+        &--approvers {
+            .cwd-common__link {
+                font-size: 14px;
+            }
+        }
+
+        & .nested-approval-state {
+            & table {
+                margin-top: 3px;
+            }
+        }
+
+        & .root-status {
+            margin-bottom: 0;
+            padding-top: 0;
+        }
+
+        & a,
+        .balance-value {
+            font-family: SuisseIntlReg, arial, sans-serif;
+            color: #dec27f !important;
+        }
+    }
+
+    &__info-wrap {
+        margin-bottom: 10px;
+        line-height: 1.8;
+    }
+
+    &__actions {
+        text-align: center;
+    }
+
+    &__approval-buttons {
+        display: grid;
+        align-items: center;
+        justify-content: flex-end;
+        row-gap: 16px;
+        grid-template-columns: 100%;
+
+        & button {
+            width: 180px !important;
+            height: 40px;
+            margin: auto !important;
+
+            & span {
+                font-size: 12px !important;
+                line-height: 1 !important;
+            }
+        }
+    }
+    &__source {
+        padding-top: 0;
+    }
+}
+
+.proposals-switch {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__btn {
+        display: block;
+        margin-right: 12px !important;
+
+        .react-switch-handle > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 1024px) {
+    .proposals {
+        &__list-item {
+            &--approvers {
+                & .proposals__info-text {
+                    color: #ffffff;
+                }
+                & .cwd-common__link {
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .proposals {
+        grid-template-columns: 100%;
+
+        &__head {
+            display: none;
+        }
+
+        &__list-item {
+            margin-right: 11px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__approval-buttons {
+            align-items: start;
+            justify-content: space-around;
+            margin-top: 10px;
+
+            .cwd-btn__rounded {
+                margin-right: 0;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .proposals {
+
+        &__wrap {
+            margin-top: 20px;
+        }
+
+        &__list-item {
+            width: 100% !important;
+        }
+        &__approval-buttons {
+            margin-top: 30px;
+
+        }
+    }
+
+    .proposals-switch {
+        &__text {
+            font-size: 12px;
+        }
+    }
+}

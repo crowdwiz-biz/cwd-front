@@ -1,0 +1,173 @@
+.table {
+    width: 100%;
+}
+
+.table > thead > tr > th {
+    padding: 12px 5px;
+    font-weight: normal;
+    font-size: 0.875rem;
+    color: #777;
+    text-align: left;
+}
+
+.table > tbody > tr > td {
+    padding: 5px;
+}
+
+.table > tbody > tr:last-of-type > td {
+    border-bottom: none;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+    background-color: #f5f5f5;
+}
+
+.key-value-table {
+    tr > td:first-child {
+        padding-left: 0 !important;
+    }
+    tr > td:last-child {
+        text-align: right;
+    }
+}
+
+.table.compact {
+    td,
+    th {
+        font-size: 94%;
+    }
+}
+
+/* Wrap table in div with this class to make horizontal scroll */
+.responsive-table {
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+    max-width: 100%;
+    width: 100vw;
+}
+
+th.is-sortable {
+    cursor: pointer;
+    &.is-active {
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+}
+
+.table__wrap {
+    width: 100%;
+
+    .dashboard-table {
+        margin-bottom: 20px;
+    }
+}
+
+table.table.dashboard-table {
+    margin-top: 20px;
+    max-width: 1100px !important;
+    > thead > tr > th:first-of-type,
+    > tbody > tr > td:first-of-type {
+        padding-left: 12px;
+    }
+    > thead > tr > th:last-of-type,
+    > tbody > tr > td:last-of-type {
+        padding-right: 12px;
+    }
+    > thead > tr > th {
+        @include CoreSansEMedium;
+        font-size: 0.875rem;
+        text-align: center;
+        border: none;
+    }
+    > tbody > tr {
+        &:nth-child(odd) {
+            background-color: #2a2a2a;
+        }
+        > td {
+            font-size: 0.875rem;
+            text-align: center;
+            border: none;
+
+            &.worker-name {
+                max-width: 15rem;
+                overflow-x: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                > div span.icon > svg {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                }
+                > div > a {
+                    font-size: 90%;
+                }
+            }
+
+            &.worker-id {
+                width: 3rem;
+                max-width: 5rem;
+            }
+        }
+        &.total-value {
+            td {
+                vertical-align: middle;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-bottom: none;
+                word-wrap: none;
+            }
+            td:first-of-type {
+                text-align: left;
+                text-transform: uppercase;
+                @include CoreSansEMedium;
+            }
+            td:nth-child(3) {
+                @include CoreSansEMedium;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.cwd-table {
+    &__header {
+        margin-bottom: 7px;
+        & td {
+            color: #ffffff;
+            text-align: left;
+        }
+    }
+    &__th {
+        & span {
+            color: #626262;
+            font-size: 12px;
+        }
+    }
+    & tbody > tr {
+        &:nth-child(odd) {
+            background-color: #2a2a2a;
+        }
+    }
+    & td {
+        a {
+            color: #f2cb96 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    table.table.dashboard-table {
+        width: 100%;
+        > thead > tr > th:first-of-type,
+        > tbody > tr > td:first-of-type {
+            display: none;
+        }
+        > tr {
+            width: 100%;
+            &:nth-child(odd) {
+                background-color: #fff;
+            }
+        }
+    }
+}

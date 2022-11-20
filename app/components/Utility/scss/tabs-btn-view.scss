@@ -1,0 +1,108 @@
+.tabs-btn-view {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 !important;
+        margin-bottom: 15px !important;
+        padding-left: 40px;
+        list-style: none;
+
+        &--settings {
+            width: 485px;
+        }
+    }
+
+    & a {
+        color: unset !important;
+        text-decoration: none;
+    }
+
+    & li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 94px;
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0;
+        border-radius: 4px;
+        border: 1px solid #1b1b1b;
+        cursor: pointer;
+    }
+
+    & li.is-active {
+        position: relative;
+        padding-left: 11px;
+        padding-right: 11px;
+        background-color: #212121;
+        border: none;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            margin-left: -10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 8px solid #212121;
+            z-index: 100;
+        }
+    }
+
+    & li.tab-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+            span {
+                color: #dec27f;
+            }
+        }
+    }
+
+    &__content {
+        min-height: 300px;
+        padding-bottom: 1px;
+        background-color: #212121;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tabs-btn-view {
+        &__list {
+            &--settings {
+                width: 330px;
+                padding: 0;
+                margin: 0 auto !important;
+                flex-wrap: wrap;
+            }
+
+            & li {
+                min-width: 60px;
+                margin-bottom: 10px;
+                padding-left: 9px;
+                padding-right: 9px;
+
+                &--active {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+
+                & .tab-title {
+                    font-size: 12px !important;
+                }
+            }
+        }
+
+        &__content {
+            min-height: 350px;
+            margin-bottom: -62px;
+        }
+    }
+}

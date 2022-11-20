@@ -1,0 +1,257 @@
+.gamezone {
+    &__wrap {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        font-family: "CoreSansERgular", arial, sans-serif;
+    }
+    &__center-layout {
+        width: 818px;
+        margin: 0 auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    &__header-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    &__header {
+        width: auto;
+        height: 256px;
+    }
+    &__title {
+        margin-top: 0 !important;
+        margin-bottom: 31px !important;
+        font-size: 30px !important;
+        color: #ffffff !important;
+        text-align: center;
+        line-height: 1.3;
+        font-family: StemBold, arial, sans-serif;
+    }
+    &__games-wrap {
+        display: flex;
+        flex-direction: row !important;
+    }
+}
+.gamezone-matrix {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 700px;
+    height: 422px;
+    margin-right: 39px;
+    padding-top: 165px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 37px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
+    background-image: url(../../../assets/png-images/gamezone/game-zone_matrix.png);
+    overflow: hidden;
+
+    .cmarket__label {
+        top: 20px;
+        right: -55px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__intro {
+        display: block;
+        margin-bottom: 100px;
+        font-family: CoreSansE-65Bold, arial, sans-serif;
+        line-height: 1.2;
+        font-size: 30px;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0px 4px 22px #000000;
+    }
+}
+.game-item {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+    &__label {
+        display: inline-block;
+        position: absolute;
+        top: 14px;
+        right: -52px;
+        color: #ffffff;
+        width: 216px;
+        padding: 10px;
+        background-color: #ed4300;
+        text-transform: uppercase;
+        box-shadow: 0px 4px 19px 0 #000;
+        transform: rotate(39deg);
+        z-index: 100;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        text-shadow: 1px 1px 2px #292929;
+    }
+    &__content {
+        width: 390px;
+        margin-bottom: 34px;
+        padding: 20px 25px;
+        padding-bottom: 0;
+        border-radius: 20px;
+        background-color: #1e1e1e;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+
+        &--inactive {
+            opacity: 0.5;
+            .game-item__btn {
+                cursor: default;
+            }
+        }
+        &--heads {
+            background-image: url(../../../assets/png-images/gamezone/game-zone_heads.png);
+        }
+        &--scoop {
+            background-image: url(../../../assets/png-images/gamezone/game-zone_scoop.png);
+        }
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__title {
+        font-family: "CoreSansE-55Medium", arial, sans-serif;
+        margin-top: 6px;
+        margin-bottom: 28px;
+        font-size: 30px;
+        color: #ffffff;
+        text-shadow: 0px 4px 22px #000000;
+    }
+    &__img {
+        display: block;
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 190px;
+        height: 53px;
+        text-align: center;
+        background-image: linear-gradient(to bottom, #f2cb96, #e6ba7d);
+        padding: 11px;
+        border-radius: 40px;
+        box-shadow: 0px -19px 46px #1d1c1c;
+
+        &:hover {
+            transition: all 0.2s ease-in-out 0s;
+            text-decoration: none;
+            box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+        }
+        &:active {
+            text-decoration: none;
+        }
+        &--matrix {
+            width: 212px;
+            padding-top: 18px;
+            padding-bottom: 19px;
+        }
+    }
+    &__btn-text {
+        color: #1e1e1e !important;
+        font-size: 18px !important;
+    }
+    &__disabled {
+        width: 100%;
+        text-align: center;
+        font-family: "CoreSansE-55Medium", arial, sans-serif;
+        font-size: 30px;
+        line-height: 1.2;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .gamezone {
+        &__wrap {
+            padding-bottom: 90px;
+        }
+
+        &__center-layout {
+            max-width: 90%;
+            margin: 0 auto;
+            padding-top: 18px;
+        }
+
+        &__header {
+            width: auto;
+            height: auto;
+        }
+        &__title {
+            margin-bottom: 20px !important;
+            font-size: 18px !important;
+        }
+        &__matrix {
+            width: 280px;
+            height: 158px;
+        }
+        &__games-wrap {
+            flex-direction: column !important;
+        }
+    }
+    .game-item {
+        margin-right: 0;
+
+        &__content {
+            width: 100%;
+        }
+        &__disabled {
+            font-size: 27px;
+        }
+        &__list {
+            display: block;
+        }
+    }
+    .gamezone-matrix {
+        width: 100%;
+        height: 344px;
+        margin-right: 0;
+        margin-bottom: 35px;
+        padding-left: 0;
+        padding-right: 0;
+
+        &__inner {
+            width: 250px;
+        }
+
+        &__intro {
+            margin-bottom: 50px;
+            font-size: 24px;
+        }
+    }
+}

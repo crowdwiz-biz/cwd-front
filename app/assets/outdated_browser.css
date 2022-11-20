@@ -1,0 +1,48 @@
+.outdated-browser {
+    margin-top: 150px;
+    position: relative;
+    background-color: #202020;
+    box-shadow: 0 6px 16px 0 #0c0c0c;
+    border: 0;
+    border-radius: 8px;
+    background-clip: padding-box;
+    max-width: 520px;
+    margin: 100px auto 0;
+    font-family: Roboto Medium, Monospaced Number, Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    color: #ffffff;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 1000;
+}
+
+.outdated-browser__header {
+    background: #202020;
+    border-bottom: 1px solid #171717;
+    padding: 16px 24px;
+    font-weight: 700;
+    position: relative;
+}
+
+.outdated-browser__body {
+    padding: 24px;
+}
+
+.outdated-browser__link-wrapper {
+    padding: 24px 0;
+}
+
+.outdated-browser__body a {
+    display: inline-block;
+    color: #dec27f;
+    text-decoration: none;
+}
+
+.outdated-browser__body a:hover {
+    color: #dec27f;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}

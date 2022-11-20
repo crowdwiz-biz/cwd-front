@@ -1,0 +1,64 @@
+.trx-confirm {
+    &__modal {
+        border-radius: 20px;
+        background-color: #2a2a2a;
+        height: hidden;
+        box-shadow: 1.3px 24px 59.3px 19.8px rgba(0, 0, 0, 0.6);
+        z-index: 1500;
+    
+        & .ant-modal-content {
+            box-shadow: none !important;
+            top: 18px !important;
+            border-radius: 20px !important;
+    
+            & button > span > i > svg {
+                position: absolute !important;
+                top: 0;
+                right: 20px;
+            }
+    
+            & .ant-modal-header {
+                border-bottom: none;
+            }
+
+            & .ant-modal-body {
+                padding-bottom: 5px;
+            }
+    
+            & .ant-modal-footer {
+                border-top: none;
+            }
+    
+            & .ant-modal-close-x {
+                color: #fff !important;
+    
+                &.ant-modal-close-x :hover {
+                    color: #b59567;
+                }
+            }
+        }
+    }
+    
+    &__body {
+        max-height: 60vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .transaction__row {
+            background-color: #222222;
+            font-size: 13px;
+
+            & div:last-child {
+                text-align: right;  
+            }
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 20px;
+        font-family: SuisseIntlBold, arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}

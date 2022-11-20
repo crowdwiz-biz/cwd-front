@@ -1,0 +1,22 @@
+.tab-counter {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    margin-top: -15px;
+    display: inline-flex;
+    padding: 2px 5px;
+    background: #68a11a;
+    min-width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    &__num {
+        color: #fff !important;
+        font-weight: bold;
+        justify-content: center;
+        line-height: 1;
+        font-size: 12px;
+    }
+}

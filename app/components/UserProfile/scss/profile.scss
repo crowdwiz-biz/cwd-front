@@ -1,0 +1,116 @@
+.profile {
+    &__wrap {
+        .cwd-btn__action-btn {
+            height: 36px;
+            & span {
+                margin-right: 0;
+            }
+        }
+
+        .cwd-common__text {
+            a {
+                color: #ffffff !important;
+            }
+        }
+
+        .cwd-common__wrap-920 {
+            padding-bottom: 50px;
+        }
+    }
+
+    &__full-width-wrap {
+        background-color: #212121;
+
+        .cwd-common__wrap-920 {
+            padding-top: 50px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .cwd-btn__action-btn {
+            .new-icon {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__action-btn-wrap {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 12px;
+        align-items: center;
+    }
+
+    &__alert {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: -36px;
+        right: 0;
+        width: auto;
+        padding: 10px;
+        color: #03d99d;
+        font-size: 14px;
+        z-index: 100;
+        animation-name: fadeIn;
+        animation-duration: 1.4s;
+    }
+
+    &__btn {
+        &--remove-contact {
+            .new-icon {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        &__full-width-wrap {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile {
+        &__wrap {
+            .cwd-common__wrap-920 {
+                padding-bottom: 30px;
+            }
+        }
+
+        &__full-width-wrap {
+            .cwd-common__wrap-920 {
+                padding-top: 20px;
+            }
+        }
+
+        &__header {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        &__action-btn-wrap {
+            grid-template-columns: 100%;
+            column-gap: 0;
+            row-gap: 12px;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 20px;
+
+            .cwd-btn__action-btn {
+                width: 100%;
+                height: 44px;
+            }
+        }
+    }
+}

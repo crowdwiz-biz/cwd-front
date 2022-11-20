@@ -1,0 +1,111 @@
+.sort-block {
+    &__wrap {
+        display: flex;
+        align-items: baseline;
+        background-color: #222;
+        padding: 15px 20px;
+        max-width: 950px;
+        border-radius: 10px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: baseline;
+
+        &:first-child {
+            margin-right: 40px;
+        }
+    }
+
+    &__label {
+        margin-right: 10px;
+    }
+
+    &__btn {
+        margin: 0 !important;
+        margin-right: 10px !important;
+        border: none;
+        background-color: transparent;
+        outline: none !important;
+
+        &--active {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &:first-child {
+            padding-left: 14px;
+        }
+
+        &:last-child {
+            margin-right: 0 !important;
+        }
+
+        & span {
+            color: #ffffff;
+
+            &:hover {
+                transition: all 0.2s ease-in-out 0s;
+                text-decoration: underline;
+            }
+
+            &:focus {
+                outline: none !important;
+            }
+
+            &:active {
+                outline: none !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .sort-block {
+        &__wrap {
+            max-width: 620px;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+
+        &__inner {
+            flex-wrap: wrap;
+
+            &:first-child {
+                margin-right: 26px;
+                max-width: 220px;
+            }
+        }
+
+        &__label {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sort-block {
+        &__wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 18px 15px;
+        }
+
+        &__inner {
+            flex-wrap: wrap;
+
+            &:first-child {
+                margin-right: 0;
+                margin-bottom: 27px;
+                max-width: 100%;
+            }
+        }
+
+        &__label {
+            display: inline-block;
+        }
+    }
+}

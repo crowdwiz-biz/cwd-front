@@ -1,0 +1,42 @@
+.market {
+    &__btn-wrap {
+        margin-top: 15px;
+    }
+    &__btn {
+        display: inline-block;
+        min-width: 100px;
+        margin-right: 7px;
+        color: #2a2a2a;
+        border: none;
+        text-align: center;
+        padding: 10px 7px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &--buy {
+            background-color: #6ba583;
+        }
+
+        &--sell {
+            background-color: #eb4d5c;
+        }
+
+        &--clear {
+            margin-right: 0;
+            background-color: transparent;
+            color: #00a9e9;
+            padding: 9px 6px;
+            border: 1px solid #00a9e9;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .market {
+        &__order-btn-wrap {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            justify-content: space-between;
+        }
+    }
+}

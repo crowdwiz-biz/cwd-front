@@ -1,0 +1,111 @@
+.gr-invite {
+
+    &__wrap{
+        padding-bottom: 90px;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 80px;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        background-color: #1e1e1e;
+        border-radius: 4px;
+        margin-bottom: 3px;
+        padding-left: 16px;
+        padding-right: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        padding-right: 8px;
+        font-size: 15px;
+        color: #ffffff;
+
+        &--highlight {
+            color: #dec27f;
+
+            .cwd-common__link {
+                font-family: SuisseIntlReg, arial, sans-serif;
+
+                color: #dec27f !important;
+            }
+        }
+    }
+
+    &__team-logo {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 15px;
+        margin-right: 12px;
+    }
+
+    &__btn-block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gr-invite {
+        &__wrap{
+            padding-bottom: 120px;
+        }
+
+        &__text {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gr-invite {
+        &__item {
+            display: block;
+            height: unset;
+            padding: 16px 16px 14px 20px;
+        }
+
+        &__col {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            padding-bottom: 8px;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        &__btn-block {
+            justify-content: center;
+            .cwd-btn__action-btn {
+                width: 100%;
+            }
+        }
+    }
+}

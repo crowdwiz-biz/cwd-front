@@ -1,0 +1,202 @@
+.gr-team-overview {
+    &__header {
+        display: grid;
+        grid-template-columns: 380px 200px 1fr;
+        gap: 50px;
+        margin-bottom: 40px;
+    }
+
+    &__header-column {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid #1b1b1b;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &--ranking-block {
+            justify-content: space-between;
+            padding-right: 50px;
+        }
+
+        &--btn-block {
+            justify-content: flex-end;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        background-position: 50%;
+        background-color: #101010;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 20px;
+    }
+
+    &__header-info-block {
+        max-width: 258px;
+    }
+
+    &__name {
+        display: block;
+        width: 258px;
+        margin-bottom: 3px;
+        font-family: StemBold, arial, sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: #ffffff;
+
+        &--highlight {
+            color: #dec27f;
+        }
+    }
+
+    &__img-column {
+        text-align: center;
+    }
+
+    &__rank-img {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        background-position: 50%;
+        background-color: #101010;
+        background-repeat: no-repeat;
+        background-size: 90%;
+
+        &--0 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_0.jpg");
+        }
+        &--1 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_01.jpg");
+        }
+        &--2 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_02.jpg");
+        }
+        &--3 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_03.jpg");
+        }
+        &--4 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_04.jpg");
+        }
+        &--5 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_05.jpg");
+        }
+        &--6 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_06.jpg");
+        }
+        &--7 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_07.jpg");
+        }
+        &--8 {
+            background-image: url("../../../assets/jpg-images/great-race/ranking/ranking_08.jpg");
+        }
+    }
+
+    &__members-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        background-color: #101010;
+    }
+
+    .gr-content__description-text {
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gr-team-overview {
+        .cwd-btn__action-btn--delete-btn {
+            margin-bottom: 40px;
+        }
+
+        &__header-column {
+            &--ranking-block {
+                border-right: none;
+            }
+        }
+
+        &__header {
+            display: grid;
+            grid-template-columns: 380px 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gr-team-overview {
+        &__header {
+            grid-template-columns: 100%;
+            gap: 30px;
+        }
+
+        &__header-column {
+            border-right: none;
+        }
+
+        &__logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        &__header-info-block {
+            max-width: 246px;
+        }
+
+        &__name {
+            max-width: 246px;
+            font-size: 18px;
+        }
+
+        &__header-column {
+            &--ranking-block {
+                display: grid;
+                grid-template-columns: 36% 34%;
+                gap: 30px;
+                justify-content: flex-start;
+                padding-right: 0;
+            }
+        }
+
+        &__img-column {
+            display: flex;
+            align-items: center;
+        }
+
+        &__rank-img {
+            margin-bottom: 0;
+            margin-right: 11px;
+        }
+
+        &__members-icon {
+            margin-bottom: 0;
+            margin-right: 11px;
+        }
+
+        .gr-content__description-text {
+            margin-bottom: 30px;
+        }
+
+        .cwd-btn__action-btn--delete-btn {
+            margin-bottom: 30px;
+        }
+    }
+}

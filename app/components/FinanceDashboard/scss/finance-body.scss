@@ -1,0 +1,158 @@
+.finance-body {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-bottom: 20px !important;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        background-color: #212121;
+        border-radius: 15px;
+
+        &--dex {
+            overflow: hidden;
+        }
+    }
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 376px;
+        margin: 0 auto;
+    }
+
+    &__item-img {
+        max-width: 100%;
+
+        &--dex {
+            height: 180px;
+            width: 655px;
+            max-width: 655px;
+        }
+        &--staking {
+            width: 370px;
+            margin-top: -40px;
+        }
+        &--pledge {
+            width: 362px;
+            height: 100px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        &--gcwd {
+            width: 362px;
+            height: 100px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 18px;
+        font-family: RussoOne, arial, sans-serif;
+        font-size: 28px;
+    }
+
+    &__ex-rate {
+        margin-bottom: 20px;
+        padding: 6px 10px;
+        background-color: #1d1d1d;
+        border-radius: 4px;
+    }
+
+    &__ex-rate-text {
+        color: #7c7c7c;
+        font-family: CoreSansE-Regular, arial;
+        font-size: 14px;
+    }
+
+    &__ex-rate-price {
+        font-family: CoreSansE-65Bold, sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .finance-body {
+        grid-template-columns: 100%;
+
+        &__item-img {
+            &--dex {
+                height: auto;
+                width: 96%;
+            }
+
+            &--img {
+                width: 370px;
+            }
+
+            &--pledge {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .finance-body {
+        grid-gap: 17px;
+
+        &__btn-wrap {
+            display: grid;
+            grid-template-columns: 48% 48%;
+            grid-column-gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px;
+        }
+
+        &__item-img {
+            &--dex {
+                height: 110px;
+                width: 423px;
+                max-width: 423px;
+            }
+
+            &--pledge {
+                width: 241px;
+                height: 67px;
+                margin-top: 13px;
+                margin-bottom: 0;
+            }
+            &--gcwd {
+                width: 227px;
+                height: 63px;
+                margin-top: 13px;
+                margin-bottom: 8px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        &__ex-rate {
+            margin-bottom: 14px;
+            padding: 3px 10px 5px 10px;
+        }
+
+        &__ex-rate-text {
+            font-size: 12px;
+        }
+
+        &__ex-rate-price {
+            font-size: 12px;
+        }
+    }
+}

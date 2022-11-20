@@ -1,0 +1,18 @@
+.my-team-wrap {
+    min-height: 300px;
+
+    &__btn-plus {
+        margin-left: 12px;
+        svg * {
+            stroke: #262626;
+        }
+    }
+
+    & .cwd-btn__square-btn {
+        &:hover {
+            svg * {
+                stroke: #dec27f;
+            }
+        }
+    }
+}

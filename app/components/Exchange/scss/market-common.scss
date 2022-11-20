@@ -1,0 +1,15 @@
+.market-common {
+    &__wrap {
+        max-width: 1600px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .market-common {
+        &__wrap {
+            #mobileMarketMenu {
+                padding-bottom: 60px;
+            }
+        }
+    }
+}

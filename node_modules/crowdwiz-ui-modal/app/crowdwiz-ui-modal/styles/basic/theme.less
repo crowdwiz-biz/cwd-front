@@ -1,0 +1,590 @@
+/* * * * * * * * * * * COMPONENTS REWRITE (additional changes to components) * * * * * * * * * */
+
+// ant-upload
+// ---
+
+.ant-upload {
+
+  .ant-upload-list-item-name, a.ant-upload-list-item-name {
+    color: @upload-item-name-color;
+  }
+  &-list-item {
+    i.anticon-cross {
+      opacity: 1 !important;
+      right: auto !important;
+      left: 0 !important;
+      color: @primary-color !important;
+    }
+    &-info {
+      padding-left: 20px !important;
+    }
+  }
+}
+
+.ant-upload-drag {
+
+  border: 0 !important;
+  background-color: transparent !important;
+
+  .ant-upload.ant-upload-btn {
+    padding: 0 !important;
+  }
+
+  .ant-upload-drag-container {
+    cursor: pointer;
+    text-align: center;
+
+    padding: @upload-drag-container-padding;
+    background: @upload-drag-container-bg;
+    border: @upload-drag-container-border-width @upload-drag-container-border-style @upload-drag-container-border-color;
+
+    .ant-upload-drag-icon {
+      i {
+        color: @upload-drag-container-icon-color;
+        font-size: @upload-drag-container-icon-size;
+      }
+    }
+
+    .ant-upload-text {
+      font-size: @upload-drag-container-text-size;
+      color: @upload-drag-container-text-color;
+    }
+
+    .ant-upload-hint {
+      font-size: @upload-drag-container-hint-size;
+      color: @upload-drag-container-hint-color;
+    }
+  }
+
+}
+
+// a
+// ---
+
+a {
+  color: @link-color;
+  background-color: transparent; // remove the gray background on active links in IE 10.
+  text-decoration: @link-decoration;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s;
+  -webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
+
+  &:focus {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+
+  &:hover {
+    color: @link-hover-color;
+  }
+
+  &:active {
+    color: @link-active-color;
+  }
+
+  &:active,
+  &:hover {
+    outline: 0;
+    text-decoration: @link-hover-decoration;
+  }
+
+  &[disabled] {
+    color: @disabled-color;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+// ant-radio
+// ---
+
+.ant-radio {
+  span.ant-radio-inner {
+    border-color: @radio-border-color;
+    background: @radio-bg;
+    &:after {
+      border-radius: @radio-dot-radius;
+    }
+  }
+}
+
+.ant-radio-group {
+  .ant-radio-button-wrapper {
+    border-color: @radio-button-border-color;
+
+    &:not(:first-child)::before {
+      background-color: @radio-button-border-color;
+    }
+  }
+}
+
+// ant-checkbox
+// ---
+
+.ant-checkbox {
+  span.ant-checkbox-inner {
+    border-color: @checkbox-border-color;
+    background-color: @checkbox-bg;
+  }
+  &.ant-checkbox-checked {
+    span.ant-checkbox-inner {
+      border-color: @checkbox-checked-border-color;
+      background-color: @checkbox-checked-bg;
+      &:after {
+        border-color: @checkbox-flag-color;
+      }
+    }
+  }
+}
+
+// ant-switch
+// ---
+
+button.ant-switch {
+  border-radius: @switch-border-radius !important;
+  background-color: @switch-bg !important;
+  &:after {
+    box-shadow: @switch-dot-shadow !important;
+    border-radius: @switch-dot-border-radius !important;
+    background-color: @switch-color !important;
+    margin-left: @switch-dot-margin-left;
+    height: @switch-dot-size !important;
+    width: @switch-dot-size !important;
+    margin-top: @switch-dot-margin-top !important;
+  }
+  &.ant-switch-checked {
+    background-color: @switch-checked-bg !important;
+    &:after {
+      background-color: @switch-checked-color !important;
+      height: @switch-dot-size;
+      width: @switch-dot-size;
+      margin-top: @switch-dot-margin-top;
+      margin-left: @switch-checked-dot-margin-left;
+    }
+  }
+}
+
+// ant-table
+// ---
+
+.ant-table {
+  table {
+    thead.ant-table-thead {
+      > tr {
+        > th {
+          text-transform: uppercase;
+          &.ant-table-column-has-actions {
+            &:hover {
+              background-color: @table-header-bg !important;
+              .anticon {
+                background: transparent !important;
+                color: @table-header-icon-active-color;
+              }
+            }
+          }
+          > span {
+            color: @table-header-color;
+            text-transform: @table-header-text-transform;
+          }
+          border-bottom: @table-header-border-bottom;
+          .anticon {
+            color: @table-header-icon-color;
+            &.ant-table-filter-selected {
+              color: @table-header-icon-active-color;
+            }
+            &.ant-table-filter-open {
+              background: transparent !important;
+            }
+          }
+          .on {
+            &.anticon {
+              color: @table-header-icon-active-color !important;
+            }
+          }
+          .off {
+            &.anticon {
+              color: @table-header-icon-color !important;
+            }
+          }
+          .ant-table-column-sorter {
+            height: 20px;
+            margin-top: -10px;
+          }
+        }
+      }
+    }
+    tbody.ant-table-tbody {
+      > tr.ant-table-row {
+        > td {
+          border-bottom: @table-body-border-bottom;
+        }
+        &:nth-child(2n) {
+          background-color: @table-row-even-bg;
+        }
+        &:nth-child(2n+1) {
+          background-color: @table-row-odd-bg;
+        }
+        &:hover {
+          background-color: @table-row-hover-bg;
+        }
+      }
+    }
+  }
+  .ant-table-placeholder {
+    height: @table-placeholder-no-data-height;
+    line-height: @table-placeholder-no-data-line-height;
+    vertical-align: middle;
+  }
+}
+
+// ant-tabs
+// ---
+
+.ant-tabs {
+  &-bar {
+    border-bottom: @tabs-border-width @tabs-border-style @tabs-border-color !important;
+  }
+  .ant-tabs-tab {
+    text-transform: @tabs-tab-text-transform;
+    font-weight: @tabs-title-font-weight;
+    &.ant-tabs-tab-active {
+      font-weight: @tabs-title-active-font-weight;
+    }
+  }
+  div.ant-tabs-ink-bar {
+    height: @tabs-ink-bar-height;
+  }
+  &-card {
+    .ant-tabs-tab {
+      background-color: @tabs-card-tab-bg !important;
+      border-color: @tabs-card-split-border-color !important;
+      &-active {
+        border-color: @tabs-card-tab-active-border-color !important;
+        background: @tabs-card-tab-active-bg !important;
+        color: @tabs-card-tab-active-color !important;
+      }
+    }
+    .ant-tabs-bar {
+      border-bottom-color: @tabs-card-bar-border-color !important;
+    }
+  }
+
+}
+
+// Breadcrumb
+// ---
+
+.ant-breadcrumb {
+  &-link, a {
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  > span:last-child {
+    .ant-breadcrumb-separator {
+      display: none;
+    }
+  }
+}
+
+// ant-slider
+// ---
+
+.ant-slider {
+  &-handle {
+    background-color: @slider-handle-background-color;
+  }
+  &-dot {
+    transition: .15s;
+    background-color: @slider-dot-background-color;
+  }
+  &-dot-active {
+    background-color: @slider-dot-background-color-active;
+  }
+  &:hover {
+    .ant-slider-handle {
+      background-color: @slider-handle-background-color-hover;
+    }
+    .ant-slider-dot {
+      border-color: @slider-dot-border-color-hover;
+    }
+    .ant-slider-dot-active {
+      border-color: @slider-dot-border-color-active;
+    }
+  }
+}
+
+// ant-modal
+// ---
+
+.ant-modal {
+  &-close-x {
+    color: @modal-close-x-color;
+    transition: .3s;
+    &:hover {
+      color: @modal-close-x-color-hover;
+    }
+  }
+  &-footer {
+    > div {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      button {
+        margin: 0 6px;
+        &:last-child {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+// ant-input
+// ---
+.ant-input {
+  line-height: @input-line-height !important;
+}
+
+// ant-btn
+// ---
+
+.ant-btn {
+  text-transform: uppercase;
+  span {
+    font-weight: @btn-font-weight;
+  }
+  &-primary {
+    &[disabled] {
+      background-color: @btn-primary-disabled-bg !important;
+      border-color: @btn-primary-disabled-border-color !important;
+      color: @btn-primary-disabled-color !important;
+    }
+  }
+  &-icon-only {
+    padding: 0 @padding-md - 1px !important;
+  }
+  .ant-btn-group & {
+    &[disabled] {
+      border-color: @btn-default-border !important;
+    }
+  }
+}
+
+// ant-select
+// ---
+
+.ant-select {
+  &-selection {
+    background-color: @select-background-color;
+  }
+
+  &-dropdown-menu-item {
+    background-color: @select-background-color;
+
+    &:hover {
+      color: @select-item-hover-color;
+      background-color: @select-item-hover-background-color;
+    }
+  }
+  &-dropdown-menu-item-selected {
+    color: @select-item-selected-color;
+    background-color: @select-item-selected-background-color;
+    &:hover {
+      color: @select-item-selected-hover-color;
+      background-color: @select-item-selected-hover-background-color;
+    }
+  }
+  &-dropdown-menu {
+    border: @select-dropdown-menu-border-width @select-dropdown-menu-border-style @select-dropdown-menu-border-color;
+  }
+}
+
+// ant-collapse
+// ---
+
+.ant-collapse {
+  border: @collapse-border;
+  background-color: @collapse-background-color;
+  &-header {
+    padding-left: @collapse-item-header-padding-left !important;
+    color: @collapse-item-header-color !important;
+    text-transform: @collapse-item-header-text-transform;
+    border: @collapse-item-header-border;
+    border-bottom: @collapse-item-header-border-bottom;
+    background-color: @collapse-item-header-background-color;
+    &:hover {
+      color: @collapse-item-header-color-hover !important;
+      background-color: @collapse-item-header-background-color-hover;
+    }
+    .arrow {
+      right: @collapse-arrow-right-position !important;
+      left: @collapse-arrow-left-position !important;
+    }
+
+  }
+  &-item {
+    background-color: @collapse-item-background-color;
+    border-bottom: @collapse-item-border-bottom !important;
+    &:last-child {
+      .ant-collapse-header {
+        border-bottom: @collapse-item-header-border;
+      }
+    }
+  }
+  &-item-active {
+    .ant-collapse-header {
+      color: @collapse-item-active-header-color !important;
+      background-color: @collapse-item-active-header-background-color;
+    }
+  }
+  &-item-disabled {
+    &:last-child {
+      .ant-collapse-header {
+        border-bottom: @collapse-item-disabled-header-border;
+      }
+    }
+    .ant-collapse-header {
+      color: @collapse-item-disabled-header-color !important;
+      background-color: @collapse-item-disabled-header-background-color;
+      border: @collapse-item-disabled-header-border;
+      border-bottom: @collapse-item-disabled-header-border-bottom;
+    }
+  }
+  &-content {
+    border-top: @collapse-content-border-top;
+    background-color: @collapse-content-background-color;
+  }
+  &-borderless {
+    .ant-collapse-header {
+      background-color: @collapse-borderless-header-background-color;
+      border: @collapse-borderless-header-border;
+      border-bottom: @collapse-borderless-header-border-bottom;
+      &:hover {
+        color: @collapse-borderless-item-header-color-hover !important;
+        background-color: @collapse-borderless-item-header-background-color-hover;
+      }
+    }
+    .ant-collapse-item-active {
+      .ant-collapse-header {
+        color: @collapse-borderless-item-active-header-color-hover !important;
+        background-color: @collapse-borderless-item-active-header-background-color-hover;
+        border: @collapse-borderless-header-border;
+        border-bottom: @collapse-borderless-header-border-bottom;
+      }
+    }
+    .ant-collapse-item-disabled {
+      .ant-collapse-header {
+        color: @collapse-borderless-item-disabled-header-color-hover !important;
+        background-color: @collapse-borderless-item-disabled-header-background-color-hover;
+      }
+    }
+  }
+}
+
+// ant-popover
+
+.ant-popover {
+
+  .style-guide-popover-mixin(@box-shadow, @placement) {
+    &.ant-popover-placement-@{placement} {
+      .ant-popover-content {
+        .ant-popover-arrow {
+          box-shadow: @box-shadow;
+        }
+        .ant-popover-inner {
+          box-shadow: @popover-content-inner-box-shadow;
+        }
+      }
+    }
+  }
+
+  // placements
+
+  // top
+  .style-guide-popover-mixin(@popover-placement-top-arrow-box-shadow, top);
+  .style-guide-popover-mixin(@popover-placement-top-arrow-box-shadow, topLeft);
+  .style-guide-popover-mixin(@popover-placement-top-arrow-box-shadow, topRight);
+
+  // left
+  .style-guide-popover-mixin(@popover-placement-left-arrow-box-shadow, left);
+  .style-guide-popover-mixin(@popover-placement-left-arrow-box-shadow, leftTop);
+  .style-guide-popover-mixin(@popover-placement-left-arrow-box-shadow, leftBottom);
+
+
+  // bottom
+  .style-guide-popover-mixin(@popover-placement-bottom-arrow-box-shadow, bottom);
+  .style-guide-popover-mixin(@popover-placement-bottom-arrow-box-shadow, bottomLeft);
+  .style-guide-popover-mixin(@popover-placement-bottom-arrow-box-shadow, bottomRight);
+
+
+  // right
+  .style-guide-popover-mixin(@popover-placement-right-arrow-box-shadow, right);
+  .style-guide-popover-mixin(@popover-placement-right-arrow-box-shadow, rightTop);
+  .style-guide-popover-mixin(@popover-placement-right-arrow-box-shadow, rightBottom);
+
+
+  .ant-popover-title {
+    border-bottom: 1px solid @popover-title-border-bottom-color;
+  }
+
+}
+
+// ant-card
+
+.ant-card {
+  background-color: @card-background;
+  border-color: @card-border-color;
+
+  .ant-card-head {
+    border-color: @card-border-color;
+  }
+
+  .ant-card-body {
+    // fix if body has background it places over the border
+    margin-top: 1px;
+    background-color: @card-body-background;
+    border-color: @card-border-color;
+  }
+}
+
+// ant-alert
+
+.ant-alert {
+  .ant-alert-message {
+    color: @alert-message-color;
+    font-weight: 500;
+  }
+}
+
+// ant-notification-notice
+
+.ant-notification-notice {
+  border: @notification-border;
+}
+
+// ant-calendar
+
+.ant-calendar {
+  &-active-week {
+    background: @calendar-active-week-background !important;
+  }
+
+  &-body tr {
+    &:hover {
+      background: @calendar-active-week-hover !important;
+    }
+  }
+  &-picker-input {
+    line-height: 1 !important;
+  }
+}
+
+// ant-tooltip
+
+.ant-tooltip {
+  &-inner {
+    box-shadow: @tooltip-box-shadow;
+  }
+}

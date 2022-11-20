@@ -1,0 +1,57 @@
+.node-access-popup {
+    @include CoreSansELight;
+    left: 0;
+    bottom: 22px;
+    width: 100%;
+    position: absolute;
+    background-color: #262626;
+    &__header {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 23px;
+        border-bottom: 1px solid #302f2f;
+    }
+    &__title {
+        display: block;
+        font-family: "CoreSansE-Light", arial, sans-serif;
+        font-size: 18px;
+        color: #ffffff;
+        margin-bottom: 12px;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding-top: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__text {
+        padding-right: 20px;
+        font-family: "CoreSansE-Light", arial, sans-serif;
+        font-size: 16px;
+        color: #6d6d6d;
+    }
+    button[role="switch"].ant-switch {
+        background-color: #414141 !important;
+        -webkit-border-radius: 20px !important;
+        -moz-border-radius: 20px !important;
+        border-radius: 20px !important;
+        &:after {
+            border-radius: 100px !important;
+        }
+    }
+    &__link {
+        font-family: "CoreSansE-Light", arial, sans-serif;
+        font-size: 16px;
+        text-decoration: underline;
+        color: #e1c697;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .node-access-popup {
+        bottom: -18px;
+        padding-bottom: 20px;
+    }
+}

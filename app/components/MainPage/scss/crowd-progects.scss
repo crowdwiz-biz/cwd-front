@@ -1,0 +1,127 @@
+.crowd-progects {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 110px 110px 110px;
+        gap: 20px;
+        list-style: none;
+        margin: 0 !important;
+    }
+
+    &__item {
+        background-color: #202020;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            transition: all 0.3s;
+            box-shadow: 0 6px 16px 0 #0c0c0c;
+            transform: translateY(-2px);
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: -13px;
+        bottom: -13px;
+        padding-left: 15px;
+        text-decoration: none !important;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        margin: 0 auto;
+        margin-right: 20px;
+
+        & img {
+            max-width: 110px;
+            max-height: 120px;
+        }
+    }
+
+    &__name {
+        font-family: SuisseIntlBold, arial, sans-serif;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: normal;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .crowd-progects {
+        &__container {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 160px 160px;
+            margin-top: 50px !important;
+            row-gap: 47px;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__link {
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: -33px;
+            bottom: auto;
+            width: 100%;
+            padding-left: 0;
+        }
+
+        &__img {
+            width: auto;
+            height: 112px;
+            margin-right: auto;
+            margin-bottom: 20px;
+
+            & img {
+                max-width: 100px;
+            }
+        }
+
+        &__name {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .crowd-progects {
+        &__container {
+            grid-template-columns: 160px 160px;
+            grid-template-rows: 105px 105px 105px;
+            column-gap: 10px;
+            row-gap: 40px;
+            margin-top: 25px !important;
+        }
+
+        &__link {
+            top: -24px;
+        }
+
+        &__img {
+            height: 76px;
+
+            & img {
+                max-height: 82px;
+                max-width: 82px;
+            }
+        }
+
+        &__name {
+            font-size: 14px;
+        }
+    }
+}

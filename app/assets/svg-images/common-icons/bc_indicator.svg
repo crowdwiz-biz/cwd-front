@@ -1,0 +1,5 @@
+<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.2" cx="8.5" cy="8.5" r="8" stroke="#03D99D"/>
+<circle opacity="0.4" cx="8.5" cy="8.5" r="5" stroke="#03D99D"/>
+<circle class="center-indicator" cx="8.5" cy="8.5" r="2.5" fill="#03D99D"/>
+</svg>
