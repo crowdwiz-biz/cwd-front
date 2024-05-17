@@ -356,7 +356,7 @@ class MarginPosition extends React.Component {
                         />
                     ) : null}
                 </td>
-                <td style={{textAlign: "center"}}>
+                <td style={{display: "flex", justifyContent: "center"}}>
                     <Link
                         to={`/market/${debtAsset.get(
                             "symbol"
@@ -366,6 +366,7 @@ class MarginPosition extends React.Component {
                             iconWidth={16}
                             iconHeight={16}
                             iconName={"trade"}
+                            iconClass="icon-gray"
                         />
                     </Link>
                 </td>
@@ -382,7 +383,7 @@ class MarginPosition extends React.Component {
                                 }
                             )}
                         >
-                            <div style={{paddingBottom: 5}}>
+                            <div style={{paddingBottom: 5, display: "flex", justifyContent: "center"}}>
                                 <AntIcon type={"question-circle"} />
                             </div>
                         </Tooltip>
@@ -393,12 +394,13 @@ class MarginPosition extends React.Component {
                                 "tooltip.update_position"
                             )}
                         >
-                            <div style={{paddingBottom: 5}}>
+                            <div style={{paddingBottom: 5, display: "flex", justifyContent: "center"}}>
                                 <a onClick={this._onUpdatePosition.bind(this)}>
                                     <NewIcon
                                         iconWidth={16}
                                         iconHeight={16}
                                         iconName={"adjust"}
+                                        iconClass="icon-gray"
                                     />
                                 </a>
                             </div>
