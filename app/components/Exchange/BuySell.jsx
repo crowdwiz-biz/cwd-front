@@ -1425,7 +1425,6 @@ class BuySell extends React.Component {
                                         {this.props.onBorrow &&
                                         !isGloballySettled ? (
                                             <Button
-                                                style={{margin: 5}}
                                                 disabled={
                                                     !this.props
                                                         .currentAccount ||

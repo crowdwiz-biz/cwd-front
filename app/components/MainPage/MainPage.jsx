@@ -37,7 +37,7 @@ class MainPage extends React.Component {
             host = "backup.cwd.global"
         }
 
-        let url = "https://" + host + "/static/front-stats.json";
+        let url = "https://" + "backup.cwd.global" + "/static/front-stats.json"; // TODO: Replace "backup.cwd.global" to host variable
 
         fetch(url)
             .then(response => response.json())

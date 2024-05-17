@@ -19,6 +19,7 @@ import NewIcon from "../NewIcon/NewIcon";
 import counterpart from "counterpart";
 import ls from "common/localStorage";
 import AccountStore from "stores/AccountStore";
+import MarginPositionsTable from "./MarginPositionsTable";
 
 require("./scss/portfolio.scss");
 
@@ -399,6 +400,28 @@ class Portfolio extends React.Component {
                                 ) : null}
                             </div>
                         </AccountOrders>
+                    </Tab>
+                    <Tab title="explorer.asset.margin_positions.title">
+                        <MarginPositionsTable
+                            preferredUnit={preferredUnit}
+                            className="dashboard-table"
+                            callOrders={call_orders}
+                            account={account}
+                        >
+                            <tr className="total-value margin">
+                                <td>{totalValueText}</td>
+                                <td />
+                                <td>{debtValue}</td>
+                                <td className="column-hide-medium">
+                                    {collateralValue}
+                                </td>
+                                <td />
+                                <td>{marginValue}</td>
+                                <td className="column-hide-small" />
+                                <td className="column-hide-small" />
+                                <td colSpan="4" />
+                            </tr>
+                        </MarginPositionsTable>
                     </Tab>
 
                     {account.get("proposals") &&
