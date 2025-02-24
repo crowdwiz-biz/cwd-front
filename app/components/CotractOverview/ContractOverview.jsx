@@ -88,6 +88,8 @@ class ContractOverview extends React.Component {
                                     </div>
                                 </div>
                             </Tab>
+                            {/* лидрерского бонуса сейчас нет в ядре, он идет на null-account,
+                            поэтому скрываем на фронте
                             <Tab title="contract_overview.tabs.tab_leder_bonus">
                                 <div className="contract-overview__tab-content">
                                     <Translate
@@ -106,7 +108,7 @@ class ContractOverview extends React.Component {
                                         />
                                     </div>
                                 </div>
-                            </Tab>
+                            </Tab>*/}
                             <Tab title="contract_overview.tabs.tab_other">
                                 <div className="contract-overview__tab-content">
                                     <div className="contract-overview__table-scroll">

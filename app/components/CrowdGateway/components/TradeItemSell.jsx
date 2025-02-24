@@ -225,7 +225,7 @@ class TradeItemSell extends React.Component {
 
         let userBalance = this.state.userBalance;
         let minCwdLimit = activeItem["min_cwd"] / 100000;
-        let maxCwdLimit = activeItem["max_cwd"] / 100000 - 2;
+        let maxCwdLimit = activeItem["max_cwd"] / 100000 - 250;
 
         let isTop = this.props.isTop;
         let exRate = parseFloat(activeItem["price"] / 100000000);
@@ -398,14 +398,14 @@ class TradeItemSell extends React.Component {
                                     className="cwdgateway__field"
                                     type="number"
                                     min={activeItem["min_cwd"]}
-                                    max={activeItem["max_cwd"] - 200000}
+                                    max={activeItem["max_cwd"] - 20000000}
                                     name="popupSellAmount"
                                     id={"popupAmount_" + activeItem["id"]}
                                     onChange={this.amountValidate.bind(
                                         this,
                                         activeItem["id"],
                                         activeItem["min_cwd"],
-                                        activeItem["max_cwd"] - 200000
+                                        activeItem["max_cwd"] - 20000000
                                     )}
                                 />
                             </div>
@@ -436,7 +436,7 @@ class TradeItemSell extends React.Component {
                                         this,
                                         activeItem["id"],
                                         activeItem["min_cwd"],
-                                        activeItem["max_cwd"] - 200000
+                                        activeItem["max_cwd"] - 20000000
                                     )}
                                     rows="3"
                                 />

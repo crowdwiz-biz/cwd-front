@@ -1112,6 +1112,8 @@
         "game_heads": "Heads or tails",
         "game_lottery": "Scoop",
         "heads-desc-01": "In this game you play with other participants. You can place your bet or answer the bet of another player in the \"Active bets\" section. Winability is 50%. The commission of the platform with a win is 10%",
+        "heads-stats-day": "The biggest win of the day: {account} - {amount}",
+        "heads-stats-week": "The biggest win of the week: {account} - {amount}",
         "heads-text": "Place a bet",
         "lot-participants": "Participants:",
         "lot_expiration": "Expiration:",

@@ -125,7 +125,7 @@ class StakingTransfer extends React.Component {
             fee_asset_id = fee_asset_types[0];
         }
         if (!currentAccount) return null;
-        let fee_asset = new Asset({amount: 2000000});
+        let fee_asset = new Asset({amount: 4000000000});
         this.setState({
             feeAmount: fee_asset,
             fee_asset_id: "1.3.0"

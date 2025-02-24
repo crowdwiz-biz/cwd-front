@@ -183,6 +183,17 @@ class ModalContent extends React.Component {
         let currentBalance = null,
             balanceAmount = 0;
 
+        // Пользование смарткойном только для ограниченной группы
+        // let testArray = [];
+        // let testAccounts = ChainStore.fetchFullAccount("test-accounts");
+
+        // if (testAccounts) {
+        //     testAccounts.get("whitelisted_accounts").map(acc => {
+        //         testArray.push(acc)
+        //     })
+        // }
+        // const isBorrowAllow = false || testArray.includes(this.props.account.get("id"));
+
         account_balances &&
             account_balances.forEach(balance => {
                 let balanceObject = ChainStore.getObject(balance);

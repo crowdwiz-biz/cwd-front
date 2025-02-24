@@ -29,6 +29,14 @@
             border: 1px solid #00a9e9;
         }
     }
+    &__order-btn-wrap {
+        display: flex;
+
+        button {
+            margin: 0 0 0 auto !important;
+            height: 34px;
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -37,6 +45,10 @@
             display: grid;
             grid-template-columns: 45% 45%;
             justify-content: space-between;
+
+            button {
+                margin: 14px auto 0 0 !important;
+            }
         }
     }
 }

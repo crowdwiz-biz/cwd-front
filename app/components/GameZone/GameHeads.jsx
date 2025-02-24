@@ -1,5 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
+import TranslateWithLinks from "../Utility/TranslateWithLinks";
 import WalletUnlockActions from "actions/WalletUnlockActions";
 import AccountActions from "actions/AccountActions";
 import AccountStore from "stores/AccountStore";
@@ -33,6 +34,7 @@ class GameHeads extends React.Component {
 
         this.state = {
             flipcoin: [],
+            apiData: {},
             betAmount: 0,
             showModal: false,
             locales: SettingsStore.getState().defaults.locale,
@@ -49,6 +51,7 @@ class GameHeads extends React.Component {
 
     componentDidMount() {
         this.getBetsArray();
+        this.getStatsData();
         this.updateWindowDimensions();
         window.addEventListener("resize", this.updateWindowDimensions);
 
@@ -77,6 +80,20 @@ class GameHeads extends React.Component {
             })
             .catch(err => {
                 console.log("error:", err);
+            });
+    }
+
+    getStatsData() {
+        // get statistic from static file
+        let host = "backup.cwd.global";
+        let url = "https://" + host + "/static/head_or_tails_stats.json";
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    apiData: data
+                });
             });
     }
 
@@ -200,6 +217,7 @@ class GameHeads extends React.Component {
     }
 
     render() {
+        let apiData = this.state.apiData;
         let flipCoin = this.state.flipcoin;
         let deviceWidth = window.innerWidth;
 
@@ -283,6 +301,25 @@ class GameHeads extends React.Component {
                             className="game-heads__description"
                             content="gamezone.heads-desc-01"
                             component="p"
+                        />
+                    </div>
+
+                    <div className="game-heads__desc-wrap">
+                        <TranslateWithLinks
+                            string={"gamezone.heads-stats-day"}
+                            keys={[
+                                {
+                                    type: "account",
+                                    value: apiData.account,
+                                    arg: "account"
+                                },
+                                {
+                                    type: "amount",
+                                    value: {amount: apiData.max_win, asset_id: "1.3.0"},
+                                    arg: "amount",
+                                    decimalOffset: 5
+                                }
+                            ]}
                         />
                     </div>
 

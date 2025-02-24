@@ -1,6 +1,6 @@
 export const leaderBonusData = [
     {
-        rowTitle: "15 000",
+        rowTitle: "300 000",
         cell_01: {
             type: "text",
             data: ""
@@ -16,86 +16,6 @@ export const leaderBonusData = [
         cell_04: {
             type: "text",
             data: "1%"
-        },
-        titleDataType: "number"
-    },
-    {
-        rowTitle: "35 000",
-        cell_01: {
-            type: "text",
-            data: ""
-        },
-        cell_02: {
-            type: "text",
-            data: ""
-        },
-        cell_03: {
-            type: "text",
-            data: "2%"
-        },
-        cell_04: {
-            type: "text",
-            data: "2%"
-        },
-        titleDataType: "number"
-    },
-    {
-        rowTitle: "100 000",
-        cell_01: {
-            type: "text",
-            data: ""
-        },
-        cell_02: {
-            type: "text",
-            data: ""
-        },
-        cell_03: {
-            type: "text",
-            data: "3%"
-        },
-        cell_04: {
-            type: "text",
-            data: "3%"
-        },
-        titleDataType: "number"
-    },
-    {
-        rowTitle: "250 000",
-        cell_01: {
-            type: "text",
-            data: ""
-        },
-        cell_02: {
-            type: "text",
-            data: ""
-        },
-        cell_03: {
-            type: "text",
-            data: "4%"
-        },
-        cell_04: {
-            type: "text",
-            data: "4%"
-        },
-        titleDataType: "number"
-    },
-    {
-        rowTitle: "450 000",
-        cell_01: {
-            type: "text",
-            data: ""
-        },
-        cell_02: {
-            type: "text",
-            data: ""
-        },
-        cell_03: {
-            type: "text",
-            data: "5%"
-        },
-        cell_04: {
-            type: "text",
-            data: "5%"
         },
         titleDataType: "number"
     },
@@ -111,6 +31,86 @@ export const leaderBonusData = [
         },
         cell_03: {
             type: "text",
+            data: "2%"
+        },
+        cell_04: {
+            type: "text",
+            data: "2%"
+        },
+        titleDataType: "number"
+    },
+    {
+        rowTitle: "2 000 000",
+        cell_01: {
+            type: "text",
+            data: ""
+        },
+        cell_02: {
+            type: "text",
+            data: ""
+        },
+        cell_03: {
+            type: "text",
+            data: "3%"
+        },
+        cell_04: {
+            type: "text",
+            data: "3%"
+        },
+        titleDataType: "number"
+    },
+    {
+        rowTitle: "5 000 000",
+        cell_01: {
+            type: "text",
+            data: ""
+        },
+        cell_02: {
+            type: "text",
+            data: ""
+        },
+        cell_03: {
+            type: "text",
+            data: "4%"
+        },
+        cell_04: {
+            type: "text",
+            data: "4%"
+        },
+        titleDataType: "number"
+    },
+    {
+        rowTitle: "9 000 000",
+        cell_01: {
+            type: "text",
+            data: ""
+        },
+        cell_02: {
+            type: "text",
+            data: ""
+        },
+        cell_03: {
+            type: "text",
+            data: "5%"
+        },
+        cell_04: {
+            type: "text",
+            data: "5%"
+        },
+        titleDataType: "number"
+    },
+    {
+        rowTitle: "14 000 000",
+        cell_01: {
+            type: "text",
+            data: ""
+        },
+        cell_02: {
+            type: "text",
+            data: ""
+        },
+        cell_03: {
+            type: "text",
             data: "6%"
         },
         cell_04: {
@@ -120,7 +120,7 @@ export const leaderBonusData = [
         titleDataType: "number"
     },
     {
-        rowTitle: "1 500 000",
+        rowTitle: "30 000 000",
         cell_01: {
             type: "text",
             data: ""
@@ -140,7 +140,7 @@ export const leaderBonusData = [
         titleDataType: "number"
     },
     {
-        rowTitle: "3 000 000",
+        rowTitle: "60 000 000",
         cell_01: {
             type: "text",
             data: ""

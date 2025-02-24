@@ -3,44 +3,24 @@ export const totalContactData = [
         rowTitle: "tab_01.row_1",
         cell_01: {
             type: "text",
-            data: "14%"
+            data: "8.4%"
         },
         cell_02: {
             type: "text",
-            data: "16%"
+            data: "9.6%"
         },
         cell_03: {
             type: "text",
-            data: "18%"
+            data: "10.8%"
         },
         cell_04: {
             type: "text",
-            data: "20%"
+            data: "12%"
         },
         titleDataType: "text"
     },
     {
         rowTitle: "tab_01.row_2",
-        cell_01: {
-            type: "text",
-            data: "7%"
-        },
-        cell_02: {
-            type: "text",
-            data: "8%"
-        },
-        cell_03: {
-            type: "text",
-            data: "9%"
-        },
-        cell_04: {
-            type: "text",
-            data: "10%"
-        },
-        titleDataType: "text"
-    },
-    {
-        rowTitle: "tab_01.row_3",
         cell_01: {
             type: "text",
             data: "4.2%"
@@ -60,6 +40,26 @@ export const totalContactData = [
         titleDataType: "text"
     },
     {
+        rowTitle: "tab_01.row_3",
+        cell_01: {
+            type: "text",
+            data: "2.52%"
+        },
+        cell_02: {
+            type: "text",
+            data: "2.88%"
+        },
+        cell_03: {
+            type: "text",
+            data: "3.24%"
+        },
+        cell_04: {
+            type: "text",
+            data: "3.6%"
+        },
+        titleDataType: "text"
+    },
+    {
         rowTitle: "tab_01.row_4",
         cell_01: {
             type: "text",
@@ -67,15 +67,15 @@ export const totalContactData = [
         },
         cell_02: {
             type: "text",
-            data: "3.2%"
+            data: "1.92%"
         },
         cell_03: {
             type: "text",
-            data: "3.6%"
+            data: "2.16%"
         },
         cell_04: {
             type: "text",
-            data: "4%"
+            data: "2.4%"
         },
         titleDataType: "text"
     },
@@ -87,15 +87,15 @@ export const totalContactData = [
         },
         cell_02: {
             type: "text",
-            data: "2.4%"
+            data: "1.44%"
         },
         cell_03: {
             type: "text",
-            data: "2.7%"
+            data: "1.62%"
         },
         cell_04: {
             type: "text",
-            data: "3%"
+            data: "1.8%"
         },
         titleDataType: "text"
     },
@@ -111,11 +111,11 @@ export const totalContactData = [
         },
         cell_03: {
             type: "text",
-            data: "1.8%"
+            data: "1.08%"
         },
         cell_04: {
             type: "text",
-            data: "2%"
+            data: "1.2%"
         },
         titleDataType: "text"
     },
@@ -131,11 +131,11 @@ export const totalContactData = [
         },
         cell_03: {
             type: "text",
-            data: "1.8%"
+            data: "1.08%"
         },
         cell_04: {
             type: "text",
-            data: "2%"
+            data: "1.2%"
         },
         titleDataType: "text"
     },
@@ -155,7 +155,7 @@ export const totalContactData = [
         },
         cell_04: {
             type: "text",
-            data: "3%"
+            data: "1.8%"
         },
         titleDataType: "text"
     }

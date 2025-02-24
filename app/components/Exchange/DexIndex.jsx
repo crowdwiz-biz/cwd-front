@@ -29,67 +29,46 @@ class DexIndex extends React.Component {
                     link: "MGCWD_CWD"
                 },
                 {
-                    base: "1.3.32",
-                    quote: "1.3.1",
-                    name: "mCENT - GCWD",
-                    icon: "dex_mcent_gcwd",
-                    link: "GCWD_MCENT"
-                },
-                {
-                    base: "1.3.32",
-                    quote: "1.3.5",
-                    name: "mCENT - mGCWD",
-                    icon: "dex_mcent_mgcwd",
-                    link: "MGCWD_MCENT"
-                },
-                {
-                    base: "1.3.5",
-                    quote: "1.3.1",
-                    name: "mGCWD - GCWD",
-                    icon: "dex_mgcwd_gcwd",
-                    link: "GCWD_MGCWD"
-                },
-                {
                     base: "1.3.0",
-                    quote: "1.3.10",
-                    name: "DIAMOND - CWD",
-                    icon: "dex_diamond_cwd",
-                    link: "DIAMOND_CWD"
-                },
-                {
-                    base: "1.3.0",
-                    quote: "1.3.23",
-                    name: "INDEX.SHARE - CWD",
+                    quote: "1.3.228",
+                    name: "SCR - CWD",
                     icon: "dex_index_cwd",
-                    link: "INDEX.SHARE_CWD"
+                    link: "SCR_CWD"
                 },
                 {
                     base: "1.3.0",
-                    quote: "1.3.31",
-                    name: "INDEX.mSHARE - CWD",
-                    icon: "dex_mshare_cwd",
-                    link: "INDEX.MSHARE_CWD"
-                },
-                {
-                    base: "1.3.31",
-                    quote: "1.3.23",
-                    name: "mSHARE - SHARE",
-                    icon: "dex_mshare_index",
-                    link: "INDEX.SHARE_INDEX.MSHARE"
+                    quote: "1.3.208",
+                    name: "USDT - CWD",
+                    icon: "dex_index_cwd",
+                    link: "USDT_CWD"
                 },
                 {
                     base: "1.3.0",
-                    quote: "1.3.32",
-                    name: "mCENT - CWD",
-                    icon: "dex_mcent_cwd",
-                    link: "MCENT_CWD"
+                    quote: "1.3.168",
+                    name: "CROWDEX - CWD",
+                    icon: "dex_gcwd_mgcwd",
+                    link: "CROWDEX_CWD"
                 },
                 {
                     base: "1.3.0",
-                    quote: "1.3.35",
-                    name: "PRIDE - CWD",
-                    icon: "dex_pride_cwd",
-                    link: "PRIDE_CWD"
+                    quote: "1.3.227",
+                    name: "AXIOME - CWD",
+                    icon: "dex_gcwd_mgcwd",
+                    link: "AXIOME_CWD"
+                },
+                {
+                    base: "1.3.0",
+                    quote: "1.3.155",
+                    name: "ORDER - CWD",
+                    icon: "dex_gcwd_mgcwd",
+                    link: "ORDER_CWD"
+                },
+                {
+                    base: "1.3.0",
+                    quote: "1.3.223",
+                    name: "ZHIROTOP - CWD",
+                    icon: "dex_gcwd_mgcwd",
+                    link: "ZHIROTOP_CWD"
                 },
                 {
                     base: "1.3.0",
@@ -100,17 +79,66 @@ class DexIndex extends React.Component {
                 },
                 {
                     base: "1.3.0",
-                    quote: "1.3.38",
-                    name: "GLOBAL - CWD",
-                    icon: "dex_global_cwd",
-                    link: "GLOBAL_CWD"
+                    quote: "1.3.224",
+                    name: "FIRSTETF - CWD",
+                    icon: "dex_gcwd_mgcwd",
+                    link: "FIRSTETF_CWD"
                 },
                 {
                     base: "1.3.0",
-                    quote: "1.3.97",
-                    name: "MYCAPITAL - CWD",
-                    icon: "dex_mycapital_cwd",
-                    link: "MYCAPITAL_CWD"
+                    quote: "1.3.122",
+                    name: "GREEN - CWD",
+                    icon: "dex_gcwd_mgcwd",
+                    link: "GREEN_CWD"
+                },
+                {
+                    base: "1.3.5",
+                    quote: "1.3.1",
+                    name: "mGCWD - GCWD",
+                    icon: "dex_mgcwd_gcwd",
+                    link: "GCWD_MGCWD"
+                },
+                {
+                    base: "1.3.0",
+                    quote: "1.3.32",
+                    name: "mCENT - CWD",
+                    icon: "dex_mcent_cwd",
+                    link: "MCENT_CWD"
+                },
+                {
+                    base: "1.3.0",
+                    quote: "1.3.132",
+                    name: "BANKCWD - CWD",
+                    icon: "dex_bankcwd_cwd",
+                    link: "BANKCWD_CWD"
+                },
+                {
+                    base: "1.3.0",
+                    quote: "1.3.231",
+                    name: "mBCWD - CWD",
+                    icon: "dex_mbcwd_cwd",
+                    link: "MBCWD_CWD"
+                },
+                {
+                    base: "1.3.231",
+                    quote: "1.3.132",
+                    name: "mBCWD - BANKCWD",
+                    icon: "dex_mbcwd_bankcwd",
+                    link: "MBCWD_BANKCWD"
+                },
+                {
+                    base: "1.3.0",
+                    quote: "1.3.235",
+                    name: "GoldBANK - CWD",
+                    icon: "dex_goldbank_cwd",
+                    link: "GOLDBANK_CWD"
+                },
+                {
+                    base: "1.3.0",
+                    quote: "1.3.236",
+                    name: "CashBANK - CWD",
+                    icon: "dex_cashbank_cwd",
+                    link: "CASHBANK_CWD"
                 }
             ]
         };

@@ -3,19 +3,19 @@ export const priceData = [
         rowTitle: "price",
         cell_01: {
             type: "text",
-            data: "1500 CWD"
+            data: "750 000 CWD"
         },
         cell_02: {
             type: "text",
-            data: "7500 CWD"
+            data: "4 500 000 CWD"
         },
         cell_03: {
             type: "text",
-            data: "15000 CWD"
+            data: "9 000 000 CWD"
         },
         cell_04: {
             type: "text",
-            data: "25000 CWD"
+            data: "15 000 000 CWD"
         },
         titleDataType: "text",
     }

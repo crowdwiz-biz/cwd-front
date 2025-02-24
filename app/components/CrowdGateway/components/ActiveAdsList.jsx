@@ -105,7 +105,7 @@ class ActiveAdsList extends React.Component {
                             for (let trade in tradesBuy) {
                                 if (allowedAccounts.includes(tradesBuy[trade]['pa']["p2p_gateway"])
                                     // check if price max > min && max > 2
-                                    && tradesBuy[trade]['pa']['max_cwd'] > 200000
+                                    && tradesBuy[trade]['pa']['max_cwd'] > 20000000
                                 ) {
                                     allowedTradesBuy.push(tradesBuy[trade])
                                 }
@@ -143,7 +143,7 @@ class ActiveAdsList extends React.Component {
                             for (let trade in tradesSell) {
                                 if (allowedAccounts.includes(tradesSell[trade]['pa']["p2p_gateway"])
                                     // check if price max > min && max > 2
-                                    && tradesSell[trade]['pa']['min_cwd'] > 200000
+                                    && tradesSell[trade]['pa']['min_cwd'] > 20000000
                                 ) {
                                     allowedTradesSell.push(tradesSell[trade])
                                 }

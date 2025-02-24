@@ -9,7 +9,7 @@ import utils from "../../lib/common/utils";
 
 const replaceName = asset => {
     let {name, prefix} = utils.replaceName(asset);
-    return prefix + "" + name;
+    return name;
 };
 
 const AssetSelectView = ({

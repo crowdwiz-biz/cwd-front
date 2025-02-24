@@ -510,7 +510,47 @@ class App extends React.Component {
         let { walletMode, theme, location, match, ...others } = this.props;
         let content = null;
 
-        let depricatedAssets = ["ALTER", "SILVER", "CARBON", "INDEX.CWD", "MULTICS", "CROWD.BTC", "GUARD"];
+        let depricatedAssets = [
+            "ALTER",
+            "SILVER",
+            "CARBON",
+            "INDEX.CWD",
+            "MULTICS",
+            "CROWD.BTC",
+            "GUARD",
+            "TERAHASH",
+            "TIMBER",
+            "MOTOR",
+            "CWDORAX",
+            "MOTOR23082022",
+            "PHOENIX23082022",
+            "PHOENIX31082022",
+            "FUTURETRADE",
+            "FUTUREFIX",
+            "FUTUREFIX6",
+            "FUTUREFIX6145",
+            "FUTUREFIX6140",
+            "FUTUREFIX6135",
+            "NEWYEAR2023FIX6",
+            "NEWYEAR2023FIX3",
+            "NEWYEAR2023STK3",
+            "NEWYEAR2023TRD6",
+            "FUTUREFIX6130",
+            "FUTUREFIX6125",
+            "FUTUREFIX6120",
+            "FUTUREFIX6115",
+            "FUTUREFIX6110",
+            "FUTUREFIX6105",
+            "FUTUREFIX6100",
+            "FUTUREFIX695",
+            "FUTURETRADE670",
+            "FUTUREFIX370",
+            "FUTUREFIX365",
+            "FUTURE360",
+            "DREAM37",
+            "FIXPLAY",
+            "GAMEPLAY"
+        ];
         let tradeUrl = window.location.href;
 
         let isDepricated = false;

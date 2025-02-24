@@ -80,8 +80,7 @@ class MainHeader extends React.Component {
                         <h1 className="mp-header__cwd-title">
                             crowdwiz. world. decentralization.
                         </h1>
-
-                        {!account && containerWidth < 1280 ? (
+                        {/*!account - кнопка регистрации должна быть всегда активна поэтому коммент */ true && containerWidth < 1280 ? (
                             <Link
                                 className="mp-header__auth-block-btn mp-header__auth-block-btn--reg noselect"
                                 to={`/create-account/password`}
@@ -119,7 +118,7 @@ class MainHeader extends React.Component {
 
                         {containerWidth > 1280 ? (
                             <div className="mp-header__auth-block">
-                                {!account ? (
+                                {/*!account - кнопка регистрации должна быть всегда активна поэтому коммент */ true  ? (
                                     <Link
                                         className="mp-header__auth-block-btn mp-header__auth-block-btn--reg noselect"
                                         to={`/create-account/password`}
