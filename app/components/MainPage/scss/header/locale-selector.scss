@@ -2,17 +2,17 @@
     &__box {
         position: relative;
         display: flex;
-        min-width: 140px;
         align-items: center;
         z-index: 1000;
     }
 
     &__list {
         position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0 !important;
-        padding-right: 3px;
+        min-width: 160px;
+        top: 60px;
+        padding: 10px 20px;
+        margin-left: 0;
+
         list-style: none;
         background: linear-gradient(
             to bottom,
@@ -20,13 +20,20 @@
             rgba(23, 23, 23, 0.7)
         );
         z-index: 1000;
+        right: 10px;
+
+        img {
+            margin-right: 0;
+        }
     }
 
     &__item {
         display: flex;
         align-items: center;
+        flex-direction: row-reverse;
         padding-bottom: 15px;
         cursor: pointer;
+
         &:last-child {
             padding-bottom: 0;
         }
@@ -40,13 +47,15 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        margin-right: 9px;
+        margin-right: 28px;
     }
 
     &__text {
-        margin-right: 6px;
+        margin-right: 16px;
         font-size: 14px;
         line-height: 1;
+        flex-grow: 1;
+
     }
 
     &__drop-down-btn {

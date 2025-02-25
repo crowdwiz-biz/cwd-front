@@ -12,7 +12,7 @@ import BlockHash from "./utility/BlockHash";
 
 
 // IMAGES
-import cwdLogo from "assets/svg-images/svg-common/main-page/header/cwd_logo.svg";
+import logo from "assets/svg-images/svg-common/main-page/header/logo.svg";
 import loginIcon from "assets/svg-images/svg-common/main-page/header/login_icon.svg";
 
 class MainHeader extends React.Component {
@@ -43,42 +43,34 @@ class MainHeader extends React.Component {
         return (
             <section className="mp-center-wrap mp-header__wrap">
                 <div className="mp-header__user-block">
-                    <LocaleSelector />
+                    <div className="empty"></div>
 
                     <img
-                        src={cwdLogo}
+                        src={logo}
                         className="mp-header__logo"
                         alt="cwdLogo"
                         width="100"
                         heigth="100"
                     />
 
-                    <button
-                        type="button"
-                        className="mp-header__login-btn"
-                        onClick={this.logIn.bind(this)}
-                    >
-                        {containerWidth > 767 ? (
+                    <div  className="mp-header__row-end">
+                        <LocaleSelector />
+                        <button
+                            type="button"
+                            className="mp-header__login-btn"
+                            onClick={this.logIn.bind(this)}
+                        >
                             <Translate
-                                className="mp-header__login-text"
                                 content="main_page.header.login-btn"
                             />
-                        ) : null}
-
-                        <img
-                            src={loginIcon}
-                            className="mp-header__login-img"
-                            alt="login"
-                            width="34"
-                            heigth="30"
-                        />
-                    </button>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="mp-header">
                     <div className="mp-header__left-column">
                         <h1 className="mp-header__cwd-title">
-                            crowdwiz. world. decentralization.
+                            CrowdWiz. Decentralization. World.
                         </h1>
                         {/*!account - кнопка регистрации должна быть всегда активна поэтому коммент */ true && containerWidth < 1280 ? (
                             <Link
@@ -132,7 +124,6 @@ class MainHeader extends React.Component {
                                     onClick={this.logIn.bind(this)}
                                 >
                                     <Translate
-                                        className="mp-header__login-text"
                                         content="main_page.header.login-btn"
                                     />
                                 </button>

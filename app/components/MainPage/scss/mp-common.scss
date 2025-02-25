@@ -135,7 +135,8 @@
     }
 
     .mp-center-wrap {
-        width: 670px;
+        width: 100%;
+        padding: 0 24px;
         margin-bottom: 70px;
     }
 }
@@ -143,6 +144,32 @@
 @media screen and (max-width: 767px) {
     .mp-common {
         font-size: 11px;
+
+        .mp-header {
+            &__user-block {
+               display: flex;
+                justify-content: space-between;
+                align-items: center;
+                > img {
+                    width: 32px;
+                    height: 32px;
+                    margin: 0;
+                }
+                > div {
+                    display: flex;
+                    align-items: center;
+                    &:nth-child(2) {
+                        justify-content: flex-start;
+                    }
+                    &:nth-child(3) {
+                        justify-content: flex-end;
+                    }
+                }
+                .empty {
+                    display: none;
+                }
+            }
+        }
 
         &__description {
             width: 100%;
@@ -164,7 +191,6 @@
     }
 
     .mp-center-wrap {
-        width: 330px;
         margin-bottom: 50px;
     }
 }

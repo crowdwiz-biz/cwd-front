@@ -713,7 +713,7 @@
                 color: $info-color;
             }
             > span {
-                @include CoreSansEMedium;
+                @include ManropeMedium;
             }
         }
         svg > path {
@@ -1090,11 +1090,11 @@
     }
     .value.negative {
         color: $ask-color !important;
-        @include CoreSansEMedium;
+        @include ManropeMedium;
     }
     .value.positive {
         color: $bid-color !important;
-        @include CoreSansEMedium;
+        @include ManropeMedium;
     }
     .active-bucket {
         background-color: lighten($light-panel-bg-color, 12%);
@@ -1120,7 +1120,7 @@
             color: $primary-text-color;
         }
         h6 {
-            @include CoreSansEMedium;
+            @include ManropeMedium;
         }
         .bottom {
             border-top-color: $bg-color;
@@ -1139,7 +1139,7 @@
             background: transparent;
             border: 2px solid $button-bg-color;
             > a {
-                @include CoreSansEMedium;
+                @include ManropeMedium;
                 color: $primary-text-color;
             }
         }
@@ -1167,7 +1167,7 @@
     .my-account h4,
     .my-account p,
     table.table > tbody > tr > td.my-account > span {
-        @include CoreSansEMedium;
+        @include ManropeMedium;
         color: $info-color;
     }
     .account-left-menu {
@@ -1419,7 +1419,7 @@
         > span.price-integer,
         > span > span.price-integer,
         > span.formatted-price > span {
-            @include CoreSansEMedium;
+            @include ManropeMedium;
             color: $bid-color;
         }
         > span.price-decimal,
@@ -1432,7 +1432,7 @@
         > span.price-integer,
         > span > span.price-integer,
         > span.formatted-price > span {
-            @include CoreSansEMedium;
+            @include ManropeMedium;
             color: $ask-color;
         }
         > span.price-decimal,
@@ -1445,7 +1445,7 @@
         > span.price-integer,
         > span > span.price-integer,
         > span.formatted-price > span {
-            @include CoreSansEMedium;
+            @include ManropeMedium;
             color: $call-color;
         }
         > span.price-decimal,
@@ -1620,7 +1620,7 @@
         background-color: $header-color;
         padding: 8px 35px;
         border-bottom: 1px solid grey;
-        @include CoreSansEMedium;
+        @include ManropeMedium;
         text-transform: uppercase;
         cursor: pointer;
     }
@@ -1700,12 +1700,12 @@
         > td.danger {
             background-color: darken($alert-color, 15%) !important;
             color: $dark-text-color;
-            @include CoreSansEMedium;
+            @include ManropeMedium;
         }
         > td.warning {
             background-color: darken($warning-color, 15%) !important;
             color: $dark-text-color;
-            @include CoreSansEMedium;
+            @include ManropeMedium;
         }
     }
     .nodes-header {
@@ -1786,7 +1786,7 @@
     }
     table.table > tbody > tr.in-use {
         > td:nth-child(2) {
-            @include CoreSansEMedium;
+            @include ManropeMedium;
         }
     }
     .SimpleDepositBridge__info-row {
@@ -1800,7 +1800,7 @@
     }
     input.my-key,
     td.my-key a {
-        @include CoreSansEMedium;
+        @include ManropeMedium;
         color: $info-color;
     }
     td.pub-key {

@@ -64,22 +64,13 @@ class LocaleSelector extends React.Component {
                         src={langImg[currentLocale]}
                         alt=""
                     />
-                    {containerWidth > 767 ? (
-                        <span className="locale-selector__text">
-                            {counterpart.translate(
-                                "languages." + currentLocale
-                            )}
-                        </span>
-                    ) : null}
-
-                    {!isSelectOpened ? (
-                        <NewIcon
-                            iconClass={"locale-selector__drop-down-btn"}
-                            iconWidth={9}
-                            iconHeight={9}
-                            iconName={"up_down_arrow"}
-                        />
-                    ) : null}
+                    {/*{containerWidth > 767 ? (*/}
+                    {/*    <span className="locale-selector__text">*/}
+                    {/*        {counterpart.translate(*/}
+                    {/*            "languages." + currentLocale*/}
+                    {/*        )}*/}
+                    {/*    </span>*/}
+                    {/*) : null}*/}
                 </div>
 
                 {isSelectOpened ? (

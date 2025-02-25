@@ -29,7 +29,7 @@ div.button.create-account {
 div.input-wrapper {
     > div.input-right-symbol {
         font-size: 0.9rem;
-        @include CoreSansEMedium;
+        @include ManropeMedium;
         position: absolute;
         top: 12px;
         right: 8px;
@@ -41,7 +41,7 @@ div.input-wrapper {
         padding-bottom: 5px;
         > div.float-right {
             clear: both;
-            @include CoreSansEMedium;
+            @include ManropeMedium;
         }
     }
 }

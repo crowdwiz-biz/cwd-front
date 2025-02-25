@@ -9,7 +9,7 @@
 
     &__user-block {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
         align-items: center;
         padding-top: 43px;
@@ -17,20 +17,35 @@
     }
 
     &__logo {
-        width: 85px;
-        height: 60px;
+        width: 58px;
+        height: 52px;
         margin: 0 auto;
     }
 
-    &__login-btn {
+    &__row-end {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 0 !important;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        outline: none;
+    }
+
+    &__login-btn {
+        background: none;
+        padding: 16px 32px;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 18px;
+        border: 1px solid rgba(63, 57, 40, 1);
+        transition: all 0.3s;
+
+        @media screen and (max-width: 767px) {
+            padding: 12px 24px;
+        }
+
+        span {
+            color: rgba(222, 194, 127, 1);
+            font-weight: 700;
+            transition: all 0.3s;
+        }
 
         &:active {
             outline: none;
@@ -38,11 +53,12 @@
         &:focus {
             outline: none;
         }
-    }
-
-    &__login-text {
-        margin-right: 5px;
-        font-size: 14px;
+        &:hover {
+            background: rgba(222, 194, 127, 1);
+            span {
+                color: rgba(23, 23, 23, 1);
+            }
+        }
     }
 
     &__login-img {
@@ -68,7 +84,7 @@
 
     &__cwd-title {
         margin: 0 !important;
-        font-family: Sifonn;
+        font-family: "Manrope", sans-serif;
         font-size: 48px !important;
         font-weight: normal !important;
         line-height: 60px !important;
@@ -210,9 +226,6 @@
         }
 
         &__auth-block-btn {
-            width: 140px;
-            height: 40px;
-
             & span {
                 font-size: 13px;
             }

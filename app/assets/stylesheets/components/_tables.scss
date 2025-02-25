@@ -76,7 +76,7 @@ table.table.dashboard-table {
         padding-right: 12px;
     }
     > thead > tr > th {
-        @include CoreSansEMedium;
+        @include ManropeMedium;
         font-size: 0.875rem;
         text-align: center;
         border: none;
@@ -120,10 +120,10 @@ table.table.dashboard-table {
             td:first-of-type {
                 text-align: left;
                 text-transform: uppercase;
-                @include CoreSansEMedium;
+                @include ManropeMedium;
             }
             td:nth-child(3) {
-                @include CoreSansEMedium;
+                @include ManropeMedium;
                 text-align: right;
             }
         }

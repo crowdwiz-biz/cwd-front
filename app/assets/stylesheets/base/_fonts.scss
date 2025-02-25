@@ -1,5 +1,6 @@
 /* ***** declarations ****** */
 @import "./../style-guide-fixes";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 @mixin font-face($font-family, $file-path, $font-weight, $font-style) {
     @font-face {
@@ -10,81 +11,31 @@
     }
 }
 
-// BASE CROWDWIZ FONT
-@include font-face(
-    CoreSansE-Light,
-    "vendors/CoreSansE/CoreSansE-35Light",
-    300,
-    normal
-);
-@mixin CoreSansELight {
-    font-family: "CoreSansE-Light", arial, sans-serif;
+@mixin ManropeLight {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
     font-weight: lighter;
     font-style: normal;
 }
 
-@include font-face(
-    CoreSansE-Regular,
-    "vendors/CoreSansE/CoreSansE-45Regular",
-    400,
-    normal
-);
-@mixin CoreSansERgular {
-    font-family: "CoreSansE-Regular", arial, sans-serif;
+@mixin ManropeRegular {
+    font-family: "Manrope", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-@include font-face(
-    CoreSansE-55Medium,
-    "vendors/CoreSansE/CoreSansE-55Medium",
-    500,
-    normal
-);
-@mixin CoreSansEMedium {
-    font-family: "CoreSansE-55Medium", arial, sans-serif;
+@mixin ManropeMedium {
+    font-family: "Manrope", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
-@include font-face(
-    CoreSansE-65Bold,
-    "vendors/CoreSansE/CoreSansE-65Bold",
-    700,
-    normal
-);
-@mixin CoreSansE665Bold {
-    font-family: "CoreSansE-65Bold", arial, sans-serif;
+@mixin ManropeBold {
+    font-family: "Manrope", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 
-@include font-face(
-    CoreSansE-85Heavy,
-    "vendors/CoreSansE/CoreSansE-85Heavy",
-    900,
-    normal
-);
-@mixin CoreSansE85Heavy {
-    font-family: "CoreSansE-85Heavy", arial, sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-@mixin SegoeUILight {
-    font-family: "wf_SegoeUILight", "Segoe UI Light", "Segoe WP Light",
-        "wf_SegoeUI", "Segoe UI", "Segoe", "Segoe WP", "Tahoma", "Verdana",
-        arial, sans-serif;
-    font-size: 90%;
-    font-weight: lighter;
-}
-
-@mixin SegoeUIRegular {
-    font-family: "wf_SegoeUI", "Segoe UI", "Segoe", "Segoe WP", "Tahoma",
-        "Verdana", arial, sans-serif;
-    font-size: 90%;
-    font-weight: normal;
-}
 
 @mixin MonospaceFont {
     font-family: "Lucida Console", Monaco, monospace !important;
@@ -126,7 +77,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "CoreSansERgular", arial, sans-serif;
+    font-family: "Manrope", arial, sans-serif;
 }
 
 .monospace {
@@ -136,7 +87,7 @@ h6 {
 *#{$ant-fix} > {
     label,
     label > span {
-        @include CoreSansERgular;
+        @include ManropeRegular;
         text-transform: uppercase;
     }
 }
@@ -152,24 +103,24 @@ h6 {
 }
 
 .txtann {
-    @include CoreSansELight;
+    @include ManropeLight;
 }
 
 .txtlabel {
-    @include CoreSansELight;
+    @include ManropeLight;
     text-transform: uppercase;
 }
 
 .account-drop-down a.button {
-    @include CoreSansELight;
+    @include ManropeLight;
 }
 
 .footer .logo {
-    @include CoreSansELight;
+    @include ManropeLight;
 }
 
 .tabs > .tab-item {
-    @include CoreSansELight;
+    @include ManropeLight;
 }
 
 .label,
@@ -178,29 +129,29 @@ h6 {
 .label.info,
 .label.cancel,
 .label.alert {
-    @include CoreSansELight;
+    @include ManropeLight;
 }
 
 .table > thead > tr > th {
-    @include CoreSansERgular;
+    @include ManropeRegular;
 }
 
 .vertical-order-table-cell {
-    @include CoreSansERgular;
+    @include ManropeRegular;
 }
 
 .table.dashboard-table {
     > thead > tr > th {
-        @include CoreSansERgular;
+        @include ManropeRegular;
     }
 
     > tbody > tr > td {
-        @include CoreSansERgular;
+        @include ManropeRegular;
     }
 }
 
 .win32 {
-    @include CoreSansELight;
+    @include ManropeLight;
 }
 
 .win32 {
@@ -210,46 +161,46 @@ h6 {
     h4,
     h5,
     h6 {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     label,
     label > span {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     button,
     .button {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     .content-block > h3 {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     .page-header > h3 {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     a.currency,
     span.currency {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     .txtlabel {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     span.time {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     .footer .logo {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     .tabs > .tab-item {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     .label,
@@ -258,10 +209,10 @@ h6 {
     .label.info,
     .label.cancel,
     .label.alert {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 
     .key-value-table tr > td:first-child {
-        @include CoreSansELight;
+        @include ManropeLight;
     }
 }

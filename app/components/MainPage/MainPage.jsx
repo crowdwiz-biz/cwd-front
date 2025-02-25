@@ -37,10 +37,10 @@ class MainPage extends React.Component {
             host = "backup.cwd.global"
         }
 
-        let url = "https://" + host + "/static/front-stats.json";
+        let url =  'http://153.92.222.33:8800/static/front_stats.json' //"https://" + host + "/static/front-stats.json";
 
         fetch(url)
-            .then(response => response.json())
+            .then(response => response && response.json())
             .then(data => {
                 this.setState({
                     apiData: data
