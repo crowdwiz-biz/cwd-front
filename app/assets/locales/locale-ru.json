@@ -2566,12 +2566,12 @@
         "header": {
             "login-btn": "Войти",
             "register_btn": "Регистрация",
-            "current_block": "Текущий блок:",
-            "trx_per_sec": "Транзакций в секунду:",
+            "current_block": "Текущий блок",
+            "trx_per_sec": "Транзакций в секунду",
             "current_supply": "Текущее количество",
             "market_cap": "Рыночная капитализация",
             "market_cap_tip": "Рыночная капитализация = Текущее количество CWD и GCWD * Текущая средняя ставка CWDex.",
-            "total_accounts": "Всего аккаунтов:",
+            "total_accounts": "Всего аккаунтов",
             "per_day": "За сегодня:",
             "new_accs_chart": "Новые акк.",
             "acc_chart_today": "сегодня"

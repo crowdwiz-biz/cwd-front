@@ -2,8 +2,9 @@ import React from "react";
 import Translate from "react-translate-component";
 import ReactHighchart from "react-highcharts";
 import counterpart from "counterpart";
-import {FormattedDate} from "react-intl";
+// import {FormattedDate} from "react-intl";
 import {FormattedNumber} from "react-intl";
+import line from "assets/svg-images/svg-common/main-page/header/line.svg";
 
 class RegChartBlock extends React.Component {
     constructor(props) {
@@ -97,62 +98,63 @@ class RegChartBlock extends React.Component {
             }
         };
 
-        let historyDate = data[0];
-        let todayAccData = data.slice(-1)[0];
+        // let historyDate = data[0];
+        // let todayAccData = data.slice(-1)[0];
 
         return (
-            <section className="mp-reg-stat">
-                <div className="mp-reg-stat__data-block">
-                    <div className="mp-reg-stat__data-wrap">
-                        <div className="mp-reg-stat__inner">
-                            <Translate
-                                className="header-daily-stat__title"
-                                content="main_page.header.total_accounts"
+            <div className="mp-reg-stat">
+                <div className="mp-reg-stat__data-wrap">
+                    <div className="mp-reg-stat__inner">
+                        <Translate
+                            className="header-daily-stat__title"
+                            content="main_page.header.total_accounts"
+                        />
+
+                        <span className="header-daily-stat__data total-accounts">
+                            <FormattedNumber
+                                unitDisplay="long"
+                                value={accountTotal}
                             />
-
-                            <span className="header-daily-stat__data">
-                                <FormattedNumber
-                                    unitDisplay="long"
-                                    value={accountTotal}
-                                />
-                            </span>
-                        </div>
-
-                        <div className="mp-reg-stat__inner">
-                            <Translate
-                                className="header-daily-stat__title"
-                                content="main_page.header.per_day"
-                            />
-
-                            <span className="header-daily-stat__highlighted">
-                                <FormattedNumber
-                                    unitDisplay="long"
-                                    value={todayAccData[1]}
-                                />
-                            </span>
-                        </div>
+                        </span>
                     </div>
 
-                    <div>
-                        <ReactHighchart ref="chart" config={config} />
+                    {/*<div className="mp-reg-stat__inner">*/}
+                    {/*    <Translate*/}
+                    {/*        className="header-daily-stat__title"*/}
+                    {/*        content="main_page.header.per_day"*/}
+                    {/*    />*/}
 
-                        <div className="mp-reg-stat__label-wrap">
-                            <span className="mp-reg-stat__subtitle">
-                                <FormattedDate
-                                    value={historyDate[0]}
-                                    month="long"
-                                    day="numeric"
-                                />
-                            </span>
-
-                            <Translate
-                                className="mp-reg-stat__subtitle"
-                                content="main_page.header.acc_chart_today"
-                            />
-                        </div>
-                    </div>
+                    {/*    <span className="header-daily-stat__highlighted">*/}
+                    {/*        <FormattedNumber*/}
+                    {/*            unitDisplay="long"*/}
+                    {/*            value={todayAccData[1]}*/}
+                    {/*        />*/}
+                    {/*    </span>*/}
+                    {/*</div>*/}
                 </div>
-            </section>
+
+                <div className="chart-wrapper">
+                    <ReactHighchart ref="chart" config={config} />
+                    <div className="line">
+                        <img src={line} alt="line" />
+                    </div>
+
+                    {/*<div className="mp-reg-stat__label-wrap">*/}
+                    {/*    <span className="mp-reg-stat__subtitle">*/}
+                    {/*        <FormattedDate*/}
+                    {/*            value={historyDate[0]}*/}
+                    {/*            month="long"*/}
+                    {/*            day="numeric"*/}
+                    {/*        />*/}
+                    {/*    </span>*/}
+
+                    {/*    <Translate*/}
+                    {/*        className="mp-reg-stat__subtitle"*/}
+                    {/*        content="main_page.header.acc_chart_today"*/}
+                    {/*    />*/}
+                    {/*</div>*/}
+                </div>
+            </div>
         );
     }
 }

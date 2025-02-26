@@ -9,6 +9,8 @@ import FormattedAsset from "../../Utility/FormattedAsset";
 import AssetWrapper from "../../Utility/AssetWrapper";
 import NewIcon from "../../NewIcon/NewIcon";
 import {FormattedNumber} from "react-intl";
+import arrow from "../../../assets/svg-images/svg-common/main-page/header/arrow.svg";
+// import arrow from "assets/svg-images/svg-common/main-page/header/arrow.svg";
 
 class HeaderDailyStats extends React.Component {
     constructor(props) {
@@ -145,7 +147,7 @@ class HeaderDailyStats extends React.Component {
             trxPerSec = trxCount / ((lastBlock - firstBlock) / 1000);
         }
         return (
-            <section className="header-daily-stat">
+            <div className="header-daily-stat">
                 {/* Current Block */}
                 <div className="header-daily-stat__item">
                     <Translate
@@ -155,7 +157,9 @@ class HeaderDailyStats extends React.Component {
 
                     <span className="header-daily-stat__data">
                         # {formatBlockNum}
+                        <img src={arrow} />
                     </span>
+
                 </div>
 
                 {/* Transactions per second */}
@@ -167,6 +171,7 @@ class HeaderDailyStats extends React.Component {
 
                     <span className="header-daily-stat__data">
                         {utils.format_number(trxPerSec, 2)}
+                        <img src={arrow} />
                     </span>
                 </div>
 
@@ -176,7 +181,7 @@ class HeaderDailyStats extends React.Component {
                         <Translate content="main_page.header.current_supply" />
 
                         <span className="header-daily-stat__highlighted">
-                            cwd:
+                            cwd
                         </span>
                     </div>
 
@@ -189,6 +194,7 @@ class HeaderDailyStats extends React.Component {
                                 hide_asset={true}
                             />
                         ) : null}
+                        <img src={arrow} />
                     </span>
                 </div>
 
@@ -198,7 +204,7 @@ class HeaderDailyStats extends React.Component {
                         <Translate content="main_page.header.market_cap" />
 
                         <span className="header-daily-stat__highlighted">
-                            usd:
+                            usd
                         </span>
                     </div>
 
@@ -207,6 +213,7 @@ class HeaderDailyStats extends React.Component {
                             unitDisplay="long"
                             value={marketCapUsd}
                         />
+                        <img src={arrow} />
                     </span>
 
                     <button
@@ -230,7 +237,7 @@ class HeaderDailyStats extends React.Component {
                         </div>
                     ) : null}
                 </div>
-            </section>
+            </div>
         );
     }
 }

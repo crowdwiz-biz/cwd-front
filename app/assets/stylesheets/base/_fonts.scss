@@ -1,6 +1,5 @@
 /* ***** declarations ****** */
 @import "./../style-guide-fixes";
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 @mixin font-face($font-family, $file-path, $font-weight, $font-style) {
     @font-face {
@@ -41,6 +40,7 @@
     font-family: "Lucida Console", Monaco, monospace !important;
 }
 
+@include font-face(Manrope, "vendors/Manrope/manrope-regular", normal, normal);
 // MAIN-PAGE FONTS header
 @include font-face(Sifonn, "vendors/Sifonn/Sifonn", normal, normal);
 @include font-face(StemBold, "vendors/Stem/Stem_Bold", normal, normal);
@@ -77,7 +77,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Manrope", arial, sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 .monospace {

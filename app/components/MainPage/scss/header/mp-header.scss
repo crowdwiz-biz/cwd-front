@@ -1,8 +1,4 @@
 .mp-header {
-    display: grid;
-    grid-template-columns: 50% 498px;
-    justify-content: space-between;
-
     &__wrap {
         margin-bottom: 64px;
     }
@@ -35,7 +31,7 @@
         font-size: 14px;
         line-height: 18px;
         border: 1px solid rgba(63, 57, 40, 1);
-        transition: all 0.3s;
+        transition: all .25s ease-in-out;
 
         @media screen and (max-width: 767px) {
             padding: 12px 24px;
@@ -53,6 +49,7 @@
         &:focus {
             outline: none;
         }
+
         &:hover {
             background: rgba(222, 194, 127, 1);
             span {
@@ -82,64 +79,84 @@
         width: 100%;
     }
 
-    &__cwd-title {
-        margin: 0 !important;
-        font-family: "Manrope", sans-serif;
-        font-size: 48px !important;
-        font-weight: normal !important;
-        line-height: 60px !important;
-        color: #ffffff;
+    h1.title {
+        font-size: 56px;
+        line-height: 64px;
+        font-weight: 700;
         text-align: center;
-        text-transform: uppercase;
+        margin-top: 100px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 32px;
+            line-height: 40px;
+            margin-top: 52px;
+        }
+    }
+
+    .main-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 400;
+        max-width: 634px;
+        margin: 10px auto 40px auto;
+        text-align: center;
+        font-size: 16px;
+        line-height: 22px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 
     &__auth-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px;
-        gap: 10px;
-    }
-
-    &__auth-block-btn {
         display: flex;
-        align-items: center;
         justify-content: center;
-        cursor: pointer;
-        background-color: transparent;
-        border: 1px solid #dec27f;
-        border-radius: 8px;
-        outline: none;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 60px;
 
-        & span {
-            font-size: 18px;
-            color: #dec27f;
-        }
-
-        &:active {
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid rgba(63, 57, 40, 1);
+            border-radius: 4px;
             outline: none;
-        }
+            font-size: 14px;
+            line-height: 18px;
+            width: 156px;
+            padding: 16px;
+            font-weight: 700;
+            color: rgba(23, 23, 23, 1);
+            transition: all 0.3s;
 
-        &:focus {
-            outline: none;
-        }
-
-        &:hover {
-            transition: all 0.3s ease-in-out 0s;
-            background-color: #202020;
-        }
-
-        &--reg {
-            background-color: #dec27f !important;
-            text-decoration: none !important;
-
-            & span {
-                color: #171717;
+            &:active {
+                outline: none;
             }
 
-            &:hover {
-                transition: all 0.3s ease-in-out 0s;
-                background-color: darken(#dec27f, 5%) !important;
-                border: 1px solid (#dec27f, 5%);
+            &:focus {
+                outline: none;
+            }
+
+            &.mp-header__auth-block-btn--reg {
+                background: rgba(222, 194, 127, 1);
+                color: rgba(23, 23, 23, 1);
+
+                &:hover {
+                    opacity: 0.8;
+                    color: rgba(23, 23, 23, 1);
+                }
+            }
+
+            &.mp-header__auth-block-btn--login {
+                color: rgba(222, 194, 127, 1);
+
+                &:hover {
+                    background: rgba(222, 194, 127, 1);
+                    color: rgba(23, 23, 23, 1);
+                }
             }
         }
     }
@@ -171,11 +188,6 @@
             width: 100%;
             height: 500px;
             margin-bottom: 42px;
-        }
-
-        &__cwd-title {
-            margin-bottom: 40px !important;
-            margin-top: 40px !important;
         }
 
         &__auth-block-btn {
@@ -216,13 +228,6 @@
         &__left-column {
             height: 274px;
             margin-bottom: 14px;
-        }
-
-        &__cwd-title {
-            margin-bottom: 16px !important;
-            margin-top: 16px !important;
-            font-size: 28px !important;
-            line-height: 38px !important;
         }
 
         &__auth-block-btn {
