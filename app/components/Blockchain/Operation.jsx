@@ -114,7 +114,7 @@ class Row extends React.Component {
                 <Translate
                     content="operation.pending"
                     blocks={block - last_irreversible_block_num}
-                />
+                />;
         }
 
         fee.amount = parseInt(fee.amount, 10);
@@ -125,36 +125,33 @@ class Row extends React.Component {
             return (
                 <div className="ms-recent-ops__item">
                     {/* OP ID */}
-                    <span className="ms-recent-ops__data-set ms-recent-ops__id">
-                        # {this.props.block}
-                    </span>
+                    <div className="left">
+                        <span className="id">
+                            # {this.props.block}
+                        </span>
 
-                    {/* OP NAME */}
-                    <div className="ms-recent-ops__type">
-                        <span className="ms-recent-ops__data-set ms-recent-ops__id">
+                        <div className="type">
                             <TransactionLabel
                                 color={color}
                                 type={type}
                                 block={block}
                             />
-                        </span>
+                        </div>
                     </div>
 
                     {/* OP DESCRIPTION */}
-                    <div className="ms-recent-ops__info">
+                    <div className="info">
                         {this.props.info}
                         {pending ? (
-                            <span className="ms-recent-ops__pending">
+                            <span className="pending">
                                 {" "}
                                 - {pending}
                             </span>
                         ) : null}
                     </div>
                 </div>
-            )
-        }
-
-        else if (notificationMode) {
+            );
+        } else if (notificationMode) {
             return (
                 <div className="notification__item">
 
@@ -175,7 +172,7 @@ class Row extends React.Component {
                         {this.props.info}
                     </div>
                 </div>
-            )
+            );
         }
 
         else {
@@ -188,7 +185,7 @@ class Row extends React.Component {
                                 type={type}
                                 block={block}
                             />
-                            
+
                             {/* OP ID */}
                             <span className="operation__data-set operation__id">
                                 {deviceWidth > 576 ? null :
@@ -295,7 +292,7 @@ class Operation extends React.Component {
         let memoComponent = null;
 
         switch (
-        ops[op[0]] // For a list of trx types, see chain_types.coffee
+            ops[op[0]] // For a list of trx types, see chain_types.coffee
         ) {
             case "transfer":
                 if (op[1].memo) {
@@ -1238,7 +1235,7 @@ class Operation extends React.Component {
                                 return (
                                     <TranslateWithLinks
                                         string={`operation.fill_order_${isBid ? "buy" : "sell"
-                                            }`}
+                                        }`}
                                         keys={[
                                             {
                                                 type: "account",

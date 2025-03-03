@@ -93,6 +93,7 @@ class RegChartBlock extends React.Component {
                     minPointLength: 5,
                     colorByPoint: true,
                     colors: colors,
+                    pointPadding: 0.35,
                     borderWidth: 0
                 }
             }

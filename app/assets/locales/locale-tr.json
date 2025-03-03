@@ -2467,7 +2467,8 @@
         },
         "code_block": {
             "title": "Açık kaynak ve API",
-            "description": "CrowdWiz blockchain tamamen açık kaynaklı bir platformdur. Kaynaklardan kendi blok zinciri düğümünüzü kolayca oluşturabilir ve onunla çalışabilir veya web soketi tabanlı bir API ile genel düğüme bağlanabilirsiniz. CrowdWiz blockchain, API ile çalışmak için bir Python kitaplığına sahiptir, ancak istediğiniz herhangi bir dili kullanabilirsiniz",
+            "description_extension": " CrowdWiz blockchain, API ile çalışmak için bir Python kitaplığına sahiptir, ancak istediğiniz herhangi bir dili kullanabilirsiniz",
+            "description": "CrowdWiz blockchain tamamen açık kaynaklı bir platformdur. Kaynaklardan kendi blok zinciri düğümünüzü kolayca oluşturabilir ve onunla çalışabilir veya web soketi tabanlı bir API ile genel düğüme bağlanabilirsiniz.",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

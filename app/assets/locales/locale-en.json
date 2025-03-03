@@ -544,7 +544,7 @@
             "title": "Account information"
         },
         "rateData": {
-            "title": "Rate information", 
+            "title": "Rate information",
             "table": {
                 "header_01": "Currency",
                 "header_02": "Symbol",
@@ -2553,7 +2553,8 @@
         },
         "code_block": {
             "title": "Open source and API",
-            "description": "CrowdWiz blockchain is fully open source platform. You can easily build your own blockchain node from sources and work with it, or you may connect to the public node with a websocket-based API. CrowdWiz blockchain has a Python library to work with API, but you can use any language you want",
+            "description_extension": "CrowdWiz blockchain has a Python library to work with API, but you can use any language you want",
+            "description": "CrowdWiz blockchain is fully open source platform. You can easily build your own blockchain node from sources and work with it, or you may connect to the public node with a websocket-based API.",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

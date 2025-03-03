@@ -6,6 +6,7 @@ import utils from "common/utils";
 import Immutable from "immutable";
 import ChainTypes from "../../Utility/ChainTypes";
 import BindToChainState from "../../Utility/BindToChainState";
+import BlockHash from "./utility/BlockHash";
 
 class BlockchainRecentOps extends React.Component {
     static propTypes = {
@@ -133,12 +134,14 @@ class BlockchainRecentOps extends React.Component {
             .toArray();
 
         return (
-            <section className="ms-recent-ops__wrap mp-center-wrap">
-                <Translate
-                    className="mp-common__title"
-                    content="main_page.recent_ops.title"
-                    component="h2"
-                />
+            <section className="ms-recent-ops__wrap mp-center-wrap recent-ops">
+                <div className="head">
+                    <Translate
+                        content="main_page.recent_ops.title"
+                        component="h2"
+                    />
+                    <BlockHash />
+                </div>
                 <div className="ms-recent-ops">{transactions}</div>
 
                 <button
@@ -146,7 +149,7 @@ class BlockchainRecentOps extends React.Component {
                         this,
                         trxNumToRernder == 3 ? 10 : 3
                     )}
-                    className="ms-recent-ops__show-more-btn noselct"
+                    className="show-more"
                     type="button"
                 >
                     {trxNumToRernder == 3 ? (

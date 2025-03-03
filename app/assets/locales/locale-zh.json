@@ -2467,7 +2467,8 @@
         },
         "code_block": {
             "title": "开源和API",
-            "description": "CrowdWiz区块链是完全开源的平台。您可以轻松地从源代码构建自己的区块链节点并使用它，也可以使用基于Websocket的API连接到公共节点。 CrowdWiz区块链具有可与API配合使用的Python库，但您可以使用所需的任何语言",
+            "description_extension": "CrowdWiz区块链具有可与API配合使用的Python库，但您可以使用所需的任何语言",
+            "description": "CrowdWiz区块链是完全开源的平台。您可以轻松地从源代码构建自己的区块链节点并使用它，也可以使用基于Websocket的API连接到公共节点。",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

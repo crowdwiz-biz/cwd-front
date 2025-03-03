@@ -69,7 +69,7 @@
         justify-content: center;
         width: 638px;
         height: 484px;
-        background-image: url(../../../assets/svg-images/svg-common/main-page/header/global_bg.svg);
+        //background-image: url(../../../assets/svg-images/svg-common/main-page/header/global_bg.svg);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 0 0;
@@ -142,6 +142,7 @@
 
             &.mp-header__auth-block-btn--reg {
                 background: rgba(222, 194, 127, 1);
+                border-color: rgba(222, 194, 127, 1);
                 color: rgba(23, 23, 23, 1);
 
                 &:hover {
@@ -152,10 +153,12 @@
 
             &.mp-header__auth-block-btn--login {
                 color: rgba(222, 194, 127, 1);
+                border-color: rgba(63, 57, 40, 1);
 
                 &:hover {
                     background: rgba(222, 194, 127, 1);
                     color: rgba(23, 23, 23, 1);
+                    border-color: rgba(222, 194, 127, 1);
                 }
             }
         }
@@ -200,7 +203,7 @@
 
     .block-hash__container {
         .block-hash__inner {
-            grid-template-columns: 320px 130px;
+            grid-template-columns: 1fr
         }
     }
 }

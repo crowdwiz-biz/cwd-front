@@ -8,8 +8,6 @@ import BlockchainStore from "stores/BlockchainStore";
 import LocaleSelector from "./utility/LocaleSelector";
 import HeaderDailyStats from "./HeaderDailyStats";
 import RegChartBlock from "./utility/RegChartBlock";
-import BlockHash from "./utility/BlockHash";
-
 
 // IMAGES
 import logo from "assets/svg-images/svg-common/main-page/header/logo.svg";
@@ -35,7 +33,7 @@ class MainHeader extends React.Component {
     }
 
     render() {
-        let account = this.state.account;
+        // let account = this.state.account;
         let containerWidth = window.innerWidth;
         let { marketCapUsd, accountTotal, accountgraphData } = this.props;
 
@@ -115,8 +113,7 @@ class MainHeader extends React.Component {
                         accountgraphData={accountgraphData}
                     />
 
-                    {/* HASH BLOCK */}
-                    <BlockHash />
+                    {/*/!* HASH BLOCK *!/*/}
                 </div>
             </section>
         );

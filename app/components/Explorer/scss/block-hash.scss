@@ -1,13 +1,24 @@
 .block-hash {
-    &__container {
-        margin-bottom: 50px;
-    }
-
     &__inner {
-        display: grid;
-        grid-template-columns: 757px 152px;
-        align-items: center;
-        column-gap: 12px;
+        &.search-wrapper {
+            position: relative;
+
+            input {
+                font-size: 13px;
+            }
+
+            &:before {
+                content: "";
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top: calc(50% - 9px);
+                left: 16px;
+                background: red;
+                background: url(../../../assets/svg-images/svg-common/other/search.svg) center center no-repeat;
+                display: block;
+            }
+        }
 
         .cwd-common__input {
             height: 100% !important;
@@ -23,35 +34,6 @@
             span {
                 margin-right: 0 !important;
                 color: #262626;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 920px) {
-    .block-hash {
-        &__inner {
-            grid-template-columns: 475px 152px;
-            grid-template-rows: 50px;
-            column-gap: 9px;
-        }
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .block-hash {
-        &__container {
-            margin-bottom: 34px;
-        }
-
-        &__inner {
-            grid-template-columns: 100%;
-            grid-template-rows: 44px;
-            row-gap: 7px;
-            width: 100%;
-
-            & .cwd-btn__action-btn {
-                width: 100% !important;
             }
         }
     }

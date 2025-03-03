@@ -1,26 +1,81 @@
 .ms-recent-ops {
-    display: grid;
-    gap: 5px;
-    margin-bottom: 30px;
-
-    & a,
-    .balance-value {
-        font-family: SuisseIntlReg, arial, sans-serif;
-        color: #dec27f !important;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
     &__item {
-        display: grid;
-        grid-template-columns: 114px 350px 1fr;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        background-color: #202020;
-        border-radius: 8px;
-        padding: 20px 30px 20px 30px;
-        font-size: 16px;
-        overflow: hidden;
+        padding: 16px 24px;
+        border-radius: 6px;
+        background: rgba(23, 23, 23, 0.6);
 
-        &:nth-child(odd) {
-            background-color: #202020;
+        @media screen and (max-width: 1100px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .left {
+                margin-bottom: 16px;
+            }
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+
+            .id {
+                color: rgba(110, 110, 110, 1);
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 600;
+                margin-right: 12px;
+            }
+
+            .type {
+                display: inline;
+                * {
+                    color: rgba(222, 194, 127, 1);
+                    font-size: 14px;
+                    line-height: 1;
+                    font-weight: 600;
+                }
+
+                .operation {
+                    &__marker {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+        .info {
+            span {
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 600;
+                color: rgba(110, 110, 110, 1);
+
+                @media screen and (max-width: 768px) {
+                    line-height: 1.4;
+                }
+            }
+
+            span.balance-value {
+                color: rgba(222, 194, 127, 1);
+                span {
+                    color: rgba(222, 194, 127, 1);
+                }
+            }
+
+            a {
+                span {
+                    color: rgba(222, 194, 127, 1);
+                }
+            }
         }
     }
 
@@ -93,63 +148,6 @@
         &:hover {
             transition: all 0.3s ease-in-out 0s;
             background-color: #202020;
-        }
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    .ms-recent-ops {
-        margin-top: 40px;
-
-        &__item {
-            grid-template-columns: 114px 1fr;
-            row-gap: 5px;
-        }
-
-        &__info {
-            padding-left: 0;
-            border-left: none;
-            grid-column: 1 / -1;
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .ms-recent-ops {
-        margin-top: 20px;
-        margin-bottom: 15px;
-
-        &__item {
-            grid-template-columns: 95px 1fr;
-            row-gap: 10px;
-            padding: 15px 12px 12px 13px;
-            font-size: 14px;
-        }
-
-        &__type {
-            padding-left: 15px;
-            padding-right: 0;
-
-            & a {
-                display: inline-block;
-                width: 90%;
-            }
-
-            .operation__name {
-                font-size: 14px;
-            }
-        }
-
-        &__info, a {
-            font-size: 14px !important;
-        }
-
-        &__show-more-btn {
-            padding: 12px 12px 13px 12px;
-
-            & span {
-                font-size: 13px;
-            }
         }
     }
 }

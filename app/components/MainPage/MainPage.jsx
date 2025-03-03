@@ -17,6 +17,7 @@ import MainFooter from "./components/MainFooter";
 
 //STYLES
 import "./scss/_all.scss";
+import PlanetScene from "./components/PlanetScene";
 
 class MainPage extends React.Component {
     constructor(props) {
@@ -56,6 +57,9 @@ class MainPage extends React.Component {
         } else {
             return (
                 <div className="mp-common">
+                    <div className="main-planet-background">
+                        <PlanetScene />
+                    </div>
                     <AltContainer
                         stores={[BlockchainStore]}
                         inject={{
@@ -76,9 +80,6 @@ class MainPage extends React.Component {
                             accountTotal={apiData.account["total"]}
                             accountgraphData={apiData.account["graphData"]}
                         />
-
-                        {/* RECENT OPERATIONS */}
-                        <BlockchainRecentOps />
                     </AltContainer>
 
                     {/* Gold Crowd */}
@@ -88,7 +89,6 @@ class MainPage extends React.Component {
                         income24h={apiData.gcwd.income24h}
                         graphData={apiData.gcwd.graphData}
                     />
-
                     {/* Crowd Dex  */}
                     <CWDexStats
                         dealsCount={apiData.cwdex.dealsCount}
@@ -108,11 +108,27 @@ class MainPage extends React.Component {
                     {/* Proof of crowd */}
                     <PocStakingBlock />
 
-                    {/* Open source and API */}
-                    <CodeExamples />
-
                     {/* Build on Crowdwiz blockchain */}
                     {/* <CrowdProjects /> */}
+
+                    <AltContainer
+                        stores={[BlockchainStore]}
+                        inject={{
+                            latestBlocks: () => {
+                                return BlockchainStore.getState().latestBlocks;
+                            },
+                            latestTransactions: () => {
+                                return BlockchainStore.getState()
+                                    .latestTransactions;
+                            }
+                        }}
+                    >
+                        {/* RECENT OPERATIONS */}
+                        <BlockchainRecentOps />
+                    </AltContainer>
+
+                    {/* Open source and API */}
+                    <CodeExamples />
 
                     {/* FOOTER BLOCK */}
                     <MainFooter />

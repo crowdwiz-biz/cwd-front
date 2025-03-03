@@ -2467,7 +2467,8 @@
         },
         "code_block": {
             "title": "Mã nguồn mở và API",
-            "description": "CrowdWiz blockchain là nền tảng mã nguồn mở hoàn toàn. Bạn có thể dễ dàng xây dựng nút blockchain của riêng mình từ các nguồn và làm việc với nó hoặc bạn có thể kết nối với nút công khai bằng API dựa trên websocket. Chuỗi khối CrowdWiz có thư viện Python để làm việc với API, nhưng bạn có thể sử dụng bất kỳ ngôn ngữ nào bạn muốn",
+            "description_extension": " Chuỗi khối CrowdWiz có thư viện Python để làm việc với API, nhưng bạn có thể sử dụng bất kỳ ngôn ngữ nào bạn muốn",
+            "description": "CrowdWiz blockchain là nền tảng mã nguồn mở hoàn toàn. Bạn có thể dễ dàng xây dựng nút blockchain của riêng mình từ các nguồn và làm việc với nó hoặc bạn có thể kết nối với nút công khai bằng API dựa trên websocket.",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

@@ -171,28 +171,39 @@ curl --data '{"jsonrpc": "2.0", "method": "get_dynamic_global_properties" "param
         let containerWidth = window.innerWidth;
 
         return (
-            <section className="mp-center-wrap">
-                <div className="mp-center-wrap mp-common__inner">
+            <section className="mp-center-wrap code-example">
+                <div className="mp-common__inner">
                     <div className="mp-common__left-column">
                         <Translate
-                            className="mp-common__title"
                             content="main_page.code_block.title"
                             component="h2"
                         />
 
                         <Translate
-                            className="mp-common__description"
+                            className="description"
                             content="main_page.code_block.description"
                         />
+                        <Translate
+                            className="description"
+                            content="main_page.code_block.description_extension"
+                        />
+                        <a
+                            href="https://github.com/crowdwiz-biz"
+                            className="button"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Translate content="main_page.code_block.git_btn" />
+                        </a>
                     </div>
 
                     <div className="mp-common__right-column mp-common__right-column--flex">
                         {/* CODE SNIPPETS */}
-                        {containerWidth > 1280 ? (
+                        {containerWidth > 1296 && (
                             <Tabs
                                 className="main-page-tabs"
                                 tabsClass="main-page-tabs__list"
-                                contentClass="main-page-tabs__content"
+                                contentClass="main-page-tabs__content code-example"
                                 segmented={false}
                                 actionButtons={false}
                                 indicatorColor="primary"
@@ -246,19 +257,7 @@ curl --data '{"jsonrpc": "2.0", "method": "get_dynamic_global_properties" "param
                                     </SyntaxHighlighter>
                                 </Tab>
                             </Tabs>
-                        ) : null}
-                        <a
-                            href="https://github.com/crowdwiz-biz"
-                            className={
-                                containerWidth > 1280
-                                    ? "mp-common__btn noselct"
-                                    : "mp-common__btn mp-common__btn--gold-bg noselct"
-                            }
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Translate content="main_page.code_block.git_btn" />
-                        </a>
+                        )}
                     </div>
                 </div>
             </section>

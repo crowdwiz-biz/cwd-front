@@ -2466,7 +2466,8 @@
         },
         "code_block": {
             "title": "Open Source und API",
-            "description": "Die CrowdWiz-Blockchain ist eine vollständig Open Source-Plattform. Sie können ganz einfach Ihren eigenen Blockchain-Knoten aus Quellen erstellen und damit arbeiten, oder Sie können über eine Websocket-basierte API eine Verbindung zum öffentlichen Knoten herstellen. Die CrowdWiz-Blockchain verfügt über eine Python-Bibliothek, mit der Sie mit der API arbeiten können. Sie können jedoch jede gewünschte Sprache verwenden",
+            "description_extension": "Die CrowdWiz-Blockchain verfügt über eine Python-Bibliothek, mit der Sie mit der API arbeiten können. Sie können jedoch jede gewünschte Sprache verwenden.",
+            "description": "Die CrowdWiz-Blockchain ist eine vollständig Open Source-Plattform. Sie können ganz einfach Ihren eigenen Blockchain-Knoten aus Quellen erstellen und damit arbeiten, oder Sie können über eine Websocket-basierte API eine Verbindung zum öffentlichen Knoten herstellen.",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",
