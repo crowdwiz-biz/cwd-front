@@ -46,7 +46,7 @@ module.exports = {
         axisLabelsColor: "#fff",
         axisLineColor: "rgba(200, 200, 200, 0.3)",
         indicatorLineColor: "#FFFFFF",
-        bgColor: "#262626",
+        bgColor: "rgba(28, 28, 28, 1)",
         textColor: "#ffffff"
     },
     lightTheme: {

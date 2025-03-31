@@ -53,6 +53,11 @@
         margin-bottom: 165px;
         margin-top: -50px;
 
+        @media screen and (max-width: 990px) {
+            margin-bottom: 40px;
+            margin-top: -30px;
+        }
+
         .line {
             border-top: 1px solid #B4A47D;
             display: flex;

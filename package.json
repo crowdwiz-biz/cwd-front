@@ -182,6 +182,7 @@
     "query-string": "^6.1.0",
     "react": "^16.4.1",
     "react-autocomplete": "^1.7.2",
+    "react-awesome-reveal": "^3.6.0",
     "react-bootstrap": "^1.0.1",
     "react-circular-progressbar": "^2.0.3",
     "react-clipboard.js": "^1.0.1",

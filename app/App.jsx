@@ -20,9 +20,8 @@ import titleUtils from "common/titleUtils";
 import { BodyClassName, Notification } from "crowdwiz-ui-modal";
 import { DEFAULT_NOTIFICATION_DURATION } from "services/Notification";
 import Loadable from "react-loadable";
-// import Borrow from "./components/Showcases/Borrow";
 import LeftMenu from "./components/LeftMenu/LeftMenu";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Page404 from "./components/Page404/Page404";
 import ls from "common/localStorage";
 

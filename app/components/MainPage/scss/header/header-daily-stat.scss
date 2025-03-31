@@ -8,6 +8,7 @@
     @media (max-width: 1200px) {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
+        margin-bottom: 60px;
     }
 
     @media (max-width: 750px) {
@@ -50,6 +51,11 @@
         &.total-accounts {
             font-size: 105px;
             line-height: 120px;
+
+            @media screen and (max-width: 990px) {
+                font-size: 52px;
+                line-height: 1.14;
+            }
         }
 
         img {

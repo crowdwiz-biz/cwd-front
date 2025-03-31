@@ -7,7 +7,7 @@ import ChainTypes from "../../Utility/ChainTypes";
 import BindToChainState from "../../Utility/BindToChainState";
 import FormattedAsset from "../../Utility/FormattedAsset";
 import AssetWrapper from "../../Utility/AssetWrapper";
-import NewIcon from "../../NewIcon/NewIcon";
+// import NewIcon from "../../NewIcon/NewIcon";
 import {FormattedNumber} from "react-intl";
 import arrow from "../../../assets/svg-images/svg-common/main-page/header/arrow.svg";
 // import arrow from "assets/svg-images/svg-common/main-page/header/arrow.svg";
@@ -101,7 +101,7 @@ class HeaderDailyStats extends React.Component {
     render() {
         let marketCapUsd = this.props.marketCapUsd;
 
-        let containerWidth = this.props.containerWidth;
+        // let containerWidth = this.props.containerWidth;
         let {latestBlocks, dynGlobalObject, coreAsset} = this.props;
 
         let trxCount = 0,
@@ -216,17 +216,17 @@ class HeaderDailyStats extends React.Component {
                         <img src={arrow} />
                     </span>
 
-                    <button
-                        className="header-daily-stat__tip-btn noselct"
-                        type="button"
-                        onClick={this.showTip.bind(this)}
-                    >
-                        <NewIcon
-                            iconWidth={containerWidth > 767 ? 24 : 16}
-                            iconHeight={containerWidth > 767 ? 24 : 16}
-                            iconName={"tips_icon"}
-                        />
-                    </button>
+                    {/*<button*/}
+                    {/*    className="header-daily-stat__tip-btn noselct"*/}
+                    {/*    type="button"*/}
+                    {/*    onClick={this.showTip.bind(this)}*/}
+                    {/*>*/}
+                    {/*    <NewIcon*/}
+                    {/*        iconWidth={containerWidth > 767 ? 24 : 16}*/}
+                    {/*        iconHeight={containerWidth > 767 ? 24 : 16}*/}
+                    {/*        iconName={"tips_icon"}*/}
+                    {/*    />*/}
+                    {/*</button>*/}
 
                     {isTipVisible ? (
                         <div

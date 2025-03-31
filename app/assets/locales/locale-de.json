@@ -2426,6 +2426,79 @@
             "new_accs_chart": "Neue accs",
             "acc_chart_today": "heute"
         },
+        "development": {
+            "subtitle": "Der Quellcode der Blockchain wurde für die Entwicklung der CWD GLOBAL Blockchain-Plattform verwendet."
+        },
+        "slider": {
+            "description": "die vollständig neue Kernfunktionalität ist entwickelt",
+            "slide1": {
+                "title": "dezentralisierte Börse"
+            },
+            "slide2": {
+                "title": "dezentralisiertes Kredit- und Steuersystem"
+            },
+            "slide3": {
+                "title": "dezentrale Spielzone"
+            },
+            "slide4": {
+                "title": "Nachrichtenversand über Blockchain"
+            },
+            "slide5": {
+                "title": "System für die Auszahlung von Empfehlungsprämien"
+            },
+            "slide6": {
+                "title": "Wettbewerbsfunktion 'Das Große Rennen'"
+            },
+            "slide7": {
+                "title": "'Überprüfungswort'-Funktion"
+            },
+            "slide8": {
+                "title": "Adressbuch, Weiß-/Schwarze Liste"
+            }
+        },
+        "access": {
+            "left": {
+                "title": "Niemand kann auf die Mittel des Nutzers zugreifen",
+                "description": "es sei denn, der Nutzer erlaubt Dritten absichtlich oder versehentlich den Zugriff auf seine Daten.",
+                "button": "Mehr über Sicherheit erfahren"
+            },
+            "right": {
+                "block1": {
+                    "title": "Ein privater Schlüssel oder eine Kombination privater Schlüssel wird benötigt",
+                    "description": "Um die CWD GLOBAL Token in Ihrer digitalen Geldbörse zu kontrollieren und zu verwalten"
+                },
+                "block2": {
+                    "subtitle": "Mit der Möglichkeit",
+                    "title": "unabhängig von Dritten zu sein, kommt Verantwortung",
+                    "description": "um das zu schützen, was dem Nutzer persönlich gehört."
+                }
+            }
+        },
+        "security": {
+            "main": "Die Sicherheit und Kontrolle",
+            "title": "über Konten und Benutzerfonds hängen ausschließlich von den Benutzern selbst ab.",
+            "subtitle": "Es ist wichtig zu verstehen, dass"
+        },
+        "community_principles": {
+            "subtitle": "Gemeinschaftsprinzipien",
+            "blocks": {
+                "block1": {
+                    "title": "Dezentralisierung und Gleichheit – Kein einzelner Ausfallpunkt oder Kontrollinstanz.",
+                    "description": "Jeder Nutzer der CWD GLOBAL-Plattform kann direkt mit anderen interagieren, ohne einen Vermittler zu benötigen.",
+                    "link": "Mehr über Dezentralisierung erfahren"
+                },
+                "block2": {
+                    "title": "Transparenz und Anonymität – Blockchain-Technologie erfordert kein Vertrauen zwischen Transaktionsparteien.",
+                    "description": "Dies ermöglicht es Ihnen, Ihre Privatsphäre zu wahren, da die Blockchain selbst als Garant für die Transaktion fungiert. Alle Vorgänge sind transparent und dennoch anonym.",
+                    "link": "Mehr über Blockchain erfahren"
+                },
+                "block3": {
+                    "title": "Entscheidungen, die CWD GLOBAL betreffen, werden durch ein dezentrales Netzwerkgremium getroffen",
+                    "description": "Über das die Aktionäre – Besitzer der CWD-Kryptowährung – abstimmen. Transaktionen in CWD GLOBAL werden innerhalb weniger Sekunden überprüft und sind unwiderruflich.",
+                    "link": "Mehr über Transaktionen in CWD GLOBAL erfahren"
+                }
+            }
+        },
         "recent_ops": {
             "title": "Blockchain letzte Operationen",
             "show_more_btn": "Weitere Operationen anzeigen",
@@ -2442,9 +2515,9 @@
         "cwdex_stats": {
             "title": "Crowd Dex",
             "description": "Dezentraler Peer-to-Peer-Austausch in der Kette",
-            "24hr_deals_count": "24-Stunden-Angebote:",
-            "ex_rate": "Austauschrate:",
-            "deals_volume": "24-Stunden-Angebotsvolumen:"
+            "24hr_deals_count": "24-Stunden-Angebote",
+            "ex_rate": "Austauschrate",
+            "deals_volume": "24-Stunden-Angebotsvolumen"
         },
         "gamezone_stats": {
             "title": "Gamezone",
