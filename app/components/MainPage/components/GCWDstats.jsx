@@ -140,14 +140,18 @@ class GCWDstats extends React.Component {
             <section className="gcwd-stats__width-layout">
                 <div className="gcwd-stats-wrapper">
                     <Translate
-                        className="title"
+                        className="title wow animate__animated animate__fadeIn"
                         content="main_page.gcwd_stats.title"
                         component="h2"
+                        data-wow-duration="2s"
+                        data-wow-delay="0.2s"
                     />
 
                     <Translate
-                        className="description"
+                        className="description wow animate__animated animate__fadeIn"
                         content="main_page.gcwd_stats.description"
+                        data-wow-duration="2s"
+                        data-wow-delay="0.4s"
                     />
 
                     <div className="gcwd-stats__content">
@@ -171,7 +175,7 @@ class GCWDstats extends React.Component {
                             {/*    </span>*/}
                             {/*</div>*/}
 
-                            <div className="item">
+                            <div className="item wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
                                 <Translate
                                     className="gcwd-stats__legend"
                                     content="main_page.gcwd_stats.current_supply"
@@ -186,7 +190,7 @@ class GCWDstats extends React.Component {
                                 </span>
                             </div>
 
-                            <div className="item">
+                            <div className="item wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
                                 <Translate
                                     className="gcwd-stats__legend"
                                     content="main_page.gcwd_stats.total_income"
@@ -202,7 +206,7 @@ class GCWDstats extends React.Component {
                                     <img src={tr} alt="tr" />
                                 </span>
                             </div>
-                            <div className="item">
+                            <div className="item wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
                                 <Translate
                                     className="gcwd-stats__legend"
                                     content="main_page.gcwd_stats.24h_income"

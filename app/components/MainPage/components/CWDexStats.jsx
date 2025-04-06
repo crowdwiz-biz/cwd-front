@@ -55,21 +55,27 @@ class CWDexStats extends React.Component {
                     </path>
                 </svg>
                 <Translate
-                    className="title"
+                    className="title wow animate__animated animate__fadeIn"
                     content="main_page.cwdex_stats.title"
                     component="h2"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.2s"
                 />
 
                 <Translate
-                    className="description"
+                    className="description wow animate__animated animate__fadeIn"
                     content="main_page.cwdex_stats.description"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.4s"
                 />
                 <img className="background" src={chart} alt="chart" />
                 <div className="dex-stats">
-                    <div className="data-container">
+                    <div className="data-container wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
                         <Translate
                             className="daily-stats-view__legend"
                             content="main_page.cwdex_stats.24hr_deals_count"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.6s"
                         />
                         <span className="daily-stats-view__amount">
                             <FormattedNumber
@@ -80,7 +86,7 @@ class CWDexStats extends React.Component {
                         </span>
                     </div>
 
-                    <div className="data-container">
+                    <div className="data-container wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
                         <Translate
                             className="daily-stats-view__legend"
                             content="main_page.cwdex_stats.deals_volume"
@@ -96,7 +102,7 @@ class CWDexStats extends React.Component {
                             <img src={tr} alt="tr" />
                         </span>
                     </div>
-                    <div className="data-container">
+                    <div className="data-container wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
                         <Translate
                             className="daily-stats-view__legend"
                             content="main_page.cwdex_stats.ex_rate"

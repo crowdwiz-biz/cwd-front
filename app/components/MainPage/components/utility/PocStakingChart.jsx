@@ -15,6 +15,7 @@ class PocStakingChart extends React.Component {
         let monthPercent = this.props.monthPercent;
         let monthText = this.props.monthText;
         let monthNum = this.props.monthNum;
+        let index = this.props.index;
         let beforePercent = 0;
         let afterPercent = 0;
         if (monthPercent > 100) {
@@ -42,7 +43,11 @@ class PocStakingChart extends React.Component {
                         },
                     })}
                 >
-                    <div>
+                    <div
+                        className="wow animate__animated animate__fadeIn"
+                        data-wow-duration="2s"
+                        data-wow-delay={`${index * 0.4}s`}
+                    >
                         <CircularProgressbarWithChildren
                             value={afterPercent}
                             strokeWidth={1/2}

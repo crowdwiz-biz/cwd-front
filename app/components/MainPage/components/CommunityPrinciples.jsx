@@ -55,18 +55,28 @@ class CommunityPrinciples extends React.Component {
     render() {
         const { menu, currentSlide } = this.state;
         return (
-            <section className="mp-community-principles" data-aos="zoom-in">
+            <section className="mp-community-principles">
                 <Translate
-                    className="subtitle"
+                    className="subtitle wow animate__animated animate__fadeIn"
                     content="main_page.community_principles.subtitle"
                     component="h3"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.2s"
                 />
-                <h2 className="main-title">CWD GLOBAL</h2>
-                <div className="principles wow fadeInUp" data-wow-duration="1s">
+                <h2
+                    className="main-title wow animate__animated animate__fadeIn"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.4s"
+                >
+                    CWD GLOBAL
+                </h2>
+                <div className="principles">
                     {(menu || []).map((slide, index) => (
                         <div
                             key={slide.id}
-                            className={`principles__item ${(window.innerWidth > 990 || index === currentSlide) && "visible"}`}
+                            data-wow-duration={`${index * 2}s`}
+                            data-wow-delay="0.1s"
+                            className={`principles__item wow animate__animated animate__fadeIn ${(window.innerWidth > 990 || index === currentSlide) && "visible"}`}
                         >
                             <div className="icon-wrapper">
                                 <img src={slide.img} />

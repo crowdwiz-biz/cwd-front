@@ -12,14 +12,18 @@ class GamezoneStats extends React.Component {
         return (
             <section className="mp-center-wrap gamezone-wrapper">
                 <Translate
-                    className="title"
+                    className="title wow animate__animated animate__fadeIn"
                     content="main_page.gamezone_stats.title"
                     component="h2"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.2s"
                 />
 
                 <Translate
-                    className="description"
+                    className="description wow animate__animated animate__fadeIn"
                     content="main_page.gamezone_stats.description"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.4s"
                 />
                 <div className="content">
                     <div className="effects">
@@ -69,7 +73,7 @@ class GamezoneStats extends React.Component {
                             </defs>
                         </svg>
                     </div>
-                    <div className="col">
+                    <div className="col wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
                         <Translate
                             className="subtitle"
                             content="main_page.gamezone_stats.24hr_volume"
@@ -85,7 +89,7 @@ class GamezoneStats extends React.Component {
                         </span>
                     </div>
 
-                    <div className="col">
+                    <div className="col wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
                         <Translate
                             className="subtitle"
                             content="main_page.gamezone_stats.24hr_games_count"

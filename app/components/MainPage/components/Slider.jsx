@@ -82,11 +82,13 @@ class Slider extends React.Component {
         return (
             <div className="slider">
                 <div
-                    className="slides-container"
+                    className="slides-container wow animate__animated animate__pulse"
                     style={{
                         transform: `translateX(-${currentSlide * 100}%)`,
                         transition: "transform 0.5s ease-in-out",
                     }}
+                    data-wow-delay="0.6s"
+                    data-wow-duration="1s"
                 >
                     {slides.map((slide) => (
                         <div

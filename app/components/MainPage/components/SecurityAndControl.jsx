@@ -11,15 +11,17 @@ class SecurityAndControl extends React.Component {
         return (
             <section className="mp-security">
                 <div className="content">
-                    <div className="image-wrapper">
+                    <div className="image-wrapper wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.1s">
                         <img src={secure} alt="secure" />
                     </div>
                     <Translate
-                        className="subtitle"
+                        className="subtitle wow animate__animated animate__fadeIn"
                         content="main_page.security.subtitle"
                         component="h3"
+                        data-wow-duration="2s"
+                        data-wow-delay="0.2s"
                     />
-                    <h2 className="title">
+                    <h2 className="title wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
                         <Translate
                             content="main_page.security.main"
                             component="div"

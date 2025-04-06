@@ -149,7 +149,7 @@ class HeaderDailyStats extends React.Component {
         return (
             <div className="header-daily-stat">
                 {/* Current Block */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.2s">
                     <Translate
                         className="header-daily-stat__title"
                         content="main_page.header.current_block"
@@ -163,7 +163,7 @@ class HeaderDailyStats extends React.Component {
                 </div>
 
                 {/* Transactions per second */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.4s">
                     <Translate
                         className="header-daily-stat__title"
                         content="main_page.header.trx_per_sec"
@@ -176,7 +176,7 @@ class HeaderDailyStats extends React.Component {
                 </div>
 
                 {/* Current supply CWD */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.6s">
                     <div className="header-daily-stat__title">
                         <Translate content="main_page.header.current_supply" />
 
@@ -199,7 +199,7 @@ class HeaderDailyStats extends React.Component {
                 </div>
 
                 {/* Market Capitalization USD */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.8s">
                     <div className="header-daily-stat__title">
                         <Translate content="main_page.header.market_cap" />
 

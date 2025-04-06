@@ -53,19 +53,24 @@ class PocStakingBlock extends React.Component {
         return (
             <section className="poc_block">
                 <Translate
-                    className="title"
+                    className="title wow animate__animated animate__fadeIn"
                     content="main_page.poc_block.title"
                     component="h2"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.2s"
                 />
 
                 <Translate
-                    className="description"
+                    className="description wow animate__animated animate__fadeIn"
                     content="main_page.poc_block.description"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.4s"
                 />
                 <div className="charts-wrap">
                     {poc_array.map((item, i) => (
                         <PocStakingChart
                             key={i}
+                            index={i}
                             monthPercent={item.monthPercent}
                             monthText={item.monthText}
                             monthNum={item.monthNum}

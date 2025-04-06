@@ -111,7 +111,7 @@ class RegChartBlock extends React.Component {
                             content="main_page.header.total_accounts"
                         />
 
-                        <span className="header-daily-stat__data total-accounts">
+                        <span className="header-daily-stat__data total-accounts wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.4s">
                             <FormattedNumber
                                 unitDisplay="long"
                                 value={accountTotal}

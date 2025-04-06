@@ -41,11 +41,13 @@ class TradeBaseStats extends React.Component {
 
         return (
             <section className="trade-base">
-                <h2 className="title">DEX</h2>
+                <h2 className="title wow animate__animated animate__fadeIn"  data-wow-duration="2s" data-wow-delay="0.2s">DEX</h2>
 
                 <Translate
-                    className="description"
+                    className="description wow animate__animated animate__fadeIn"
                     content="main_page.trade_stats.description"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.4s"
                 />
 
                 <div className="list">

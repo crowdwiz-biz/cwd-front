@@ -8,6 +8,21 @@
   display: flex;
   flex-direction: column;
 
+  &:before {
+    content: "";
+    width: 880px;
+    height: 880px;
+    border-radius: 50%;
+    position: absolute;
+    //-webkit-backdrop-filter: blur(154px);
+    //backdrop-filter: blur(154px);
+    z-index: 1;
+    background: radial-gradient(50% 50% at 50% 50%, #DEC27F 0%, rgba(222, 194, 127, 0) 100%);
+    opacity: 0.3;
+    top: -400px;
+    left: -400px;
+  }
+
   > div {
     flex: 1;
   }

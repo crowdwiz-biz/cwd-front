@@ -16,7 +16,7 @@ const PlanetScene = () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
         mountRef.current.appendChild(renderer.domElement);
 
-        scene.background = new THREE.Color("rgba(28, 28, 28, 1)");
+        scene.background = new THREE.Color("#000");
         camera.position.z = 12;
 
         const createStars = () => {
