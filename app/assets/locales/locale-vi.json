@@ -2427,6 +2427,79 @@
             "new_accs_chart": "Tài khoản mới",
             "acc_chart_today": "hôm nay"
         },
+        "development": {
+            "subtitle": "Mã nguồn của blockchain đã được lấy để phát triển nền tảng blockchain CWD GLOBAL."
+        },
+        "slider": {
+            "description": "chức năng lõi hoàn toàn mới đã được phát triển",
+            "slide1": {
+                "title": "sàn giao dịch phi tập trung"
+            },
+            "slide2": {
+                "title": "hệ thống tín dụng và thuế phi tập trung"
+            },
+            "slide3": {
+                "title": "khu vực trò chơi phi tập trung"
+            },
+            "slide4": {
+                "title": "gửi tin nhắn qua blockchain"
+            },
+            "slide5": {
+                "title": "hệ thống thanh toán phần thưởng giới thiệu"
+            },
+            "slide6": {
+                "title": "tính năng cuộc thi 'Cuộc đua lớn'"
+            },
+            "slide7": {
+                "title": "tính năng 'Từ kiểm tra'"
+            },
+            "slide8": {
+                "title": "sổ địa chỉ, danh sách trắng/đen"
+            }
+        },
+        "access": {
+            "left": {
+                "title": "Không ai có thể truy cập vào tài sản của người dùng",
+                "description": "trừ khi người dùng cho phép bên thứ ba truy cập vào dữ liệu của mình, dù là cố ý hay vô tình.",
+                "button": "Tìm hiểu thêm về bảo mật"
+            },
+            "right": {
+                "block1": {
+                    "title": "Cần có khóa riêng hoặc sự kết hợp của các khóa riêng",
+                    "description": "Để kiểm soát và quản lý token CWD GLOBAL được lưu trữ trong ví kỹ thuật số của bạn"
+                },
+                "block2": {
+                    "subtitle": "Với khả năng",
+                    "title": "độc lập khỏi bên thứ ba đi kèm với trách nhiệm",
+                    "description": "bảo vệ những gì thuộc về cá nhân người dùng."
+                }
+            }
+        },
+        "security": {
+            "main": "",
+            "title": "Bảo mật và quyền kiểm soát tài khoản cũng như quỹ của người dùng hoàn toàn phụ thuộc vào chính họ.",
+            "subtitle": "Điều quan trọng là phải hiểu rằng"
+        },
+        "community_principles": {
+            "subtitle": "Nguyên tắc cộng đồng",
+            "blocks": {
+                "block1": {
+                    "title": "Phi tập trung và bình đẳng — Không có điểm hỏng hóc hoặc kiểm soát duy nhất.",
+                    "description": "Mỗi người dùng trên nền tảng CWD GLOBAL có thể tương tác trực tiếp với người khác mà không cần thông qua trung gian.",
+                    "link": "Tìm hiểu thêm về phi tập trung"
+                },
+                "block2": {
+                    "title": "Minh bạch và ẩn danh — Công nghệ blockchain không yêu cầu sự tin tưởng giữa các bên giao dịch.",
+                    "description": "Điều này cho phép bạn duy trì sự riêng tư, vì bản thân blockchain đóng vai trò là bên đảm bảo giao dịch. Tất cả các hoạt động đều minh bạch nhưng vẫn ẩn danh.",
+                    "link": "Tìm hiểu thêm về blockchain"
+                },
+                "block3": {
+                    "title": "Các quyết định ảnh hưởng đến CWD GLOBAL được đưa ra bởi một ủy ban mạng phi tập trung",
+                    "description": "Ủy ban này được bỏ phiếu bởi các cổ đông — chủ sở hữu tiền mã hóa CWD. Các giao dịch trong CWD GLOBAL được xác minh và trở thành không thể đảo ngược chỉ trong vài giây.",
+                    "link": "Tìm hiểu thêm về giao dịch trong CWD GLOBAL"
+                }
+            }
+        },
         "recent_ops": {
             "title": "Blockchain hoạt động gần đây",
             "show_more_btn": "Xem thêm hoạt động",
@@ -2443,9 +2516,9 @@
         "cwdex_stats": {
             "title": "Crowd Dex",
             "description": "Trao đổi ngang hàng trên chuỗi phi tập trung",
-            "24hr_deals_count": "Số lượng giao dịch trong 24 giờ:",
-            "ex_rate": "Tỷ lệ trao đổi:",
-            "deals_volume": "Khối lượng giao dịch trong 24 giờ:"
+            "24hr_deals_count": "Số lượng giao dịch trong 24 giờ",
+            "ex_rate": "Tỷ lệ trao đổi",
+            "deals_volume": "Khối lượng giao dịch trong 24 giờ"
         },
         "gamezone_stats": {
             "title": "Gamezone",
@@ -2467,7 +2540,8 @@
         },
         "code_block": {
             "title": "Mã nguồn mở và API",
-            "description": "CrowdWiz blockchain là nền tảng mã nguồn mở hoàn toàn. Bạn có thể dễ dàng xây dựng nút blockchain của riêng mình từ các nguồn và làm việc với nó hoặc bạn có thể kết nối với nút công khai bằng API dựa trên websocket. Chuỗi khối CrowdWiz có thư viện Python để làm việc với API, nhưng bạn có thể sử dụng bất kỳ ngôn ngữ nào bạn muốn",
+            "description_extension": " Chuỗi khối CrowdWiz có thư viện Python để làm việc với API, nhưng bạn có thể sử dụng bất kỳ ngôn ngữ nào bạn muốn",
+            "description": "CrowdWiz blockchain là nền tảng mã nguồn mở hoàn toàn. Bạn có thể dễ dàng xây dựng nút blockchain của riêng mình từ các nguồn và làm việc với nó hoặc bạn có thể kết nối với nút công khai bằng API dựa trên websocket.",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

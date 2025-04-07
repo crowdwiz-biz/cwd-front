@@ -18,39 +18,42 @@ class BlockHash extends React.Component {
 
         this.setState({
             blockHash: blockHash
-        })
+        });
+    }
+
+    handleKeyDown(link) {
+        if (event.key === "Enter") {
+            this.handleEnter(link);
+        }
+    }
+
+    handleEnter(link) {
+        if (!link) {
+            return;
+        }
+        window.location.href = `${link}`;
     }
 
     render() {
         let { blockHash } = this.state;
         let href = "/hash/";
         if (blockHash.length < 40) {
-            href = "/profile/"; 
-        } 
+            href = "/profile/";
+        }
 
 
         return (
             <section className="block-hash__container">
-                <Translate
-                    className="explorer__subtitle"
-                    content="explorer.blocks.block_hash_title"
-                />
 
-                <div className="block-hash__inner">
+                <div className="block-hash__inner search-wrapper">
                     <input
-                        className="cwd-common__input"
+                        className="cwd-common__input search"
                         ref="blockHashInput"
                         type="text"
-                        placeholder={counterpart.translate("explorer.blocks.enter_hash")}
+                        placeholder={counterpart.translate("explorer.blocks.block_hash_title")}
                         onChange={this.handleBlockHash.bind(this)}
+                        onKeyDown={() => this.handleKeyDown(href + blockHash)}
                     />
-
-                    <Link
-                        className="cwd-btn__action-btn noselect"
-                        to={href + blockHash}
-                    >
-                        <Translate content="explorer.block.go_to_btn" />
-                    </Link>
                 </div>
             </section>
         );

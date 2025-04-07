@@ -544,7 +544,7 @@
             "title": "Account information"
         },
         "rateData": {
-            "title": "Rate information", 
+            "title": "Rate information",
             "table": {
                 "header_01": "Currency",
                 "header_02": "Symbol",
@@ -2513,6 +2513,79 @@
             "new_accs_chart": "New accs",
             "acc_chart_today": "today"
         },
+        "development": {
+            "subtitle": "The source code of the blockchain was taken for the development of the CWD GLOBAL blockchain platform."
+        },
+        "slider": {
+            "description": "the completely new core functionality is developed",
+            "slide1": {
+                "title": "decentralized exchange"
+            },
+            "slide2": {
+                "title": "decentralized credit and tax system"
+            },
+            "slide3": {
+                "title": "decentralized gaming zone"
+            },
+            "slide4": {
+                "title": "message sending via blockchain"
+            },
+            "slide5": {
+                "title": "referral rewards payout system"
+            },
+            "slide6": {
+                "title": "competition feature 'The Great Race'"
+            },
+            "slide7": {
+                "title": "'Verification Word' feature"
+            },
+            "slide8": {
+                "title": "address book, whitelist/blacklist"
+            }
+        },
+        "security": {
+            "main": "Security and control",
+            "title": "over accounts and user funds depend solely on the users themselves.",
+            "subtitle": "It is important to understand that"
+        },
+        "access": {
+            "left": {
+                "title": "No one can access the user's funds",
+                "description": "unless the user themselves allows third parties to access their data, either intentionally or accidentally.",
+                "button": "Learn more about security"
+            },
+            "right": {
+                "block1": {
+                    "title": "A private key or a combination of private keys is required",
+                    "description": "To control and manage CWD GLOBAL tokens stored in your digital wallet"
+                },
+                "block2": {
+                    "subtitle": "With the ability",
+                    "title": "to be independent of third parties comes responsibility",
+                    "description": "to protect what personally belongs to the user."
+                }
+            }
+        },
+        "community_principles": {
+            "subtitle": "Community Principles",
+            "blocks": {
+                "block1": {
+                    "title": "Decentralization and Equality — No Single Point of Failure or Control.",
+                    "description": "Every user of the CWD GLOBAL platform can interact with others directly without the need for an intermediary.",
+                    "link": "Learn more about decentralization"
+                },
+                "block2": {
+                    "title": "Transparency and Anonymity — Blockchain technology does not require trust between transaction participants.",
+                    "description": "This allows you to maintain your privacy, as the blockchain itself acts as the guarantor of the transaction. All operations are transparent and yet anonymous.",
+                    "link": "Learn more about blockchain"
+                },
+                "block3": {
+                    "title": "Decisions affecting CWD GLOBAL are made by a decentralized network committee",
+                    "description": "Which is voted on by shareholders — owners of the CWD cryptocurrency. Transactions in CWD GLOBAL are verified and become irreversible in just a few seconds.",
+                    "link": "Learn more about transactions in CWD GLOBAL"
+                }
+            }
+        },
         "recent_ops": {
             "title": "Blockchain recent operations",
             "show_more_btn": "View more operations",
@@ -2529,9 +2602,9 @@
         "cwdex_stats": {
             "title": "Crowd Dex",
             "description": "Decentralized on-chain peer-to-peer exchange",
-            "24hr_deals_count": "24hr Deals count:",
-            "ex_rate": "Exchage rate:",
-            "deals_volume": "24hr Deals volume:"
+            "24hr_deals_count": "24hr Deals count",
+            "ex_rate": "Exchage rate",
+            "deals_volume": "24hr Deals volume"
         },
         "gamezone_stats": {
             "title": "Gamezone",
@@ -2553,7 +2626,8 @@
         },
         "code_block": {
             "title": "Open source and API",
-            "description": "CrowdWiz blockchain is fully open source platform. You can easily build your own blockchain node from sources and work with it, or you may connect to the public node with a websocket-based API. CrowdWiz blockchain has a Python library to work with API, but you can use any language you want",
+            "description_extension": "CrowdWiz blockchain has a Python library to work with API, but you can use any language you want",
+            "description": "CrowdWiz blockchain is fully open source platform. You can easily build your own blockchain node from sources and work with it, or you may connect to the public node with a websocket-based API.",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

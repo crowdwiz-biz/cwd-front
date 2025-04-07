@@ -2427,6 +2427,79 @@
             "new_accs_chart": "新认证",
             "acc_chart_today": "今天"
         },
+        "development": {
+            "subtitle": "区块链的源代码被用于开发CWD GLOBAL区块链平台。"
+        },
+        "slider": {
+            "description": "全新核心功能已开发完成",
+            "slide1": {
+                "title": "去中心化交易所"
+            },
+            "slide2": {
+                "title": "去中心化的信用与税务系统"
+            },
+            "slide3": {
+                "title": "去中心化游戏区"
+            },
+            "slide4": {
+                "title": "通过区块链发送消息"
+            },
+            "slide5": {
+                "title": "推荐奖励支付系统"
+            },
+            "slide6": {
+                "title": "'大赛' 竞赛功能"
+            },
+            "slide7": {
+                "title": "'验证词' 功能"
+            },
+            "slide8": {
+                "title": "地址簿，白名单/黑名单"
+            }
+        },
+        "access": {
+            "left": {
+                "title": "没有人可以访问用户的资金",
+                "description": "除非用户自己允许第三方访问他们的数据，无论是故意还是偶然。",
+                "button": "了解更多关于安全的信息"
+            },
+            "right": {
+                "block1": {
+                    "title": "需要私钥或私钥的组合",
+                    "description": "以控制和管理存储在您的数字钱包中的 CWD GLOBAL 代币"
+                },
+                "block2": {
+                    "subtitle": "拥有独立性意味着",
+                    "title": "独立于第三方也意味着责任",
+                    "description": "保护属于用户个人的资产。"
+                }
+            }
+        },
+        "security": {
+            "main": "",
+            "title": "安全性和对用户账户及资金的控制完全取决于用户自己。",
+            "subtitle": "重要的是要理解"
+        },
+        "community_principles": {
+            "subtitle": "社区原则",
+            "blocks": {
+                "block1": {
+                    "title": "去中心化与平等——无单点故障或控制。",
+                    "description": "CWD GLOBAL 平台的每个用户都可以直接与他人互动，无需中介。",
+                    "link": "了解更多关于去中心化"
+                },
+                "block2": {
+                    "title": "透明与匿名——区块链技术不需要交易参与者之间的信任。",
+                    "description": "这使您能够保持隐私，因为区块链本身是交易的保证。所有操作都是透明的，同时又是匿名的。",
+                    "link": "了解更多关于区块链"
+                },
+                "block3": {
+                    "title": "影响 CWD GLOBAL 的决策由去中心化网络委员会做出",
+                    "description": "该委员会由 CWD 加密货币的持有者——股东投票决定。CWD GLOBAL 中的交易在几秒钟内被验证并变得不可逆。",
+                    "link": "了解更多关于 CWD GLOBAL 的交易"
+                }
+            }
+        },
         "recent_ops": {
             "title": "区块链近期运营",
             "show_more_btn": "查看更多操作",
@@ -2443,9 +2516,9 @@
         "cwdex_stats": {
             "title": "Crowd Dex",
             "description": "分散式链上对等交换",
-            "24hr_deals_count": "24小时交易计数：",
-            "ex_rate": "出勤率：",
-            "deals_volume": "24小时交易量："
+            "24hr_deals_count": "24小时交易计数",
+            "ex_rate": "出勤率",
+            "deals_volume": "24小时交易量"
         },
         "gamezone_stats": {
             "title": "Gamezone",
@@ -2467,7 +2540,8 @@
         },
         "code_block": {
             "title": "开源和API",
-            "description": "CrowdWiz区块链是完全开源的平台。您可以轻松地从源代码构建自己的区块链节点并使用它，也可以使用基于Websocket的API连接到公共节点。 CrowdWiz区块链具有可与API配合使用的Python库，但您可以使用所需的任何语言",
+            "description_extension": "CrowdWiz区块链具有可与API配合使用的Python库，但您可以使用所需的任何语言",
+            "description": "CrowdWiz区块链是完全开源的平台。您可以轻松地从源代码构建自己的区块链节点并使用它，也可以使用基于Websocket的API连接到公共节点。",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

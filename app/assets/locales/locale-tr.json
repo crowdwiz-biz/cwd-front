@@ -2427,6 +2427,79 @@
             "new_accs_chart": "Yeni accs",
             "acc_chart_today": "bugün"
         },
+        "development": {
+            "subtitle": "Blockchain'in kaynak kodu, CWD GLOBAL blockchain platformunun geliştirilmesi için alındı."
+        },
+        "slider": {
+            "description": "tamamen yeni çekirdek fonksiyonalitesi geliştirilmiştir",
+            "slide1": {
+                "title": "dezentralize borsa"
+            },
+            "slide2": {
+                "title": "dezentralize kredi ve vergi sistemi"
+            },
+            "slide3": {
+                "title": "dezentralize oyun alanı"
+            },
+            "slide4": {
+                "title": "blok zinciri üzerinden mesaj gönderimi"
+            },
+            "slide5": {
+                "title": "referans ödülleri ödeme sistemi"
+            },
+            "slide6": {
+                "title": "'Büyük Yarış' yarışma fonksiyonu"
+            },
+            "slide7": {
+                "title": "'Doğrulama Kelimesi' fonksiyonu"
+            },
+            "slide8": {
+                "title": "adres defteri, beyaz/siyah liste"
+            }
+        },
+        "access": {
+            "left": {
+                "title": "Hiç kimse kullanıcının fonlarına erişemez",
+                "description": "kullanıcı kendisi üçüncü şahıslara verilerini erişim izni verene kadar, kasıtlı veya kazara.",
+                "button": "Güvenlik hakkında daha fazla bilgi"
+            },
+            "right": {
+                "block1": {
+                    "title": "Bir özel anahtar veya özel anahtar kombinasyonu gereklidir",
+                    "description": "Dijital cüzdanınızda saklanan CWD GLOBAL tokenlerini kontrol etmek ve yönetmek için"
+                },
+                "block2": {
+                    "subtitle": "Bağımsız olma yeteneği ile",
+                    "title": "üçüncü şahıslardan bağımsız olmak sorumluluk getirir",
+                    "description": "kullanıcıya ait olanı korumak."
+                }
+            }
+        },
+        "security": {
+            "main": "",
+            "title": "Güvenlik ve kullanıcı hesapları ile fonları üzerindeki kontrol tamamen kullanıcılara bağlıdır.",
+            "subtitle": "Şunu anlamak önemlidir ki"
+        },
+        "community_principles": {
+            "subtitle": "Topluluk İlkeleri",
+            "blocks": {
+                "block1": {
+                    "title": "Merkeziyetsizlik ve Eşitlik — Tek bir hata noktası veya kontrol yok.",
+                    "description": "CWD GLOBAL platformunun her kullanıcısı, bir aracıya ihtiyaç duymadan doğrudan diğerleriyle etkileşim kurabilir.",
+                    "link": "Merkeziyetsizlik hakkında daha fazla bilgi edinin"
+                },
+                "block2": {
+                    "title": "Şeffaflık ve Anonimlik — Blockchain teknolojisi, işlem tarafları arasında güven gerektirmez.",
+                    "description": "Bu, gizliliğinizi korumanızı sağlar çünkü işlemin garantisi blockchain'in kendisidir. Tüm işlemler şeffaf olmakla birlikte aynı zamanda anonimdir.",
+                    "link": "Blockchain hakkında daha fazla bilgi edinin"
+                },
+                "block3": {
+                    "title": "CWD GLOBAL'ı etkileyen kararlar, merkeziyetsiz bir ağ komitesi tarafından alınır",
+                    "description": "Bu komite, CWD kripto para birimine sahip hissedarlar tarafından oylanır. CWD GLOBAL'daki işlemler sadece birkaç saniye içinde doğrulanır ve geri alınamaz hale gelir.",
+                    "link": "CWD GLOBAL'daki işlemler hakkında daha fazla bilgi edinin"
+                }
+            }
+        },
         "recent_ops": {
             "title": "Blockchain son işlemleri",
             "show_more_btn": "Daha fazla işlem görüntüleyin",
@@ -2443,9 +2516,9 @@
         "cwdex_stats": {
             "title": "Crowd Dex",
             "description": "Merkezi olmayan zincir üzerinde eşler arası değişim",
-            "24hr_deals_count": "24 saatlik Fırsatlar sayılır:",
-            "ex_rate": "Değişim oranı:",
-            "deals_volume": "24 saat Fırsat hacmi:"
+            "24hr_deals_count": "24 saatlik Fırsatlar sayılır",
+            "ex_rate": "Değişim oranı",
+            "deals_volume": "24 saat Fırsat hacmi"
         },
         "gamezone_stats": {
             "title": "Gamezone",
@@ -2467,7 +2540,8 @@
         },
         "code_block": {
             "title": "Açık kaynak ve API",
-            "description": "CrowdWiz blockchain tamamen açık kaynaklı bir platformdur. Kaynaklardan kendi blok zinciri düğümünüzü kolayca oluşturabilir ve onunla çalışabilir veya web soketi tabanlı bir API ile genel düğüme bağlanabilirsiniz. CrowdWiz blockchain, API ile çalışmak için bir Python kitaplığına sahiptir, ancak istediğiniz herhangi bir dili kullanabilirsiniz",
+            "description_extension": " CrowdWiz blockchain, API ile çalışmak için bir Python kitaplığına sahiptir, ancak istediğiniz herhangi bir dili kullanabilirsiniz",
+            "description": "CrowdWiz blockchain tamamen açık kaynaklı bir platformdur. Kaynaklardan kendi blok zinciri düğümünüzü kolayca oluşturabilir ve onunla çalışabilir veya web soketi tabanlı bir API ile genel düğüme bağlanabilirsiniz.",
             "tab_01": "Get account information",
             "tab_02": "Transfer asset",
             "tab_03": "Print Market ticker and sell",

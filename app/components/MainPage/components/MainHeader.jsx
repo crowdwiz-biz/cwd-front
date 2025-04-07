@@ -8,12 +8,9 @@ import BlockchainStore from "stores/BlockchainStore";
 import LocaleSelector from "./utility/LocaleSelector";
 import HeaderDailyStats from "./HeaderDailyStats";
 import RegChartBlock from "./utility/RegChartBlock";
-import BlockHash from "./utility/BlockHash";
-
 
 // IMAGES
-import cwdLogo from "assets/svg-images/svg-common/main-page/header/cwd_logo.svg";
-import loginIcon from "assets/svg-images/svg-common/main-page/header/login_icon.svg";
+import logo from "assets/svg-images/svg-common/main-page/header/logo.svg";
 
 class MainHeader extends React.Component {
     constructor(props) {
@@ -36,109 +33,87 @@ class MainHeader extends React.Component {
     }
 
     render() {
-        let account = this.state.account;
+        // let account = this.state.account;
         let containerWidth = window.innerWidth;
         let { marketCapUsd, accountTotal, accountgraphData } = this.props;
 
         return (
             <section className="mp-center-wrap mp-header__wrap">
                 <div className="mp-header__user-block">
-                    <LocaleSelector />
+                    <div className="empty"></div>
 
                     <img
-                        src={cwdLogo}
+                        src={logo}
                         className="mp-header__logo"
                         alt="cwdLogo"
                         width="100"
                         heigth="100"
                     />
 
-                    <button
-                        type="button"
-                        className="mp-header__login-btn"
-                        onClick={this.logIn.bind(this)}
-                    >
-                        {containerWidth > 767 ? (
+                    <div  className="mp-header__row-end">
+                        <LocaleSelector />
+                        <button
+                            type="button"
+                            className="mp-header__login-btn"
+                            onClick={this.logIn.bind(this)}
+                        >
                             <Translate
-                                className="mp-header__login-text"
                                 content="main_page.header.login-btn"
                             />
-                        ) : null}
-
-                        <img
-                            src={loginIcon}
-                            className="mp-header__login-img"
-                            alt="login"
-                            width="34"
-                            heigth="30"
-                        />
-                    </button>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="mp-header">
-                    <div className="mp-header__left-column">
-                        <h1 className="mp-header__cwd-title">
-                            crowdwiz. world. decentralization.
-                        </h1>
-                        {/*!account - кнопка регистрации должна быть всегда активна поэтому коммент */ true && containerWidth < 1280 ? (
-                            <Link
-                                className="mp-header__auth-block-btn mp-header__auth-block-btn--reg noselect"
-                                to={`/create-account/password`}
-                            >
-                                <Translate content="main_page.header.register_btn" />
-                            </Link>
-                        ) : null}
+                    <h1 className="title">
+                        CrowdWiz. Decentralization. World.
+                    </h1>
+                    <div className="main-description">
+                        <Translate
+                            content="main_page.footer.description"
+                        />
+                    </div>
+                    <div className="mp-header__auth-block">
+                        <Link
+                            className="mp-header__auth-block-btn mp-header__auth-block-btn--reg noselect"
+                            to={"/create-account/password"}
+                        >
+                            <Translate content="main_page.header.register_btn" />
+                        </Link>
+
+                        <button
+                            className="mp-header__auth-block-btn mp-header__auth-block-btn--login noselect"
+                            onClick={this.logIn.bind(this)}
+                        >
+                            <Translate
+                                content="main_page.header.login-btn"
+                            />
+                        </button>
                     </div>
 
-                    <div className="mp-header__right-column">
-                        <AltContainer
-                            stores={[BlockchainStore]}
-                            inject={{
-                                latestBlocks: () => {
-                                    return BlockchainStore.getState()
-                                        .latestBlocks;
-                                }
-                            }}
-                        >
-                            <HeaderDailyStats
-                                containerWidth={containerWidth}
-                                marketCapUsd={marketCapUsd}
-                                accountTotal={accountTotal}
-                                accountgraphData={accountgraphData}
-                            />
-                        </AltContainer>
-
-                        <RegChartBlock
+                    <AltContainer
+                        stores={[BlockchainStore]}
+                        inject={{
+                            latestBlocks: () => {
+                                return BlockchainStore.getState()
+                                    .latestBlocks;
+                            }
+                        }}
+                    >
+                        <HeaderDailyStats
+                            containerWidth={containerWidth}
+                            marketCapUsd={marketCapUsd}
                             accountTotal={accountTotal}
                             accountgraphData={accountgraphData}
                         />
+                    </AltContainer>
 
-                        {/* HASH BLOCK */}
-                        <BlockHash />
+                    <RegChartBlock
+                        accountTotal={accountTotal}
+                        accountgraphData={accountgraphData}
+                    />
 
-                        {containerWidth > 1280 ? (
-                            <div className="mp-header__auth-block">
-                                {/*!account - кнопка регистрации должна быть всегда активна поэтому коммент */ true  ? (
-                                    <Link
-                                        className="mp-header__auth-block-btn mp-header__auth-block-btn--reg noselect"
-                                        to={`/create-account/password`}
-                                    >
-                                        <Translate content="main_page.header.register_btn" />
-                                    </Link>
-                                ) : null}
-
-                                <button
-                                    className="mp-header__auth-block-btn mp-header__auth-block-btn--login noselect"
-                                    onClick={this.logIn.bind(this)}
-                                >
-                                    <Translate
-                                        className="mp-header__login-text"
-                                        content="main_page.header.login-btn"
-                                    />
-                                </button>
-                            </div>
-                        ) : null}
-                    </div>
+                    {/*/!* HASH BLOCK *!/*/}
                 </div>
             </section>
         );

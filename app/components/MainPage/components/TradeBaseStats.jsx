@@ -6,7 +6,8 @@ import TradeBaseItem from "./utility/TradeBaseItem";
 import mgcwdIcon from "assets/svg-images/svg-common/main-page/trade-img/mgcwd_icon.svg";
 import gcwdIcon from "assets/svg-images/svg-common/main-page/trade-img/gcwd_icon.svg";
 import mcentIcon from "assets/svg-images/svg-common/main-page/trade-img/mcent_icon.svg";
-
+import ellipse1 from "assets/svg-images/svg-common/main-page/slider/ellipse1.svg";
+import ellipse2 from "assets/svg-images/svg-common/main-page/slider/ellipce2.svg";
 
 class TradeBaseStats extends React.Component {
     constructor(props) {
@@ -39,27 +40,29 @@ class TradeBaseStats extends React.Component {
         let exchangeData = this.state.exchangeData;
 
         return (
-            <section className="mp-center-wrap">
-                <div className="mp-center-wrap mp-common__inner">
-                    <div className="mp-common__left-column">
-                        <h2 className="mp-common__title">DEX</h2>
+            <section className="trade-base">
+                <h2 className="title wow animate__animated animate__fadeIn"  data-wow-duration="2s" data-wow-delay="0.2s">DEX</h2>
 
-                        <Translate
-                            className="mp-common__description"
-                            content="main_page.trade_stats.description"
-                        />
-                    </div>
+                <Translate
+                    className="description wow animate__animated animate__fadeIn"
+                    content="main_page.trade_stats.description"
+                    data-wow-duration="2s"
+                    data-wow-delay="0.4s"
+                />
 
-                    <ul className="mp-common__right-column trade-stats__right-column">
-                        {exchangeData.map((assetObj, index) => (
+                <div className="list">
+                    {exchangeData.map((assetObj, index) => (
+                        <div className="item" key={index}>
+                            <img className="ellipse-border ellipse" src={ellipse1} alt="ellipse1" />
+                            <img className="ellipse" src={ellipse2} alt="ellipse2" />
                             <TradeBaseItem
                                 key={index}
                                 itemClass="trade-stats__data-container"
                                 asset_data={assetObj}
                                 isOption={false}
                             />
-                        ))}
-                    </ul>
+                        </div>
+                    ))}
                 </div>
             </section>
         );

@@ -7,8 +7,10 @@ import ChainTypes from "../../Utility/ChainTypes";
 import BindToChainState from "../../Utility/BindToChainState";
 import FormattedAsset from "../../Utility/FormattedAsset";
 import AssetWrapper from "../../Utility/AssetWrapper";
-import NewIcon from "../../NewIcon/NewIcon";
+// import NewIcon from "../../NewIcon/NewIcon";
 import {FormattedNumber} from "react-intl";
+import arrow from "../../../assets/svg-images/svg-common/main-page/header/arrow.svg";
+// import arrow from "assets/svg-images/svg-common/main-page/header/arrow.svg";
 
 class HeaderDailyStats extends React.Component {
     constructor(props) {
@@ -99,7 +101,7 @@ class HeaderDailyStats extends React.Component {
     render() {
         let marketCapUsd = this.props.marketCapUsd;
 
-        let containerWidth = this.props.containerWidth;
+        // let containerWidth = this.props.containerWidth;
         let {latestBlocks, dynGlobalObject, coreAsset} = this.props;
 
         let trxCount = 0,
@@ -145,9 +147,9 @@ class HeaderDailyStats extends React.Component {
             trxPerSec = trxCount / ((lastBlock - firstBlock) / 1000);
         }
         return (
-            <section className="header-daily-stat">
+            <div className="header-daily-stat">
                 {/* Current Block */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.2s">
                     <Translate
                         className="header-daily-stat__title"
                         content="main_page.header.current_block"
@@ -155,11 +157,13 @@ class HeaderDailyStats extends React.Component {
 
                     <span className="header-daily-stat__data">
                         # {formatBlockNum}
+                        <img src={arrow} />
                     </span>
+
                 </div>
 
                 {/* Transactions per second */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.4s">
                     <Translate
                         className="header-daily-stat__title"
                         content="main_page.header.trx_per_sec"
@@ -167,16 +171,17 @@ class HeaderDailyStats extends React.Component {
 
                     <span className="header-daily-stat__data">
                         {utils.format_number(trxPerSec, 2)}
+                        <img src={arrow} />
                     </span>
                 </div>
 
                 {/* Current supply CWD */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.6s">
                     <div className="header-daily-stat__title">
                         <Translate content="main_page.header.current_supply" />
 
                         <span className="header-daily-stat__highlighted">
-                            cwd:
+                            cwd
                         </span>
                     </div>
 
@@ -189,16 +194,17 @@ class HeaderDailyStats extends React.Component {
                                 hide_asset={true}
                             />
                         ) : null}
+                        <img src={arrow} />
                     </span>
                 </div>
 
                 {/* Market Capitalization USD */}
-                <div className="header-daily-stat__item">
+                <div className="header-daily-stat__item wow animate__animated animate__fadeIn" data-wow-duration="2s"  data-wow-delay="0.8s">
                     <div className="header-daily-stat__title">
                         <Translate content="main_page.header.market_cap" />
 
                         <span className="header-daily-stat__highlighted">
-                            usd:
+                            usd
                         </span>
                     </div>
 
@@ -207,19 +213,20 @@ class HeaderDailyStats extends React.Component {
                             unitDisplay="long"
                             value={marketCapUsd}
                         />
+                        <img src={arrow} />
                     </span>
 
-                    <button
-                        className="header-daily-stat__tip-btn noselct"
-                        type="button"
-                        onClick={this.showTip.bind(this)}
-                    >
-                        <NewIcon
-                            iconWidth={containerWidth > 767 ? 24 : 16}
-                            iconHeight={containerWidth > 767 ? 24 : 16}
-                            iconName={"tips_icon"}
-                        />
-                    </button>
+                    {/*<button*/}
+                    {/*    className="header-daily-stat__tip-btn noselct"*/}
+                    {/*    type="button"*/}
+                    {/*    onClick={this.showTip.bind(this)}*/}
+                    {/*>*/}
+                    {/*    <NewIcon*/}
+                    {/*        iconWidth={containerWidth > 767 ? 24 : 16}*/}
+                    {/*        iconHeight={containerWidth > 767 ? 24 : 16}*/}
+                    {/*        iconName={"tips_icon"}*/}
+                    {/*    />*/}
+                    {/*</button>*/}
 
                     {isTipVisible ? (
                         <div
@@ -230,7 +237,7 @@ class HeaderDailyStats extends React.Component {
                         </div>
                     ) : null}
                 </div>
-            </section>
+            </div>
         );
     }
 }

@@ -6,8 +6,8 @@
     "display": "standalone",
     "orientation": "portrait",
     "lang": "en-EN",
-    "background_color": "#262626",
-    "theme_color": "#262626",
+    "background_color": "rgba(28, 28, 28, 1)",
+    "theme_color": "rgba(28, 28, 28, 1)",
     "description": "CWD - Crowdwiz. World. Decentralization.",
     "icons": [
         {

@@ -1,28 +1,67 @@
 .header-daily-stat {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content max-content;
-    gap: 10px;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 105px;
+    margin-top: 60px;
+    margin-bottom: 280px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 750px) {
+        grid-template-columns: 1fr;
+    }
 
     &__item {
-        position: relative;
-        padding: 18px 13px 18px 21px;
-        border-radius: 8px;
-        background-color: #202020;
-        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__title {
-        @include legend-text;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.5);
+        white-space: pre;
+        margin-bottom: 10px;
     }
 
     &__highlighted {
-        @include highlighted;
+       color: rgba(222, 194, 127, 1);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-left: 6px;
     }
 
     &__data {
-        @include num-data;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-wrap: nowrap;
+        text-align: center;
+        white-space: nowrap;
+
+        &.total-accounts {
+            font-size: 105px;
+            line-height: 120px;
+
+            @media screen and (max-width: 990px) {
+                font-size: 52px;
+                line-height: 1.14;
+            }
+        }
+
+        img {
+            margin-left: 15px;
+        }
+
     }
 
     &__tip-btn {
@@ -60,37 +99,5 @@
         line-height: 1.4;
         z-index: 110;
         cursor: pointer;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    .header-daily-stat {
-        gap: 14px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .header-daily-stat {
-        // grid-template-rows: 50px 50px;
-        gap: 10px;
-
-        &__item {
-            padding: 10px 8px 10px 12px;
-        }
-
-        &__title {
-            font-size: 11px;
-        }
-
-        &__data {
-            font-size: 14px;
-        }
-
-        &__tip-btn {
-            right: 13px;
-            width: 16px;
-            height: 16px;
-            margin-top: 1px !important;
-        }
     }
 }

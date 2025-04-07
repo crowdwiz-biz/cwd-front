@@ -2,9 +2,10 @@ import React from "react";
 import Translate from "react-translate-component";
 import ReactHighchart from "react-highcharts";
 import counterpart from "counterpart";
-import {FormattedDate} from "react-intl";
-import NewIcon from "../../NewIcon/NewIcon";
+// import {FormattedDate} from "react-intl";
+// import NewIcon from "../../NewIcon/NewIcon";
 import {FormattedNumber} from "react-intl";
+import tr from "assets/svg-images/svg-common/main-page/slider/tr.svg";
 
 class GCWDstats extends React.Component {
     constructor(props) {
@@ -14,16 +15,16 @@ class GCWDstats extends React.Component {
     render() {
         let {currentSupply, totalIncome, income24h, graphData} = this.props;
 
-        let containerWidth = window.innerWidth;
+        // let containerWidth = window.innerWidth;
 
         let data = graphData;
 
-        let colors = ["#03D99D"];
+        let colors = ["#DEC27F"];
 
         let tooltipLabel = counterpart.translate(
             "main_page.gcwd_stats.24h_chart_legend"
         );
-        let chartHeight = containerWidth > 767 ? 200 : 70;
+        let chartHeight = 160;
 
         let config = {
             chart: {
@@ -60,7 +61,7 @@ class GCWDstats extends React.Component {
                 {
                     name: "Date:",
                     data: data,
-                    color: "#03D99D"
+                    color: "#DEC27F"
                 }
             ],
             xAxis: {
@@ -123,7 +124,7 @@ class GCWDstats extends React.Component {
                             y2: 1
                         },
                         stops: [
-                            [0, "#01a375"],
+                            [0, "#DEC27F"],
                             [1, "transparent"]
                         ]
                     },
@@ -132,85 +133,80 @@ class GCWDstats extends React.Component {
             }
         };
 
-        let historyDate = data[0];
-        let todayValue = data.slice(-1)[0];
-        let dailyPercent = (income24h / totalIncome) * 100;
+        // let historyDate = data[0];
+        // let todayValue = data.slice(-1)[0];
+        // let dailyPercent = (income24h / totalIncome) * 100;
         return (
             <section className="gcwd-stats__width-layout">
-                <div className="mp-center-wrap mp-common__inner">
-                    <div className="mp-common__left-column">
-                        <Translate
-                            className="mp-common__title"
-                            content="main_page.gcwd_stats.title"
-                            component="h2"
-                        />
+                <div className="gcwd-stats-wrapper">
+                    <Translate
+                        className="title wow animate__animated animate__fadeIn"
+                        content="main_page.gcwd_stats.title"
+                        component="h2"
+                        data-wow-duration="2s"
+                        data-wow-delay="0.2s"
+                    />
 
-                        <Translate
-                            className="mp-common__description mp-common__description--mobile-layout"
-                            content="main_page.gcwd_stats.description"
-                        />
-                    </div>
+                    <Translate
+                        className="description wow animate__animated animate__fadeIn"
+                        content="main_page.gcwd_stats.description"
+                        data-wow-duration="2s"
+                        data-wow-delay="0.4s"
+                    />
 
-                    <div className="gcwd-stats__right-column">
-                        <div className="gcwd-stats__data-wrap">
-                            <div className="gcwd-stats__data-block">
-                                <div className="gcwd-stats__data-inner">
-                                    <div className="gcwd-stats__increase-data">
-                                        <NewIcon
-                                            iconClass={
-                                                "gcwd-stats__trade-arrow"
-                                            }
-                                            iconWidth={8}
-                                            iconHeight={8}
-                                            iconName={"up_down_arrow"}
-                                        />
+                    <div className="gcwd-stats__content">
+                        <div className="gcwd-data-inner">
+                            {/*<div className="gcwd-stats__increase-data">*/}
+                            {/*    <NewIcon*/}
+                            {/*        iconClass={*/}
+                            {/*            "gcwd-stats__trade-arrow"*/}
+                            {/*        }*/}
+                            {/*        iconWidth={8}*/}
+                            {/*        iconHeight={8}*/}
+                            {/*        iconName={"up_down_arrow"}*/}
+                            {/*    />*/}
 
-                                        <span>
-                                            <FormattedNumber
-                                                unitDisplay="long"
-                                                value={dailyPercent}
-                                            />
-                                            %
-                                        </span>
-                                    </div>
+                            {/*    <span>*/}
+                            {/*        <FormattedNumber*/}
+                            {/*            unitDisplay="long"*/}
+                            {/*            value={dailyPercent}*/}
+                            {/*        />*/}
+                            {/*        %*/}
+                            {/*    </span>*/}
+                            {/*</div>*/}
 
-                                    <div className="gcwd-stats__data-row">
-                                        <Translate
-                                            className="gcwd-stats__legend"
-                                            content="main_page.gcwd_stats.current_supply"
-                                        />
-                                        <span className="gcwd-stats__amount">
-                                            <FormattedNumber
-                                                unitDisplay="long"
-                                                value={currentSupply}
-                                            />
-                                            &nbsp;
-                                            <span className="gcwd-stats__asset">
-                                                GCWD
-                                            </span>
-                                        </span>
-                                    </div>
-
-                                    <div className="gcwd-stats__data-row">
-                                        <Translate
-                                            className="gcwd-stats__legend"
-                                            content="main_page.gcwd_stats.total_income"
-                                        />
-                                        <span className="gcwd-stats__amount">
-                                            <FormattedNumber
-                                                unitDisplay="long"
-                                                value={totalIncome}
-                                            />
-                                            &nbsp;
-                                            <span className="gcwd-stats__asset">
-                                                CWD
-                                            </span>
-                                        </span>
-                                    </div>
-                                </div>
+                            <div className="item wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+                                <Translate
+                                    className="gcwd-stats__legend"
+                                    content="main_page.gcwd_stats.current_supply"
+                                />
+                                <span className="gcwd-stats__amount">
+                                    <FormattedNumber
+                                        unitDisplay="long"
+                                        value={currentSupply}
+                                    />
+                                    <span className="gcwd-stats__asset">GCWD</span>
+                                    <img src={tr} alt="tr" />
+                                </span>
                             </div>
 
-                            <div className="gcwd-stats__data-row">
+                            <div className="item wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
+                                <Translate
+                                    className="gcwd-stats__legend"
+                                    content="main_page.gcwd_stats.total_income"
+                                />
+                                <span className="gcwd-stats__amount">
+                                    <FormattedNumber
+                                        unitDisplay="long"
+                                        value={totalIncome}
+                                    />
+                                    <span className="gcwd-stats__asset">
+                                                CWD
+                                    </span>
+                                    <img src={tr} alt="tr" />
+                                </span>
+                            </div>
+                            <div className="item wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
                                 <Translate
                                     className="gcwd-stats__legend"
                                     content="main_page.gcwd_stats.24h_income"
@@ -220,30 +216,30 @@ class GCWDstats extends React.Component {
                                         unitDisplay="long"
                                         value={income24h}
                                     />
-                                    &nbsp;
                                     <span className="gcwd-stats__asset">
                                         CWD
                                     </span>
+                                    <img src={tr} alt="tr" />
                                 </span>
                             </div>
                         </div>
 
                         <div className="gcwd-stats__chart-wrap">
                             <ReactHighchart ref="chart" config={config} />
-                            <div className="mp-reg-stat__label-wrap">
-                                <span className="mp-reg-stat__subtitle">
-                                    <FormattedDate
-                                        value={historyDate[0]}
-                                        month="long"
-                                        day="numeric"
-                                    />
-                                </span>
+                            {/*<div className="mp-reg-stat__label-wrap">*/}
+                            {/*    <span className="mp-reg-stat__subtitle">*/}
+                            {/*        <FormattedDate*/}
+                            {/*            value={historyDate[0]}*/}
+                            {/*            month="long"*/}
+                            {/*            day="numeric"*/}
+                            {/*        />*/}
+                            {/*    </span>*/}
 
-                                <Translate
-                                    className="mp-reg-stat__subtitle"
-                                    content="main_page.header.acc_chart_today"
-                                />
-                            </div>
+                            {/*    <Translate*/}
+                            {/*        className="mp-reg-stat__subtitle"*/}
+                            {/*        content="main_page.header.acc_chart_today"*/}
+                            {/*    />*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>

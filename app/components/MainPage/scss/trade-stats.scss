@@ -1,4 +1,5 @@
 .trade-stats {
+    position: relative;
     &__right-column {
         grid-template-columns: 1fr 1fr 1fr;
         list-style: none;
@@ -6,31 +7,31 @@
     }
 
     &__data-container {
-        @include data-container(48px, #202020);
-        background-image: url(../../../assets/svg-images/svg-common/main-page/trade-img/trade_still_bg.svg);
+        //@include data-container(48px, #202020);
+        //background-image: url(../../../assets/svg-images/svg-common/main-page/trade-img/trade_still_bg.svg);
 
         position: relative;
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: contain;
-        padding-bottom: 28px;
-        padding-right: 20px;
+        //padding-bottom: 28px;
+        //padding-right: 20px;
 
-        &:hover {
-            transition: all 0.3s;
-            box-shadow: 0 6px 16px 0 #0c0c0c;
-            transform: translateY(-2px);
-        }
+        //&:hover {
+        //    transition: all 0.3s;
+        //    box-shadow: 0 6px 16px 0 #0c0c0c;
+        //    transform: translateY(-2px);
+        //}
 
-        &--up {
-            background-color: #162823;
-            background-image: url(../../../assets/svg-images/svg-common/main-page/trade-img/trade_up_bg.svg);
-        }
-
-        &--down {
-            background-color: #2b1919;
-            background-image: url(../../../assets/svg-images/svg-common/main-page/trade-img/trade_down_bg.svg);
-        }
+        //&--up {
+        //    background-color: #162823;
+        //    background-image: url(../../../assets/svg-images/svg-common/main-page/trade-img/trade_up_bg.svg);
+        //}
+        //
+        //&--down {
+        //    background-color: #2b1919;
+        //    background-image: url(../../../assets/svg-images/svg-common/main-page/trade-img/trade_down_bg.svg);
+        //}
     }
 
     &__link {
@@ -75,7 +76,7 @@
         color: #626262;
 
         &--up {
-            color: #03d99d;
+            color: #62BA66;
         }
 
         &--down {
@@ -106,10 +107,6 @@
 
 @media screen and (max-width: 1280px) {
     .trade-stats {
-        &__data-container {
-            padding: 20px 10px 30px;
-        }
-
         &__inner {
             display: block;
             height: auto;

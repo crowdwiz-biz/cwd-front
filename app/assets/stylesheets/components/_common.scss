@@ -145,6 +145,11 @@
             }
         }
 
+        &.search {
+            background: red;
+            padding-left: 42px !important;
+        }
+
         &--success {
             padding: 6px 14px !important;
             border: 1px solid #03d99d !important;

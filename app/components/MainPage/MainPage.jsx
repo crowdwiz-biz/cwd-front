@@ -9,7 +9,7 @@ import BlockchainRecentOps from "./components/BlockchainRecentOps";
 import GCWDstats from "./components/GCWDstats";
 import CWDexStats from "./components/CWDexStats";
 import GamezoneStats from "./components/GamezoneStats";
-import TradeBaseStats from "./components/TradeBaseStats";
+
 import PocStakingBlock from "./components/PocStakingBlock";
 import CodeExamples from "./components/CodeExamples";
 // import CrowdProjects from "./components/CrowdProjects";
@@ -17,7 +17,13 @@ import MainFooter from "./components/MainFooter";
 
 //STYLES
 import "./scss/_all.scss";
-
+import PlanetScene from "./components/PlanetScene";
+import CommunityPrinciples from "./components/CommunityPrinciples";
+import SecurityAndControl from "./components/SecurityAndControl";
+import Development from "./components/Development";
+import Access from "./components/Access";
+import Slider from "./components/Slider";
+import TabSwitcher from "./components/Tabs";
 class MainPage extends React.Component {
     constructor(props) {
         super(props);
@@ -34,13 +40,13 @@ class MainPage extends React.Component {
     getTotalData() {
         let host = window.location.hostname;
         if (["127.0.0", "192.168"].includes(host.substring(0, 7))) {
-            host = "backup.cwd.global"
+            host = "backup.cwd.global";
         }
 
-        let url = "https://" + host + "/static/front-stats.json";
+        let url =  "http://153.92.222.33:8800/static/front_stats.json"; //"https://" + host + "/static/front-stats.json";
 
         fetch(url)
-            .then(response => response.json())
+            .then(response => response && response.json())
             .then(data => {
                 this.setState({
                     apiData: data
@@ -56,6 +62,9 @@ class MainPage extends React.Component {
         } else {
             return (
                 <div className="mp-common">
+                    <div className="main-planet-background">
+                        <PlanetScene />
+                    </div>
                     <AltContainer
                         stores={[BlockchainStore]}
                         inject={{
@@ -76,43 +85,36 @@ class MainPage extends React.Component {
                             accountTotal={apiData.account["total"]}
                             accountgraphData={apiData.account["graphData"]}
                         />
+                    </AltContainer>
+                    <CommunityPrinciples />
+                    <SecurityAndControl />
+                    <Access />
+                    <Development />
+                    <Slider />
+                    <TabSwitcher apiData={apiData} />
 
+
+                    {/* Build on Crowdwiz blockchain */}
+                    {/* <CrowdProjects /> */}
+
+                    <AltContainer
+                        stores={[BlockchainStore]}
+                        inject={{
+                            latestBlocks: () => {
+                                return BlockchainStore.getState().latestBlocks;
+                            },
+                            latestTransactions: () => {
+                                return BlockchainStore.getState()
+                                    .latestTransactions;
+                            }
+                        }}
+                    >
                         {/* RECENT OPERATIONS */}
                         <BlockchainRecentOps />
                     </AltContainer>
 
-                    {/* Gold Crowd */}
-                    <GCWDstats
-                        currentSupply={apiData.gcwd.currentSupply}
-                        totalIncome={apiData.gcwd.totalIncome}
-                        income24h={apiData.gcwd.income24h}
-                        graphData={apiData.gcwd.graphData}
-                    />
-
-                    {/* Crowd Dex  */}
-                    <CWDexStats
-                        dealsCount={apiData.cwdex.dealsCount}
-                        dealsVolume={apiData.cwdex.dealsVolume}
-                        exRate={apiData.cwdex.exchangeRate}
-                    />
-
-                    {/* Dex */}
-                    <TradeBaseStats />
-
-                    {/* Gamezone */}
-                    <GamezoneStats
-                        gamesCount={apiData.gamezone.gamesCount}
-                        gamesVolume={apiData.gamezone.gamesVolume}
-                    />
-
-                    {/* Proof of crowd */}
-                    <PocStakingBlock />
-
                     {/* Open source and API */}
                     <CodeExamples />
-
-                    {/* Build on Crowdwiz blockchain */}
-                    {/* <CrowdProjects /> */}
 
                     {/* FOOTER BLOCK */}
                     <MainFooter />

@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {Apis} from "bitsharesjs-ws";
 import utils from "common/utils";
 import NewIcon from "../../../NewIcon/NewIcon";
+import arrow from "assets/svg-images/svg-common/main-page/header/arrow2.svg";
 
 class TradeBaseItem extends React.Component {
     constructor(props) {
@@ -82,47 +83,16 @@ class TradeBaseItem extends React.Component {
             iconClass =
                 "trade-stats__trade-arrow trade-stats__trade-arrow--down";
         }
-        let containerWidth = window.innerWidth;
+        // let containerWidth = window.innerWidth;
 
         return (
-            <li className={isChanged != 0 ? itemClass : this.props.itemClass}>
+            <div className={isChanged != 0 ? itemClass : this.props.itemClass}>
                 <Link
                     to={"market/" + asset_data.link}
                     className="trade-stats__link"
                 >
-                    <header className="trade-stats__header">
-                        <img
-                            className="trade-stats__asset"
-                            src={asset_data.icon}
-                            alt={quote}
-                        />
-
-                        {containerWidth > 1280 ? (
-                            <div className="trade-stats__percent-wrap">
-                                {isChanged != 0 ? (
-                                    <NewIcon
-                                        iconClass={iconClass}
-                                        iconWidth={8}
-                                        iconHeight={8}
-                                        iconName={"up_down_arrow"}
-                                    />
-                                ) : null}
-
-                                <span
-                                    className={
-                                        isChanged != 0
-                                            ? percentClass
-                                            : "trade-stats__percent"
-                                    }
-                                >
-                                    {this.state.tickerData.percent_change}%
-                                </span>
-                            </div>
-                        ) : null}
-                    </header>
-
                     <div className="trade-stats__inner">
-                        <div>
+                        <div className="col">
                             <span className="trade-stats__legend">
                                 1&nbsp;{quote}
                             </span>
@@ -136,29 +106,6 @@ class TradeBaseItem extends React.Component {
                                 {price}
                             </span>
                         </div>
-
-                        {containerWidth < 1280 ? (
-                            <div className="trade-stats__percent-wrap">
-                                {isChanged != 0 ? (
-                                    <NewIcon
-                                        iconClass={iconClass}
-                                        iconWidth={8}
-                                        iconHeight={8}
-                                        iconName={"up_down_arrow"}
-                                    />
-                                ) : null}
-
-                                <span
-                                    className={
-                                        isChanged != 0
-                                            ? percentClass
-                                            : "trade-stats__percent"
-                                    }
-                                >
-                                    {this.state.tickerData.percent_change}%
-                                </span>
-                            </div>
-                        ) : null}
 
                         <div>
                             <Translate
@@ -176,8 +123,26 @@ class TradeBaseItem extends React.Component {
                             </span>
                         </div>
                     </div>
+                    <div className="trade-stats__percent-wrap">
+                        <span
+                            className={
+                                isChanged != 0
+                                    ? percentClass
+                                    : "trade-stats__percent"
+                            }
+                        >
+                            <span>{this.state.tickerData.percent_change}%</span>
+                            {!!isChanged && (
+                                <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 8L8.49868 1L16 8" fill="currentColor"/>
+                                    <path d="M1 8L8.49868 1L16 8H1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            )}
+                        </span>
+                    </div>
                 </Link>
-            </li>
+            </div>
         );
     }
 }

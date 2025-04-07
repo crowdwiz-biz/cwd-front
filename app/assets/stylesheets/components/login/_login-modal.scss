@@ -1,6 +1,42 @@
 .login-modal {
     max-width: 450px !important;
 
+    &.cwd-modal {
+        background-color: #000 !important;
+        box-shadow: 1px 1px 30px #333333c2;
+        border-radius: 4px;
+
+        svg {
+            display: block;
+            margin: 0 auto 30px;
+        }
+
+        .auth-modal__non-verify {
+            text-align: left;
+            width: 100%;
+            .auth-modal__warning-text {
+                display: none;
+            }
+        }
+
+        .ant-modal-content {
+            background-color: #000 !important;
+
+            .login-modal__footer {
+                div {
+                    width: 100%;
+                }
+            }
+
+            .login-modal__btn {
+                width: 100%;
+                background-color: #c5a65e !important;
+                border-radius: 4px !important;
+                font-weight: 800;
+            }
+        }
+    }
+
     .ant-modal-footer {
         display: flex;
         justify-content: flex-end;
