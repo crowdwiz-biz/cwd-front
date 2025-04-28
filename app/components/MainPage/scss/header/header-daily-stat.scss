@@ -47,6 +47,13 @@
         flex-wrap: nowrap;
         text-align: center;
         white-space: nowrap;
+        max-width: 100%;
+        word-break: break-all;
+
+        @media screen and (max-width: 790px) {
+            font-size: 26px;
+            line-height: 1.4;
+        }
 
         &.total-accounts {
             font-size: 105px;

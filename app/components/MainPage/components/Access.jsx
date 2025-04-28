@@ -7,6 +7,10 @@ class Development extends React.Component {
         super(props);
     }
 
+    handleClick = () => {
+        window.open("https://github.com/crowdwiz-biz/docs?tab=readme-ov-file#управление-криптоключами-в-блокчейне-crowdwiz", "_blank");
+    };
+
     render() {
         return (
             <section className="mp-access">
@@ -31,6 +35,7 @@ class Development extends React.Component {
                             className="button"
                             content="main_page.access.left.button"
                             component="button"
+                            onClick={this.handleClick}
                         />
                     </div>
                     <div className="right-panel">
