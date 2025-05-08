@@ -9,6 +9,7 @@ import slide5 from "assets/svg-images/svg-common/main-page/slider/slide5.svg";
 import slide6 from "assets/svg-images/svg-common/main-page/slider/slide6.svg";
 import slide7 from "assets/svg-images/svg-common/main-page/slider/slide7.svg";
 import slide8 from "assets/svg-images/svg-common/main-page/slider/slide8.svg";
+import { withRouter } from "react-router-dom";
 
 import Translate from "react-translate-component";
 
@@ -22,41 +23,48 @@ class Slider extends React.Component {
                     id: 1,
                     content: "main_page.slider.slide1.title",
                     img: slide1,
+                    link: "/gateway/dex"
                 },
                 {
                     id: 2,
                     content: "main_page.slider.slide2.title",
                     img: slide2,
+                    link: "/pledge-offer"
                 },
                 {
                     id: 3,
                     content: "main_page.slider.slide3.title",
+                    link: "/gamezone",
                     img: slide3,
                 },
                 {
                     id: 4,
                     content: "main_page.slider.slide4.title",
-                    img: slide4,
+                    img: slide4
                 },
                 {
                     id: 5,
                     content: "main_page.slider.slide5.title",
                     img: slide5,
+                    link: "/contracts-overview"
                 },
                 {
                     id: 6,
                     content: "main_page.slider.slide6.title",
                     img: slide6,
+                    link: "/great-race"
                 },
                 {
                     id: 7,
                     content: "main_page.slider.slide7.title",
                     img: slide7,
+                    link: "/settings"
                 },
                 {
                     id: 8,
                     content: "main_page.slider.slide8.title",
                     img: slide8,
+                    link: "/address-book"
                 },
             ],
         };
@@ -75,6 +83,13 @@ class Slider extends React.Component {
             currentSlide: (currentSlide - 1 + slides.length) % slides.length,
         });
     };
+
+    handleTitleClick = (link) => {
+        if (!link) {
+            return;
+        };
+        this.props.history.push(link);
+    }
 
     render() {
         const { currentSlide, slides } = this.state;
@@ -106,6 +121,7 @@ class Slider extends React.Component {
                                 className="title"
                                 content={slide.content}
                                 component="div"
+                                onClick={() => this.handleTitleClick(slide.link)}
                             />
                         </div>
                     ))}
@@ -126,4 +142,4 @@ class Slider extends React.Component {
     }
 }
 
-export default Slider;
+export default withRouter(Slider);
